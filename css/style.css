@@ -33,14 +33,14 @@ h1{ text-align:center;font-family:Verdana,sans-serif;}
 
 
       .menu ul {
-        list-style-type: none;
+    list-style-type: none;
 		display:inline;
 		float:left;
-		width:97%;
+		width:95%;
 		margin:0;
 		padding:0;
 		background-color:white;
-        margin-bottom: 1em;
+     margin-bottom: 1em;
 		padding-left:3%;
       }
        .menu ul li {
@@ -53,8 +53,8 @@ h1{ text-align:center;font-family:Verdana,sans-serif;}
         line-height: 3em;       
         text-decoration: none;
         color: black;
-		font-size:0.9em;
-		font-weight: bold;
+		    font-size:0.9em;
+		    font-weight: bold;
       }
 
 
