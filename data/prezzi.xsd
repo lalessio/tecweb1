@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+
+	elementFormDefault="qualified" >
+	
+	<xsd:element name="prezzi">
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element name="prezzointero" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="prezzoridotto" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
