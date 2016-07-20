@@ -3,31 +3,31 @@
 
 	elementFormDefault="qualified" >
 	
-	<xsd:element name="news" type="Typenews"/>
+	<xsd:element name="news" type="typeNews"/>
 		
-	<xsd:complexType name="Typenews">
+	<xsd:complexType name="typeNews">
 		<xsd:sequence maxOccurs="unbounded">
-			<xsd:element name="notizia" type="Typenotizia"/>
+			<xsd:element name="notizia" type="typeNotizia"/>
 		</xsd:sequence>
 	</xsd:complexType>
 
-
-	<xsd:complexType name="Typenotizia">
+	<xsd:complexType name="typeNotizia">
 		<xsd:sequence>		
 			<xsd:element name="titolo" type="xsd:string"/> 
-			<xsd:element name="datainser" type="xsd:string"/>
-			<xsd:element name="testo" type="xsd:string"/>
-            <xsd:element name="img" type="xsd:string"/>
+			<xsd:element name="data" type="xsd:string"/> <!-- qui forse potremmo usare xsd:date -->
+			<xsd:element name="contenuto" type="xsd:string"/>
+            		<xsd:element name="img" type="xsd:string"/>
 		</xsd:sequence>
-		<xsd:attribute name="Idnotizia" type="Typeid" use="required"/>			
+		<xsd:attribute name="ID" type="typeID" use="required"/>			
 	</xsd:complexType>
-
-
     
-	<xsd:simpleType name="Typeid">
+	<xsd:simpleType name="typeID">
 		<xsd:restriction base="xsd:integer">
 			<xsd:minInclusive value="1"/>
 			<xsd:maxInclusive value="999999"/>
 		</xsd:restriction>
 	</xsd:simpleType>
+
 </xsd:schema>
+
+<!-- Last Update by Luca 20/07/2016 -->
