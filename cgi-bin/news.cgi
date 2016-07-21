@@ -32,23 +32,23 @@ print "
 		<meta name=\"author\" content=\"Carlo Sindico , Luca Alessio\"/>
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-		 <link rel=\"stylesheet\" href=\"css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
+		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
 	</head>
 	<body>
-		<div><a href=\"home.html\"><img class=\"logo\" alt=\"logo\" src=\"images/logo.jpg\"/></a></div> 
-		<div class=\"titolo\"><a href=\"index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"index.html\">Monte Verde</a></div>
+		<div><a href=\"../home.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
+		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
 		<div id=\"menu\">
 			<ul class=\"lista\">
-				<li><a href=\"index.html\"><span lang=\"en\">HOME</span></a></li>
-				<li><a href=\"chisiamo.html\">CHI SIAMO</a></li>
-				<li><a href=\"naturaterritorio.html\">NATURA E TERRITORIO</a></li>
-				<li><a href=\"newsattivita.html\"><span lang=\"en\">NEWS</span> E ATTIVITÀ</a></li>
-				<li><a href=\"orariprezzi.html\">ORARI E PREZZI</a></li>
-				<li><a href=\"infocontatti.html\">INFO E CONTATTI</a></li>
+				<li><a href=\"../index.html\"><span lang=\"en\">HOME</span></a></li>
+				<li><a href=\"../chisiamo.html\">CHI SIAMO</a></li>
+				<li><a href=\"../naturaterritorio.html\">NATURA E TERRITORIO</a></li>
+				<li><a href=\"../newsattivita.html\"><span lang=\"en\">NEWS</span> E ATTIVITÀ</a></li>
+				<li><a href=\"../orariprezzi.html\">ORARI E PREZZI</a></li>
+				<li><a href=\"../infocontatti.html\">INFO E CONTATTI</a></li>
 			</ul>
 		</div>
 		
-		<div class=\"nav\">Ti trovi qui: <a href=\"index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; <a href=\"newsattivita.html\"><span lang=\"en\">News</span> e Attività</a> &gt;&gt; Archivio News</div>
+		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; <a href=\"../newsattivita.html\"><span lang=\"en\">News</span> e Attività</a> &gt;&gt; Archivio News</div>
 
 		<div class=\"contenuto\">
 			<h1 class=\"titolo_testo\">Archivio <span lang=\"en\">News</span></h1>
@@ -67,10 +67,11 @@ foreach my $notizia (@notizie)
 	#il motivo per cui estraggo ID è perchè magari in questa pagina mostriamo solo una anteprima di x caratteri del testo e poi ci mettiamo
 	#un continua a leggere che porta a un page_template per le new in cui l'utente può leggere tutto il testo (di questa cosa ne parleremo)
 	print "
-			<div>	<!-- div box notizia o qualcosa del genere per separarle meglio -->
-				<span><strong>$title</strong></span>
-				<span >$date</span>
-				<img src=\"../$image\" alt=\"immagine pertinente alla notizia\"/> <!-- questa va messa dentro un div -->
+			<div class=\"blocco1\">
+
+				<p><strong>$title</strong></p>
+				<p>$date</p>
+				<img src=\"../images/$image\" alt=\"$title\"/> 
 				<p>$text...</p>
 				<a href=\"notizia.cgi?request=$id\">Continua a leggere</a>	
 			</div>";
@@ -86,4 +87,4 @@ print"</div>
 	</html>
 ";
 
-#Last update by Luca 21/07/2016
+#Last update by Carlo 21/07/2016
