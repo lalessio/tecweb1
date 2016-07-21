@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
 		<title>Homepage - Parco Naturale Monte Verde</title>
@@ -19,21 +19,39 @@
 				<li class="active"><span lang="en">HOME</span></li>
 				<li><a href="chisiamo.html">CHI SIAMO</a></li>
 				<li><a href="naturaterritorio.html">NATURA E TERRITORIO</a></li>
-				<li><a href="newsattivita.html"><span lang="en">NEWS</span> E ATTIVITÀ</a></li>
-				<li><a href="cgi-bin/orariprezzi.cgi">ORARI E PREZZI</a></li>
+				<li><a href="newsattivita.html"><span lang="en">NEWS</span>E ATTIVITÀ</a></li>
+				<li><a href="orariprezzi.html">ORARI E PREZZI</a></li>
 				<li><a href="infocontatti.html">INFO E CONTATTI</a></li>
 			</ul>
 		</div>
-		
-		<div><a href="adminlogin.html">Area riservata</a></div> 
-		
-		<div class="nav">Ti trovi qui: <a href="index.html"><span lang="en">Home</span></a></div>
+
+		<div class="nav">Ti trovi qui: <a href="index.html"><span lang="en">Home</span></a> &gt; &gt; Area riservata</div>
 
 		<div class="contenuto">
-			<!-- testo contenuto preso da  http://www.pnab.it/footer/mappa-del-sito.html-->
-			<h1 class="titolo_testo">Pagina principale del sito</h1>
-			<p>Qui ha senso inserirci solo le categorie più in grande e qualche immagine (stavolta organizzati meglio) anche se devo ancora pensare a come disporle</p>
+			<p>per ora nella parte dell'admin si può solo inserire nuove notizie</p>
+			<p>per eliminare notizie -> si va nella pagina archivio (o nella pagina notizia propria) e si preme su elimina (pulsante che compare solo se si è loggati come admin, cosa che il sistema riconoscerà in qualche modo tipo cookie)</p>
+			<p>per modificare orari e prezzi -> dipende da come carlo struttura l'xml ma anche se vogliamo permetterlo da qui o direttamente dalla pagina apposita</p>
+			<form method="post" action="cgi-bin/nuova_notizia.cgi">
+				<div>
+					<label>Titolo:</label>
+					<input type="text" id="new_title" name="new_title" />
+				</div>
+				<div>
+					<label>Testo:</label>
+					<input type="textarea" id="new_content" name="new_content" />
+				</div>
+				<div>
+					<label>Carica un'immagine:</label>
+					<input type="file" id="new_image" name="new_image" />
+				</div>
+				<div>
+					<input type="submit" value="Invia">
+					<input type="reset" value="Azzera">
+				</div>
+				<span id="errore">Bla</span>
+			</form>
 		</div>
+		
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="images/css.png"/>

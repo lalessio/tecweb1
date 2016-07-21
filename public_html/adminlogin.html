@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
 		<title>Homepage - Parco Naturale Monte Verde</title>
@@ -9,7 +9,27 @@
 		<meta name="author" content="Carlo Sindico , Luca Alessio"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		 <link rel="stylesheet" href="css/styleprova.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="css/styleprova.css" type="text/css" media="screen"/>
+		 
+		 <script>
+		 function login_check()
+		 {
+			var username = document.getElementById("user_name").value;
+			var password = document.getElementById("user_pwd").value;
+			if ( username == "admin" && password == "admin")
+			{
+				//alert ("Login successfully");
+				//window.location = "adminarea.html"; 
+				return true;
+			}
+			else
+			{
+				document.getElementById("errore").innerHTML = "I dati inseriti non sono corretti."
+			}
+			return false;
+		 }
+		 </script>
+		 
 	</head>
 	<body>
 		<div><img class="logo" alt="logo" src="images/logo.jpg"/></div> 
@@ -19,21 +39,32 @@
 				<li class="active"><span lang="en">HOME</span></li>
 				<li><a href="chisiamo.html">CHI SIAMO</a></li>
 				<li><a href="naturaterritorio.html">NATURA E TERRITORIO</a></li>
-				<li><a href="newsattivita.html"><span lang="en">NEWS</span> E ATTIVITÀ</a></li>
-				<li><a href="cgi-bin/orariprezzi.cgi">ORARI E PREZZI</a></li>
+				<li><a href="newsattivita.html"><span lang="en">NEWS</span>E ATTIVITÀ</a></li>
+				<li><a href="orariprezzi.html">ORARI E PREZZI</a></li>
 				<li><a href="infocontatti.html">INFO E CONTATTI</a></li>
 			</ul>
 		</div>
-		
-		<div><a href="adminlogin.html">Area riservata</a></div> 
-		
-		<div class="nav">Ti trovi qui: <a href="index.html"><span lang="en">Home</span></a></div>
+
+		<div class="nav">Ti trovi qui: <a href="index.html"><span lang="en">Home</span></a> &gt; &gt; Area riservata</div>
 
 		<div class="contenuto">
-			<!-- testo contenuto preso da  http://www.pnab.it/footer/mappa-del-sito.html-->
-			<h1 class="titolo_testo">Pagina principale del sito</h1>
-			<p>Qui ha senso inserirci solo le categorie più in grande e qualche immagine (stavolta organizzati meglio) anche se devo ancora pensare a come disporle</p>
+			<form method="post" onsubmit="return login_check()" action="adminarea.html">
+				<div>
+					<label>Username:</label>
+					<input type="text" id="user_name" name="user_name" />
+				</div>
+				<div>
+					<label>Password:</label>
+					<input type="password" id="user_pwd" name="user_pwd" />
+				</div>
+				<div>
+					<input type="submit" value="Invia">
+					<input type="reset" value="Azzera">
+				</div>
+				<span id="errore">Bla</span>
+			</form>
 		</div>
+		
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="images/css.png"/>
