@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+﻿#!/usr/bin/perl -w
 
 use strict;
 use CGI qw(:standard);
@@ -14,7 +14,7 @@ use HTML::Entities;
 my $session = CGI::Session->load() or die $!;
 #servirà ancora auth?
 #my $auth = $session->param('auth');
-my $file = "../data/newsparco.xml";
+my $file = "../data/orari.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 
@@ -24,8 +24,8 @@ print "
         \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
 	<head>
-		<title>Archivio News - Parco Naturale Monte Verde</title>
-		<meta name=\"title\" content=\"Archivio News - Parco Naturale Monte Verde\"/>
+		<title>Orari e Prezzi - Parco Naturale Monte Verde</title>
+		<meta name=\"title\" content=\"Orari e prezzi - Parco Naturale Monte Verde\"/>
 		<meta name=\"description\" content=\"Archivio News - Parco Naturale Monte Verde\"/>
 		<meta name=\"keywords\" content=\"parco naturale, animali, flora,fauna\"/>
 		<meta name=\"language\" content=\"italian it\"/>
@@ -43,41 +43,36 @@ print "
 				<li><a href=\"../chisiamo.html\">CHI SIAMO</a></li>
 				<li><a href=\"../naturaterritorio.html\">NATURA E TERRITORIO</a></li>
 				<li><a href=\"../newsattivita.html\"><span lang=\"en\">NEWS</span> E ATTIVITA'</a></li>
-				<li><a href=\"orariprezzi.cgi\">ORARI E PREZZI</a></li>
+				<li class=\"active\">ORARI E PREZZI</a></li>
 				<li><a href=\"../infocontatti.html\">INFO E CONTATTI</a></li>
 			</ul>
 		</div>
 		
-		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; <a href=\"../newsattivita.html\"><span lang=\"en\">News</span> e Attivita'</a> &gt;&gt; Archivio News</div>
+		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt;Orari e prezzi</div>
 
 		<div class=\"contenuto\">
-			<h1 class=\"titolo_testo\">Archivio <span lang=\"en\">News</span></h1>
-";
-#attenzione che per adesso estraggo e mostro tutte quante le notizie in una sola pagina (sarà da inserire un limite es. 10 e poi mostrarle in una nuova pagina)
-
-my @notizie = $doc->findnodes("/news/notizia");
-foreach my $notizia (@notizie)
-{
-	my $title = decode_entities($notizia->findvalue('titolo'));
-	my $date = $notizia->findvalue('data');
-	my $text = decode_entities($notizia->findvalue('contenuto'));
-	$text = substr($text,0,100);
-	my $image = decode_entities($notizia->findvalue('img'));
-    my $id = $notizia->getAttribute('ID');
-	#il motivo per cui estraggo ID è perchè magari in questa pagina mostriamo solo una anteprima di x caratteri del testo e poi ci mettiamo
-	#un continua a leggere che porta a un page_template per le new in cui l'utente può leggere tutto il testo (di questa cosa ne parleremo)
-	print "
+			<h1 class=\"titolo_testo\">Orari</h1>
 			<div class=\"blocconews\">
 
-				<p><strong>$title</strong></p>
-				<p>$date</p>
-				<img id=\"fotonews\" src=\"../images/$image\" alt=\"$title\"/> 
-				<p>$text...</p>
-				<a href=\"notizia.cgi?request=$id\">Continua a leggere</a>	
-			</div>";
+";
+
+my @orario = $doc->findnodes("/orari/orario/ora");
+foreach my $orario (@orario)
+{
+	my $ora = decode_entities($orario->findvalue('ora'));
+	my $giorno = decode_entities($orario->findvalue('giorno'));
+    my $id = $orario->getAttribute('id');
+
+	print "
+			
+			<p><strong>$giorno</strong></p><p><strong>$ora</strong></p>
+			";
 }
 
-print"</div>
+print"
+
+</div>			
+</div>
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
@@ -88,4 +83,5 @@ print"</div>
 ";
 
 #Last update by Carlo 21/07/2016
+
 
