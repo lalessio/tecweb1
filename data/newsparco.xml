@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <news xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" newsparco.xsd">
+	<notizia ID="1">
+		<titolo>“I Giardini del Brenta” a Val di Non Expo</titolo>
+		<data>14-07-2016</data>
+		<contenuto>Sabato 16 luglio alle ore 18.15 presso le sale "Val di Non Expo" in Piazza Granda a Cles è stata inaugurata la nuova esposizione dal titolo "I GIARDINI DEL BRENTA", curata dal Parco Naturale Adamello Brenta.
+
+		Dall’autunno scorso, le sale di “Val di Non Expo” sono state generosamente messe a disposizione della comunità dal proprietario e, dopo aver ospitato una mostra delle tradizionali stufe a olle, ora ospiterà fino alla fine di agosto un percorso naturalistico e culturale dedicato all'area protetta più estesa del Trentino, di cui Cles è comune gestore.
+		Allestimenti, strumentazioni interattive, video e ricostruzioni in dimensioni reali offriranno al visitatore la possibilità di conoscere l’ambiente delle Dolomiti di Brenta, patrimonio UNESCO, e del massiccio dell’Adamello-Presanella, in un viaggio a ritroso nel tempo, che, partendo dagli esseri viventi presenti sulle nostre montagne, cercherà la spiegazione della loro presenza in ere geologiche ormai lontane e negli adattamenti che le singole specie hanno adottato nel corso della loro storia evolutiva.
+		Percorrendo la ricostruzione di un reale sentiero nel bosco lungo le tre sale, si potranno osservare da vicino le specie animali e vegetali tipiche delle Alpi nel loro habitat, tra cui l’orso o il gallo forcello o l'aquila reale, ma anche ammirare i filmati dei paesaggi più belli del nostro territorio, sorvolare l’area protetta grazie alla tecnologia interattiva e conoscere meglio tutte le attività del Parco.
+
+		L'inaugurazione di sabato si è inserita nell’evento organizzato dalla redazione della rivista "Il Melo", in occasione dei festeggiamenti per i due anni di attività, e, dopo il taglio del nastro, ha registrato un grande afflusso di curiosi che ha toccato le 350 persone.
+
+		L'esposizione rimarrà aperta fino al 31 agosto con ingresso libero seguendo questi orari:
+
+		dal martedì alla domenica
+		mattina 9.30 - 12.00
+		pomeriggio 16.00 - 19.00
+
+		Sono previste anche aperture serali in occasione delle iniziative "Negozi aperti" il 26 luglio e il 2 e 9 agosto.</contenuto>
+		<img>ValdiNonExpo.jpg</img>
+	</notizia>
 </news>
