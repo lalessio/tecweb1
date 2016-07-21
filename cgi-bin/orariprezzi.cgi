@@ -82,6 +82,4 @@ print"
 	</html>
 ";
 
-#Last update by Carlo 21/07/2016
-
-
+#Last update by Carlo 21/08/2016
