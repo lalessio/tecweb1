@@ -42,11 +42,7 @@ print "
 		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
 	</head>
 	<body>
-<<<<<<< 42bbe523638123237af270c95ca64bfffb84a470
 		<div><a href=\"../home.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
-=======
-		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
->>>>>>> 388c713b76d5bceda7d985dc412c2261fe17670f
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
 		<div id=\"menu\">
 			<ul class=\"lista\">
@@ -54,47 +50,27 @@ print "
 				<li><a href=\"../chisiamo.html\">CHI SIAMO</a></li>
 				<li><a href=\"../naturaterritorio.html\">NATURA E TERRITORIO</a></li>
 				<li><a href=\"../newsattivita.html\"><span lang=\"en\">NEWS</span> E ATTIVITÀ</a></li>
-<<<<<<< 42bbe523638123237af270c95ca64bfffb84a470
 				<li><a href=\"../orariprezzi.html\">ORARI E PREZZI</a></li>
-=======
-				<li><a href=\"orariprezzi.cgi\">ORARI E PREZZI</a></li>
->>>>>>> 388c713b76d5bceda7d985dc412c2261fe17670f
 				<li><a href=\"../infocontatti.html\">INFO E CONTATTI</a></li>
 			</ul>
 		</div>
 		
 		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; <a href=\"../newsattivita.html\"><span lang=\"en\">News</span> e Attività</a> &gt;&gt; <a href=\"news.cgi\">Archivio News</a> &gt;&gt; $title</div>
-<<<<<<< 42bbe523638123237af270c95ca64bfffb84a470
 
 		<div class=\"contenuto\">
 			<h1 class=\"titolo_testo\">$title</h1>
 			<p>$date</p>
 			<img src=\"../images/$image\" alt=\"$title\"/> 
 			<p>$text</p>
-=======
-		<div class=\"contenuto\">
-			<div class=\"blocconews\">
-			<h1 class=\"titolo_testo\">$title</h1>
-			<p>$date</p>
-			<img id=\"fotonews\"src=\"../images/$image\" alt=\"$title\"/> 
-			<p>$text</p>
-			</div>
->>>>>>> 388c713b76d5bceda7d985dc412c2261fe17670f
 		</div>
 		
 		<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
-<<<<<<< 42bbe523638123237af270c95ca64bfffb84a470
 		 <img class=\"valido\" alt=\"css valido\" src=\"images/css.png\"/>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"images/xhtml.png\"/></div>
-=======
-		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
-		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
-		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
->>>>>>> 388c713b76d5bceda7d985dc412c2261fe17670f
 	</body>
 	</html>
 ";
 
-#Last Update by Luca 21/07/2016
+#Last Update by Luca 22/07/2016
