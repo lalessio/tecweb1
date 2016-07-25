@@ -1,4 +1,4 @@
-﻿#!/usr/bin/perl -w
+#!/usr/bin/perl -w
 
 use strict;
 use CGI qw(:standard);
@@ -11,7 +11,7 @@ use URI;
 use HTML::Parser;
 use HTML::Entities;
 
-my $session = CGI::Session->load() or die $!;
+#my $session = CGI::Session->load() or die $!;
 #servirà ancora auth?
 #my $auth = $session->param('auth');
 my $file1 = "../data/orari.xml";
@@ -55,12 +55,13 @@ print "
 
 		<div class=\"contenuto\">
 			<h2 class=\"titolo_testo\">Orari</h2>
+			<p>Aggiungere paragrafo introduttivo</p>
 			<ul>
 
 ";
 
-my @orario = $doc1->findnodes("/orari/giorno");
-foreach my $orario (@orario)
+my @orari = $doc1->findnodes("/orari/giorno");
+foreach my $orario (@orari)
 {
 	my $ora = decode_entities($orario->findvalue('ora'));
     my $id = $orario->getAttribute('id');
@@ -70,16 +71,17 @@ foreach my $orario (@orario)
 print"
 	</ul>
 	<h2 class=\"titolo_testo\">Prezzi</h21>
+	<p>Inserire spiegazione prezzi/periodi dell'anno</p>
 	<ul>";
 	
-my @prezzo = $doc2->findnodes("/prezzi/ingresso");
-foreach my $prezzo (@prezzo)
+my @prezzi = $doc2->findnodes("/prezzi/ingresso");
+foreach my $prezzo (@prezzi)
 {
 	my $pa = decode_entities($prezzo->findvalue('primaveraautunno'));
 	my $estate = decode_entities($prezzo->findvalue('estate'));
     my $id = $prezzo->getAttribute('id');
 	print "<li>
-				<strong>$id:</strong>
+				<span>$id:</span>
 				<ul>
 					<li><span>Primavera - Autunno: $pa</span></li>
 					<li><span>Estate: $estate</span></li>
