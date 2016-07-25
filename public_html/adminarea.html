@@ -31,7 +31,7 @@
 			<p>per ora nella parte dell'admin si può solo inserire nuove notizie</p>
 			<p>per eliminare notizie -> si va nella pagina archivio (o nella pagina notizia propria) e si preme su elimina (pulsante che compare solo se si è loggati come admin, cosa che il sistema riconoscerà in qualche modo tipo cookie)</p>
 			<p>per modificare orari e prezzi -> dipende da come carlo struttura l'xml ma anche se vogliamo permetterlo da qui o direttamente dalla pagina apposita</p>
-			<form method="post" action="cgi-bin/nuova_notizia.cgi">
+			<form method="post" action="cgi-bin/nuova_notizia.cgi" enctype="multipart/form-data">
 				<div>
 					<label>Titolo:</label>
 					<input type="text" id="new_title" name="new_title" />
