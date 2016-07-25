@@ -1,4 +1,4 @@
-﻿#!/usr/bin/perl -w
+#!/usr/bin/perl -w
 
 use strict;
 use CGI qw(:standard);
@@ -11,12 +11,15 @@ use URI;
 use HTML::Parser;
 use HTML::Entities;
 
-my $session = CGI::Session->load() or die $!;
+#my $session = CGI::Session->load() or die $!;
 #servirà ancora auth?
 #my $auth = $session->param('auth');
-my $file = "../data/orari.xml";
-my $parser = XML::LibXML->new();
-my $doc = $parser->parse_file($file);
+my $file1 = "../data/orari.xml";
+my $parser1 = XML::LibXML->new();
+my $doc1 = $parser1->parse_file($file1);
+my $file2 = "../data/prezzi.xml";
+my $parser2 = XML::LibXML->new();
+my $doc2 = $parser2->parse_file($file2);
 
 print "Content-type:text/html\n\n";
 print "
@@ -25,8 +28,8 @@ print "
 <html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\">
 	<head>
 		<title>Orari e Prezzi - Parco Naturale Monte Verde</title>
-		<meta name=\"title\" content=\"Orari e prezzi - Parco Naturale Monte Verde\"/>
-		<meta name=\"description\" content=\"Archivio News - Parco Naturale Monte Verde\"/>
+		<meta name=\"title\" content=\"Orari e Prezzi - Parco Naturale Monte Verde\"/>
+		<meta name=\"description\" content=\"Orari e Prezzi - Parco Naturale Monte Verde\"/>
 		<meta name=\"keywords\" content=\"parco naturale, animali, flora,fauna\"/>
 		<meta name=\"language\" content=\"italian it\"/>
 		<meta name=\"author\" content=\"Carlo Sindico , Luca Alessio\"/>
@@ -48,29 +51,46 @@ print "
 			</ul>
 		</div>
 		
-		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt;Orari e prezzi</div>
+		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; Orari e Prezzi</div>
 
 		<div class=\"contenuto\">
-			<h1 class=\"titolo_testo\">Orari</h1>
-			<div class=\"blocconews\">
+			<h2 class=\"titolo_testo\">Orari</h2>
+			<p>Aggiungere paragrafo introduttivo</p>
+			<ul>
 
 ";
 
-my @orario = $doc->findnodes("/orari/orario/ora");
-foreach my $orario (@orario)
+my @orari = $doc1->findnodes("/orari/giorno");
+foreach my $orario (@orari)
 {
 	my $ora = decode_entities($orario->findvalue('ora'));
-	my $giorno = decode_entities($orario->findvalue('giorno'));
     my $id = $orario->getAttribute('id');
-
-	print "
-			
-			<p><strong>$giorno</strong></p><p><strong>$ora</strong></p>
-			";
+	print "<li><strong>$id:</strong><span>$ora</span></li>";
 }
 
 print"
+	</ul>
+	<h2 class=\"titolo_testo\">Prezzi</h21>
+	<p>Inserire spiegazione prezzi/periodi dell'anno</p>
+	<ul>";
+	
+my @prezzi = $doc2->findnodes("/prezzi/ingresso");
+foreach my $prezzo (@prezzi)
+{
+	my $pa = decode_entities($prezzo->findvalue('primaveraautunno'));
+	my $estate = decode_entities($prezzo->findvalue('estate'));
+    my $id = $prezzo->getAttribute('id');
+	print "<li>
+				<span>$id:</span>
+				<ul>
+					<li><span>Primavera - Autunno: $pa</span></li>
+					<li><span>Estate: $estate</span></li>
+				</ul>
+			</li>";
+}	
 
+print"
+	</ul>
 </div>			
 </div>
 	<div class=\"footer\">
@@ -82,4 +102,4 @@ print"
 	</html>
 ";
 
-#Last update by Carlo 21/08/2016
+#Last Update by Luca 25/07/2016

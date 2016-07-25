@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <prezzi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" prezzi.xsd">
+	<ingresso id="intero">
+		<primaveraautunno>15</primaveraautunno>
+		<estate>13</estate>
+	</ingresso>
+	<ingresso id="ridotto ragazzi (sotto 12 anni)">
+		<primaveraautunno>12</primaveraautunno>
+		<estate>10</estate>
+	</ingresso>
+	<ingresso id="ridotto anziani (sopra 65 anni)">
+		<primaveraautunno>10</primaveraautunno>
+		<estate>8</estate>
+	</ingresso>
 </prezzi>
+<!-- Last Update by Luca 25/07/2016 -->

@@ -11,7 +11,7 @@ use URI;
 use HTML::Parser;
 use HTML::Entities;
 
-my $session = CGI::Session->load() or die $!;
+#my $session = CGI::Session->load() or die $!;
 #servirà ancora auth?
 #my $auth = $session->param('auth');
 my $file = "../data/newsparco.xml";
@@ -43,7 +43,7 @@ print "
 				<li><a href=\"../chisiamo.html\">CHI SIAMO</a></li>
 				<li><a href=\"../naturaterritorio.html\">NATURA E TERRITORIO</a></li>
 				<li><a href=\"../newsattivita.html\"><span lang=\"en\">NEWS</span> E ATTIVITA'</a></li>
-				<li><a href=\"orariprezzi.cgi\">ORARI E PREZZI</a></li>
+				<li><a href=\"orarieprezzi.cgi\">ORARI E PREZZI</a></li>
 				<li><a href=\"../infocontatti.html\">INFO E CONTATTI</a></li>
 			</ul>
 		</div>
