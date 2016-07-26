@@ -65,7 +65,12 @@ if (($estensione =~ /.png/i) || ($estensione =~ /.jpg/i) || ($estensione =~ /.jp
 	
 	my $contenuto = XML::LibXML::Element->new('contenuto');
 	$contenuto->appendText($nuovo_contenuto);
-	$new_node->appendChild($contenuto);
+	$new_node->appendChild($contenuto); 
+	
+	my $datacorrente = XML::LibXML::Element->new('data');
+	my $ymd = strftime "%Y/%m/%d", localtime;
+	$datacorrente->appendText($ymd);
+	$new_node->appendChild($datacorrente);
 	
 	my $img = XML::LibXML::Element->new('img');
 	$img->appendText("$filename");
