@@ -45,7 +45,7 @@ print "
 				<li><a href=\"../index.html\"><span lang=\"en\">HOME</span></a></li>
 				<li><a href=\"../chisiamo.html\">CHI SIAMO</a></li>
 				<li><a href=\"../naturaterritorio.html\">NATURA E TERRITORIO</a></li>
-				<li><a href=\"../newsattivita.html\"><span lang=\"en\">NEWS</span> E ATTIVITA'</a></li>
+				<li><a href=\"newsattivita.cgi\"><span lang=\"en\">NEWS</span> E ATTIVITA'</a></li>
 				<li class=\"active\">ORARI E PREZZI</a></li>
 				<li><a href=\"../infocontatti.html\">INFO E CONTATTI</a></li>
 			</ul>
@@ -102,4 +102,4 @@ print"
 	</html>
 ";
 
-#Last Update by Luca 25/07/2016
+#Last Update by Luca 28/07/2016

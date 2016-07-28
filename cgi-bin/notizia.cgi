@@ -49,8 +49,8 @@ print "
 				<li><a href=\"../index.html\"><span lang=\"en\">HOME</span></a></li>
 				<li><a href=\"../chisiamo.html\">CHI SIAMO</a></li>
 				<li><a href=\"../naturaterritorio.html\">NATURA E TERRITORIO</a></li>
-				<li><a href=\"../newsattivita.html\"><span lang=\"en\">NEWS</span> E ATTIVITÀ</a></li>
-				<li><a href=\"../orariprezzi.html\">ORARI E PREZZI</a></li>
+				<li><a href=\"newsattivita.cgi\"><span lang=\"en\">NEWS</span> E ATTIVITÀ</a></li>
+				<li><a href=\"orarieprezzi.cgi\">ORARI E PREZZI</a></li>
 				<li><a href=\"../infocontatti.html\">INFO E CONTATTI</a></li>
 			</ul>
 		</div>
@@ -66,11 +66,11 @@ print "
 		
 		<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
-		 <img class=\"valido\" alt=\"css valido\" src=\"images/css.png\"/>
+		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
-		<img class=\"valido\" alt=\"xhtml valido\" src=\"images/xhtml.png\"/></div>
+		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>
 ";
 
-#Last Update by Luca 22/07/2016
+#Last Update by Luca 28/07/2016
