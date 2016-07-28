@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <news xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" newsparco.xsd">
+	<!-- data sempre in formato YY/mm/dd -->
 	<notizia ID="1">
 		<titolo>“I Giardini del Brenta” a Val di Non Expo</titolo>
-		<data>14-07-2016</data>
+		<data>2016/07/14</data>
 		<contenuto>Sabato 16 luglio alle ore 18.15 presso le sale "Val di Non Expo" in Piazza Granda a Cles è stata inaugurata la nuova esposizione dal titolo "I GIARDINI DEL BRENTA", curata dal Parco Naturale Adamello Brenta.
 
 		Dall’autunno scorso, le sale di “Val di Non Expo” sono state generosamente messe a disposizione della comunità dal proprietario e, dopo aver ospitato una mostra delle tradizionali stufe a olle, ora ospiterà fino alla fine di agosto un percorso naturalistico e culturale dedicato all'area protetta più estesa del Trentino, di cui Cles è comune gestore.
@@ -23,7 +24,7 @@
 	</notizia>
 	<notizia ID="2"> 
 		<titolo>Chiusura temporanea DBB in Val Meledrio</titolo> 
-		<data>15-07-2016</data> 
+		<data>2016/07/15</data> 
 		<contenuto>Si segnala che, a causa dei lavori per la Centrale Idroelettrica del Comune di Dimaro Folgarida, è stato istituito divieto di transito sul percorso Dolomiti di Brenta Bike in Val Meledrio valido sia per i bikers che per i pedoni. 
 	 
 	La parte interessata dai lavori inizia dalla centrale idroelettrica fino alla località “Pont del Pastin". E’ stata individuata una viabilità alternativa con apposita segnaletica con partenza dalla frazione di Carciato (Dimaro) - strada per Malga Carciato e Via Plana. 
@@ -35,4 +36,4 @@
 		<img>cartina_val_meledrio_f3411bdfaa.jpg</img> 
 	</notizia>
 </news>
-<!-- Last Update by Luca 22/07/2016 -->
+<!-- Last Update by Luca 28/07/2016 -->
