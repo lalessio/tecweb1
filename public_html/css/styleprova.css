@@ -1,0 +1,378 @@
+html {background-color:#d4d4d4;  font-family:verdana,sans-serif; font-size: 1em;}
+body {background-color:#87dc87; margin-left: 13%; margin-right:13%; margin-top:0; }
+
+h1{ text-align:center;font-family:Verdana,sans-serif;}
+h2{ font-family:Verdana,sans-serif;}
+
+
+
+.titolo
+{
+padding-left:3.2em;
+font-size:2em;
+
+}
+.titolo a{text-decoration: none; color:black;}
+
+.sottotitolo
+{
+padding-left:12.5em;
+
+}
+.sottotitolo a{text-decoration: none; color:black;}
+
+.indice{
+float:left;
+clear:both;
+width:20%;
+border:1px solid;
+margin-left:3%;
+margin-right:3%;
+text-align:center;
+}
+
+#foto1{width:60%;
+		margin-top:4em;
+		margin-left:2em;}
+#fotonews{width:30%;}
+	
+.footer{
+        background-color:#87dc87;
+        padding-top: 0.5em;
+        padding-bottom:0.5em;
+        clear:both;
+        font-variant:small-caps; 
+        text-align:center;
+}
+
+
+.titolo_testo{
+	clear:left;
+}
+.logo {float:left;
+    max-width: 10em;
+  margin-left:3%;}
+
+.indirizzo{
+        padding: 0;
+        vertical-align: middle;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+        display: inline;
+        vertical-align: middle;}
+
+.valido{
+        padding:0;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        display: inline;
+        vertical-align: middle;
+      }
+
+
+      #menu {
+         font-family:Verdana;
+          width: 100%;
+          height: auto;
+      }
+
+        #menu ul {
+        list-style-type: none;
+	      display:inline;
+	    	float:left;
+	     	width:97%;
+	    	margin:0;
+	    	padding:0;
+	     	background-color:white;
+        margin-bottom: 1em;
+		    padding-left:3%;
+      }
+             #menu ul li {
+        float:left;
+        color: red;
+        }
+
+
+      .active,#menu ul li a {
+        display:block;
+        padding: 0 1em;   
+        line-height: 3em;  
+        text-decoration: none;
+        color: black;
+		    font-size:0.9em;
+	     	font-weight: bold;
+      }
+
+
+      #menu ul li a:hover {
+        text-decoration: underline;
+      }
+
+      #menu ul li a:focus{
+        outline: 0;
+      }
+	     #menu ul li a:visited{
+        color: purple;
+      }
+
+      #volpe{
+          clear: right;
+          padding-top: 1em;
+           width: 30%;
+          float: right;
+            }
+      #volpetesto{
+            float:right;
+            font-size:0.7em;
+            clear:right;
+            margin-bottom:2%;
+            max-width:40%;
+          }
+
+      #gallo{
+          clear: right;
+          padding-top: 1em;
+           width: 25%;
+          float: right;
+            }
+      #gallotesto{
+            float:right;
+            font-size:0.7em;
+            clear:right;
+            margin-bottom:2%;
+            max-width:40%;
+          }
+            #pianta{
+          clear: right;
+          padding-top: 1em;
+           width: 25%;
+          float: right;
+            }
+      #piantatesto{
+            float:right;
+            font-size:0.7em;
+            clear:right;
+            margin-bottom:2%;
+            max-width:40%;
+          }
+          
+      #attivita{
+          clear: right;
+          padding-top: 1em;
+           width: 30%;
+          float: right;
+            }
+ 
+        .blocco1{
+      clear:left;
+      margin-left:12%;
+      margin-right:12%;
+      }
+        .blocconews{
+      clear:left;
+      text-align:center;
+      }
+       .bloccosingolonew{
+      clear:left;
+      text-align:center;
+      border:1px solid black;
+      }
+
+      #blocco2{
+        width:50%;
+
+      } 
+	   
+     .testo_centrato {
+      text-align:center;
+      }
+
+      .contenuto{
+      padding-left:3%;
+      padding-right:3%;
+
+      }
+
+      .contenutoform{
+        margin-top:5em;
+      }
+
+      .nav{
+      padding-left:3%;
+      padding-right:3%;
+      }
+	#up { 
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+	text-decoration:underline;
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	margin-bottom:1em;
+	border-bottom: 1px solid;
+	border-bottom-color: black;
+	border-top:1px solid black;
+	background-color:white;
+	}
+
+.lista{
+    border-top:1px solid;
+    border-bottom:1px solid;
+    border-color:black;
+}
+
+
+form {
+
+padding-top:10em;
+width:auto;
+}
+.el_notizia{
+width auto;
+padding-top:1em;
+}
+fieldset { 
+padding: 1em; 
+width:auto;
+ }
+
+#informazioni label {
+display:block;
+float:left;
+width:155px;
+text-align:right;
+font-weight:bold;
+padding-right:0;
+font-family:Verdana, sans-serif;
+font-size:13px;
+
+}
+
+#informazioni input { 
+font-weight: bold; 
+font-family: Verdana,helvetica,sans-serif;
+width:auto; 
+border:#73848C 1px solid; 
+padding:0;
+margin-left:10px;
+} 
+.labelaccesskey{
+font-size:11px;
+color:rgb(51,102,153);
+font-family:Verdana, sans-serif;
+font-weight:bold;
+}
+
+
+
+
+
+@media all and (max-width:768px){
+body{
+margin:0;
+}
+.logo{float:none; display:block; margin:0 auto;}
+
+.titolo{
+padding:0;
+text-align:center;
+display:block; margin:0 auto;
+}
+.sottotitolo{
+padding:0;
+text-align:center;
+display:block; margin:0 auto;
+margin-bottom:3%
+}
+
+#menu ul
+		{
+		margin-left:-3%;
+		text-align:center;
+		padding-left:4.3%;
+}
+#menu ul li{
+		float:none;
+		text-align:center;
+		border:1px solid black;
+}
+
+
+.nav{
+
+    float:left;
+    padding-bottom:1em;
+    margin-left:3%;
+    margin-right:3%;
+
+} 
+
+.indirizzo{
+        padding: 0;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+        display: block;
+          }
+
+.valido{
+        padding:0;
+        vertical-align: center;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+
+      }
+      .indice{
+		float:left;
+		clear:left;
+		width:98.7%;
+		margin-left:0;
+		margin-right:0;
+		margin-top:3%;
+	}
+
+
+
+}
+
+
+.categorie {
+width:100%;
+float:none;
+}
+.immagine_cat{ 
+display:block; margin:0 auto;
+max-width:100%;
+max-height: 15em;
+}
+.titolo_categoria{
+text-align: center;
+text-transform: uppercase;
+float:left;
+padding-right:1%;
+padding-left:2.4%;
+}
+
+@media all and (min-width:769px)
+{
+
+.nav{
+
+	 float:left;
+    padding-bottom:1em;
+    margin-left:3%;
+    margin-right:3%;
+}	
+
+
+
+}
+
+@media all and (min-width:1900px) 
+{
+    body{
+        margin: 0 auto; 
+        width: 1900px;
+    }
+}
