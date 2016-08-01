@@ -63,28 +63,43 @@ print "
 my @orari = $doc1->findnodes("/orari/giorno");
 foreach my $orario (@orari)
 {
-	my $ora = decode_entities($orario->findvalue('ora'));
-    my $id = $orario->getAttribute('id');
-	print "<li><strong>$id:</strong><span>$ora</span></li>";
+	my $ora = ($orario->findvalue('ora'));
+	
+	decode_entities($ora);
+	
+    my $id = ($orario->getAttribute('id'));
+    
+    decode_entities($id);
+    
+	print "<li><strong>$id:</strong>$ora</li>";
 }
 
 print"
 	</ul>
-	<h2 class=\"titolo_testo\">Prezzi</h21>
-	<p>Inserire spiegazione prezzi/periodi dell'anno</p>
+	<h2 class=\"titolo_testo\">Prezzi</h2>
+	<p>L'orario di apertura al pubblico del Parco Naturale Monte Verde e' il seguente:</p>
 	<ul>";
 	
 my @prezzi = $doc2->findnodes("/prezzi/ingresso");
 foreach my $prezzo (@prezzi)
 {
-	my $pa = decode_entities($prezzo->findvalue('primaveraautunno'));
-	my $estate = decode_entities($prezzo->findvalue('estate'));
+	my $pa = ($prezzo->findvalue('primaveraautunno'));
+	
+	decode_entities($pa);
+	
+	my $estate = ($prezzo->findvalue('estate'));
+	
+	decode_entities($estate);
+	
     my $id = $prezzo->getAttribute('id');
+    
+    decode_entities($id);
+    
 	print "<li>
 				<span>$id:</span>
 				<ul>
-					<li><span>Primavera - Autunno: $pa</span></li>
-					<li><span>Estate: $estate</span></li>
+					<li><span>Primavera - Autunno: $pa €</span></li>
+					<li><span>Estate: $estate €</span></li>
 				</ul>
 			</li>";
 }	
@@ -102,4 +117,4 @@ print"
 	</html>
 ";
 
-#Last Update by Luca 28/07/2016
+#Last Update by Luca 25/07/2016

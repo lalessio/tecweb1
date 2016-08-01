@@ -157,7 +157,7 @@ text-align:center;
             max-width:40%;
           }
           
-      #attivita{
+      .attivita{
           clear: right;
           padding-top: 1em;
            width: 30%;
@@ -224,8 +224,6 @@ text-align:center;
 
 
 form {
-
-padding-top:10em;
 width:auto;
 }
 .el_notizia{
@@ -349,9 +347,12 @@ max-height: 15em;
 .titolo_categoria{
 text-align: center;
 text-transform: uppercase;
-float:left;
-padding-right:1%;
-padding-left:2.4%;
+float: left;
+padding: 0.825em;
+background: #fff;
+border-radius: 1em;
+box-shadow: 0 0 0.188em #c5c2a9;
+margin-right: 0.6em;
 }
 
 @media all and (min-width:769px)

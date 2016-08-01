@@ -48,35 +48,37 @@ print <<EOF;
 			</ul>
 		</div>
 		
-		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt;&gt; <span lang="en">News</span> e Attività</div>
+		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt;&gt; <span lang="en">News</span> e Attivita'</div>
 
 		<div class="contenuto">
 			
 			<!-- testo contenuto preso da http://www.pnab.it/footer/mappa-del-sito.html-->
 
-			<img id="attivita" alt="escursione nel Parco" src="images/attività.jpeg"/> 
-			<h1 class="titolo_testo">Attività</h1>
-			<p>Il Parco offre la possibilità di approfondire gli aspetti naturalistici attraverso escursioni guidate, attività nei laboratori didattici e interventi nelle scuole. Gli operatori che curano le attività proposte sono le "Guide ufficiali ed esclusive del Parco".
+			<h1 class="titolo_testo">Attivita'</h1>
+			<p>Il Parco offre la possibilita' di approfondire gli aspetti naturalistici attraverso escursioni guidate, attivita' nei laboratori didattici e interventi nelle scuole. Gli operatori che curano le attivita' proposte sono le "Guide ufficiali ed esclusive del Parco".
 			</p>
 			<ul>
-			<li><a href="../attivita.html">Escursioni e attività</a></li>
+			<li><a href="../attivita.html">Escursioni e attivita'</a></li>
 			</ul>
 
 			<h1 class="titolo_testo"><span lang="en">News</span></h1>
+			<div class="blocconews">
 EOF
 
 for (my $i=0; $i<3; $i=$i+1)
 {
 	my @notizie = $doc->findnodes("/news/notizia[last()-$i]");
 	my $notizia = $notizie[0];
-	my $title = decode_entities($notizia->findvalue('titolo'));
-	my $date = $notizia->findvalue('data');
-	my $text = decode_entities($notizia->findvalue('contenuto'));
+	my $title = $notizia->findvalue('titolo');
+	decode_entities($title);
+	my $date = $notizia->findvalue('data');	
+	my $text = $notizia->findvalue('contenuto');
+	decode_entities($text);
 	$text = substr($text,0,100);
-	my $image = decode_entities($notizia->findvalue('img'));
+	my $image = $notizia->findvalue('img');
     my $id = $notizia->getAttribute('ID');
 	print "
-			<div class=\"blocconews\">
+			<div class=\"bloccosingolonew\">
 				<p><strong>$title</strong></p>
 				<p>$date</p>
 				<img id=\"fotonews\" src=\"../images/$image\" alt=\"$title\"/> 
@@ -86,7 +88,7 @@ for (my $i=0; $i<3; $i=$i+1)
 }
 
 print <<EOF;
-				<p><a href="news.cgi">Visualizza l'Archivio completo delle News</a></p>
+				</div><p><a href="news.cgi">Visualizza l'Archivio completo delle News</a></p>
 		</div>
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
@@ -99,4 +101,4 @@ print <<EOF;
 	</body>
 	</html>
 EOF
-#Last Update by Luca 28/07/16
+#Last Update by Carlo 28/07/16

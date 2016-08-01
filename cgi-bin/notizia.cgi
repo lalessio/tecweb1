@@ -12,8 +12,9 @@ use URI;
 
 my $cgi = new CGI;
 my $request = $cgi->param('request');
-#my $session = CGI::Session->load() or die $!;
-#my $auth = $session->param('auth');
+my $session = CGI::Session->load() or die $!;
+my $auth = $session->param('auth');
+
 my $file ="../data/newsparco.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
@@ -23,6 +24,7 @@ my $title = decode_entities($notizia->findvalue('titolo'));
 my $date = $notizia->findvalue('data');
 my $text = decode_entities($notizia->findvalue('contenuto'));
 my $image = decode_entities($notizia->findvalue('img'));
+my $id = $notizia->getAttribute('ID');
 
 print "Content-Type: text/html\n\n";
 
@@ -58,7 +60,14 @@ print "
 		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; <a href=\"../newsattivita.html\"><span lang=\"en\">News</span> e Attività</a> &gt;&gt; <a href=\"news.cgi\">Archivio News</a> &gt;&gt; $title</div>
 
 		<div class=\"contenuto\">
-			<h1 class=\"titolo_testo\">$title</h1>
+			<h1 class=\"titolo_testo\">$title</h1>";
+			
+			if($auth eq "amministratoreautenticato")
+			{
+				print "<a href=\"delete_notizia.cgi?to_delete=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a>";
+			}
+	
+			print "
 			<p>$date</p>
 			<img src=\"../images/$image\" alt=\"$title\"/> 
 			<p>$text</p>

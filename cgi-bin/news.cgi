@@ -11,9 +11,9 @@ use URI;
 use HTML::Parser;
 use HTML::Entities;
 
-#my $session = CGI::Session->load() or die $!;
-#servirà ancora auth?
-#my $auth = $session->param('auth');
+my $session = CGI::Session->load() or die $!;
+
+my $auth = $session->param('auth');
 my $file = "../data/newsparco.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
@@ -48,36 +48,48 @@ print "
 			</ul>
 		</div>
 		
-		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; <a href=\"../newsattivita.html\"><span lang=\"en\">News</span> e Attivita'</a> &gt;&gt; Archivio News</div>
+		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; <a href=\"newsattivita.cgi\"><span lang=\"en\">News</span> e Attivita'</a> &gt;&gt; Archivio News</div>
 
 		<div class=\"contenuto\">
 			<h1 class=\"titolo_testo\">Archivio <span lang=\"en\">News</span></h1>
 ";
+
+
+
+#######################################################################################
 #attenzione che per adesso estraggo e mostro tutte quante le notizie in una sola pagina (sarà da inserire un limite es. 10 e poi mostrarle in una nuova pagina)
+#######################################################################################
+
+
 
 my @notizie = $doc->findnodes("/news/notizia");
 foreach my $notizia (@notizie)
 {
-	my $title = decode_entities($notizia->findvalue('titolo'));
+	my $title = $notizia->findvalue('titolo');
 	my $date = $notizia->findvalue('data');
-	my $text = decode_entities($notizia->findvalue('contenuto'));
+	my $text = $notizia->findvalue('contenuto');
 	$text = substr($text,0,100);
-	my $image = decode_entities($notizia->findvalue('img'));
+	my $image = $notizia->findvalue('img');
     my $id = $notizia->getAttribute('ID');
-	#il motivo per cui estraggo ID è perchè magari in questa pagina mostriamo solo una anteprima di x caratteri del testo e poi ci mettiamo
-	#un continua a leggere che porta a un page_template per le new in cui l'utente può leggere tutto il testo (di questa cosa ne parleremo)
-	print "
-			<div class=\"blocconews\">
-
+    decode_entities($title);
+    decode_entities($text);
+	print "<div class=\"bloccosingolonew\">
 				<p><strong>$title</strong></p>
 				<p>$date</p>
 				<img id=\"fotonews\" src=\"../images/$image\" alt=\"$title\"/> 
 				<p>$text...</p>
-				<a href=\"notizia.cgi?request=$id\">Continua a leggere</a>	
-			</div>";
+				<a href=\"notizia.cgi?request=$id\">Continua a leggere</a>
+			";
+	if($auth eq "amministratoreautenticato")
+	{
+		print " <p><a href=\"delete_notizia.cgi?ID=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a></p>";
+	}
+	print "</div>";
 }
 
-print"</div>
+if($auth ne "amministratoreautenticato")
+{
+print"</div></div>
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
@@ -86,6 +98,18 @@ print"</div>
 	</body>
 	</html>
 ";
+}else
+{
+	print"</div></div>
+	<div class=\"footer\">
+		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>     
+		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
+		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
+		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
+		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
+	</body>
+	</html>
+";
+}
 
-#Last update by Luca 28/07/2016
-
+#Last update by Luca 01/08/2016

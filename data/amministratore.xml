@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<amministratore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" amministratore.xsd">
+	<username>admin</username>
+	<password>admin</password>
+</amministratore>
+
+<!-- by Carlo Last Update 23/07/2016 -->
