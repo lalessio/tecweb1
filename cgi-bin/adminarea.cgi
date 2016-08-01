@@ -16,7 +16,7 @@ use utf8;
 
 my $session = CGI::Session->load() or die $!;
 
-#e l'auth?
+
 
 print "Content-type:text/html\n\n";
 print "
@@ -73,7 +73,10 @@ print "
 				
 					<label for=\"modifica\"></label>
 					<input type=\"submit\" id=\"modifica\" value=\"Modifica\">
-										
+					
+					<label for=\"azzera\"></label>
+					<input type=\"reset\" id=\"azzera\" value=\"Azzera\"/>
+					
 				</fieldset>
 				
 			</form>
@@ -104,6 +107,9 @@ print "
 					<label for=\"modifica\"></label>
 					<input type=\"submit\" id=\"modifica\" value=\"Modifica\">
 					
+					<label for=\"azzera\"></label>
+					<input type=\"reset\" id=\"azzera\" value=\"Azzera\"/>
+					
 				</fieldset>
 				
 			</form>
@@ -118,15 +124,18 @@ print "
 
 					<p><label for=\"new_title\">Titolo:</label>
 					<input type=\"text\" id=\"new_title\" name=\"new_title\"/></p>
+
 				
 					<p><label for=\"new_content\">Testo:</label>
-					<textarea rows=\"20\" cols=\"60\" name=\"new_content\" id=\"new_content\"></textarea></p>
+					<input type=\"textarea\" id=\"new_content\" name=\"new_content\"/></p>
 
 					<p><label for=\"new_image\">Carica un'immagine:</label>
 					<input type=\"file\" id=\"new_image\" name=\"new_image\"/></p>
 		
+
 			</fieldset>
 			<fieldset id=\"conferma\">
+
 
 					<label for=\"invia\"></label><input type=\"submit\" name=\"submit\" id=\"invia\" value=\"Invia\"/>
 
@@ -135,7 +144,11 @@ print "
 				
 			</fieldset>
 			</form>
-					
+			
+
+
+
+		
 		<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
@@ -148,4 +161,4 @@ print "
 </html>
 ";
 
-#Last Update by Luca 01/08/16
+<!-- Last Update by Carlo 27/07/16 -->

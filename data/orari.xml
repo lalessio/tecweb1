@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <orari xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" orari.xsd">
-	<giorno id="Lunedì">
+	<giorno id="Lunedi">
+		<ora>8:00-20:00</ora>
+	</giorno>
+	<giorno id="Martedi">
+		<ora>10:00-23:00</ora>
+	</giorno>
+	<giorno id="Mercoledi">
+		<ora>09:00 - 10:00</ora>
+	</giorno>
+	<giorno id="Giovedi">
 		<ora>12:30 - 19:30</ora>
 	</giorno>
-	<giorno id="Martedì">
-		<ora>Chiuso</ora>
-	</giorno>
-	<giorno id="Mercoledì">
-		<ora>Chiuso</ora>
-	</giorno>
-	<giorno id="Giovedì">
-		<ora>12:30 - 19:30</ora>
-	</giorno>
-	<giorno id="Venerdì">
+	<giorno id="Venerdi">
 		<ora>08:30 - 19:30</ora>
 	</giorno>
 	<giorno id="Sabato">
 		<ora>08:00 - 21:00</ora>
 	</giorno>
 	<giorno id="Domenica">
-		<ora>08:00 - 21:00</ora>
+		<ora>chiuso</ora>
 	</giorno>
 	<giorno id="Festivi">
-		<ora>08:30 - 19:30</ora>
+		<ora>chiuso</ora>
 	</giorno>
 </orari>
 <!-- Last Update by Luca 25/07/2016 -->

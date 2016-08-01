@@ -39,7 +39,9 @@ my $file = "../data/orari.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 
-if($new_orario eq '') #questo controllo va bene che sia fatto qui ma andrà fatto anche in javascript
+my $b="fallita";
+
+if($new_orario eq '')
 {
 print "Content-type:text/html\n\n";
 print <<EOF;
@@ -93,6 +95,7 @@ exit;
 
 }
 
+
  for my $dacambiare ($doc->findnodes("/orari/giorno[\@\id='$selected_day']/ora/text()"))
 	{
 		
@@ -100,7 +103,9 @@ exit;
 		open(OUT,">$file") or die;
 		print OUT $doc->toString;
 		close(OUT);	
-	}
+		$b="buon fine";}
+
+
 
 print "Content-type:text/html\n\n";
 print <<EOF;
