@@ -55,13 +55,12 @@ print <<EOF;
 			<!-- testo contenuto preso da http://www.pnab.it/footer/mappa-del-sito.html-->
 
 			<h1 class="titolo_testo">Attivita'</h1>
-			<p>Il Parco offre la possibilita' di approfondire gli aspetti naturalistici attraverso escursioni guidate, attivita' nei laboratori didattici e interventi nelle scuole. Gli operatori che curano le attivita' proposte sono le "Guide ufficiali ed esclusive del Parco".
-			</p>
-			<ul>
-			<li><a href="../attivita.html">Escursioni e attivita'</a></li>
-			</ul>
+			<p>Tra le numerose iniziative, proposte e attività del Parco Naturale Monte Verde vi sono gli ingredienti per una vacanza di emozioni, godendo delle peculiarità naturalistiche, della preziosa flora e dell’unicità delle specie animali che, grazie all’integrità di questo territorio, hanno trovato l’habitat ideale. 
+Rilassanti passeggiate ed itinerari tra vette innevate, la suggestione autunnale del bramito dei cervi, la quiete e la magia dell’inverno nelle escursioni con le ciaspole. Queste sono solamente alcune delle attività proposte dal parco.
+			</p><p><a href="../attivita.html">Scopri di più</a></p>
+		
 
-			<h1 class="titolo_testo"><span lang="en">News</span></h1>
+			<h1 class="titolo_testo"><span lang="en">News</span> recenti</h1>
 			<div class="blocconews">
 EOF
 
@@ -88,7 +87,7 @@ for (my $i=0; $i<3; $i=$i+1)
 }
 
 print <<EOF;
-				</div><p><a href="news.cgi?i=0">Visualizza l'Archivio completo delle News</a></p>
+				</div><p><a href="news.cgi?i=0">Visualizza l'Archivio Completo delle News</a></p>
 		</div>
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
@@ -101,4 +100,5 @@ print <<EOF;
 	</body>
 	</html>
 EOF
-#Last Update by Luca 02/08/16
+
+#Last Update by Luca 03/08/16
