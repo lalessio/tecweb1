@@ -88,7 +88,7 @@ for (my $i=0; $i<3; $i=$i+1)
 }
 
 print <<EOF;
-				</div><p><a href="news.cgi">Visualizza l'Archivio completo delle News</a></p>
+				</div><p><a href="news.cgi?i=0">Visualizza l'Archivio completo delle News</a></p>
 		</div>
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
@@ -101,4 +101,4 @@ print <<EOF;
 	</body>
 	</html>
 EOF
-#Last Update by Carlo 28/07/16
+#Last Update by Luca 02/08/16

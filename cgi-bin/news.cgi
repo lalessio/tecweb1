@@ -18,6 +18,10 @@ my $file = "../data/newsparco.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 
+my $cgi = CGI->new();
+my $i=$cgi->param('i');
+my $limit=$i+3;
+
 print "Content-type:text/html\n\n";
 print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"
@@ -54,17 +58,13 @@ print "
 			<h1 class=\"titolo_testo\">Archivio <span lang=\"en\">News</span></h1>
 ";
 
-
-
-#######################################################################################
-#attenzione che per adesso estraggo e mostro tutte quante le notizie in una sola pagina (sarà da inserire un limite es. 10 e poi mostrarle in una nuova pagina)
-#######################################################################################
-
-
-
 my @notizie = $doc->findnodes("/news/notizia");
-foreach my $notizia (@notizie)
+@notizie = reverse(@notizie); #ribalto così mi mostra le notizie dalla più recente
+my $arraysize = @notizie
+
+for ($i;$i<$limit and $i<$arraysize;$i+1)
 {
+	$notizia=$notizie[i];
 	my $title = $notizia->findvalue('titolo');
 	my $date = $notizia->findvalue('data');
 	my $text = $notizia->findvalue('contenuto');
@@ -85,6 +85,11 @@ foreach my $notizia (@notizie)
 		print " <p><a href=\"delete_notizia.cgi?ID=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a></p>";
 	}
 	print "</div>";
+}
+
+if($limit<$arraysize)
+{
+	print"<p><a href=\"news.cgi?i=$limit>Carica altre notizie</a></p>";
 }
 
 if($auth ne "amministratoreautenticato")
@@ -112,4 +117,4 @@ print"</div></div>
 ";
 }
 
-#Last update by Luca 01/08/2016
+#Last update by Luca 02/08/2016
