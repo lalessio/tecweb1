@@ -18,10 +18,20 @@ my $file = "../data/newsparco.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 
+<<<<<<< Updated upstream
 my $cgi = CGI->new();
 my $i=$cgi->param('i');
 my $limit=$i+3;
 
+=======
+<<<<<<< Updated upstream
+=======
+my $cgi = CGI->new();
+my $ii=$cgi->param('i');
+my $limit=$ii+3;
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 print "Content-type:text/html\n\n";
 print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"
@@ -59,10 +69,21 @@ print "
 ";
 
 my @notizie = $doc->findnodes("/news/notizia");
+<<<<<<< Updated upstream
 @notizie = reverse(@notizie); #ribalto così mi mostra le notizie dalla più recente
 my $arraysize = @notizie
 
 for ($i;$i<$limit and $i<$arraysize;$i+1)
+=======
+<<<<<<< Updated upstream
+foreach my $notizia (@notizie)
+=======
+@notizie = reverse(@notizie); #ribalto così mi mostra le notizie dalla più recente
+my $arraysize = @notizie
+
+for (my $i=$ii; $i<$limit and $i<$arraysize; $i+1)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 {
 	$notizia=$notizie[i];
 	my $title = $notizia->findvalue('titolo');
