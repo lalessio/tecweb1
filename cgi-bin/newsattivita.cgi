@@ -24,7 +24,7 @@ print <<EOF;
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 	<head>
-		<title>News e Attivita' - Parco Naturale Monte Verde</title>
+		<title>News e Attività - Parco Naturale Monte Verde</title>
 		<meta name="title" content="News e Attività - Parco Naturale Monte Verde"/>
 		<meta name="description" content="News e Attività - Parco Naturale Monte Verde"/>
 		<meta name="keywords" content="parco naturale, animali, flora,fauna"/>
@@ -35,14 +35,14 @@ print <<EOF;
 		 <link rel="stylesheet" href="../css/styleprova.css" type="text/css" media="screen"/>
 	</head>
 	<body>
-		<div><a href="../index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
+		<div><a href="../index.html"><img class="logo" alt="logo" src="images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="index.html">Monte Verde</a></div>
 		<div id="menu">
 			<ul class="lista">
 				<li><a href="../index.html"><span lang="en">HOME</span></a></li>
 				<li><a href="../chisiamo.html">CHI SIAMO</a></li>
 				<li><a href="../naturaterritorio.html">NATURA E TERRITORIO</a></li>
-				<li class="active"><span lang="en">NEWS</span> E ATTIVITA'</li>
+				<li class="active"><span lang="en">NEWS</span> E ATTIVITÀ</li>
 				<li><a href="orarieprezzi.cgi">ORARI E PREZZI</a></li>
 				<li><a href="../infocontatti.html">INFO E CONTATTI</a></li>
 			</ul>
@@ -55,13 +55,12 @@ print <<EOF;
 			<!-- testo contenuto preso da http://www.pnab.it/footer/mappa-del-sito.html-->
 
 			<h1 class="titolo_testo">Attivita'</h1>
-			<p>Il Parco offre la possibilita' di approfondire gli aspetti naturalistici attraverso escursioni guidate, attivita' nei laboratori didattici e interventi nelle scuole. Gli operatori che curano le attivita' proposte sono le "Guide ufficiali ed esclusive del Parco".
-			</p>
-			<ul>
-			<li><a href="../attivita.html">Escursioni e attivita'</a></li>
-			</ul>
+			<p>Tra le numerose iniziative, proposte e attività del Parco Naturale Monte Verde vi sono gli ingredienti per una vacanza di emozioni, godendo delle peculiarità naturalistiche, della preziosa flora e dell’unicità delle specie animali che, grazie all’integrità di questo territorio, hanno trovato l’habitat ideale. 
+Rilassanti passeggiate ed itinerari tra vette innevate, la suggestione autunnale del bramito dei cervi, la quiete e la magia dell’inverno nelle escursioni con le ciaspole. Queste sono solamente alcune delle attività proposte dal parco.
+			</p><p><a href="../attivita.html">Scopri di più</a></p>
+		
 
-			<h1 class="titolo_testo"><span lang="en">News</span></h1>
+			<h1 class="titolo_testo"><span lang="en">News</span> recenti</h1>
 			<div class="blocconews">
 EOF
 
@@ -88,7 +87,7 @@ for (my $i=0; $i<3; $i=$i+1)
 }
 
 print <<EOF;
-				</div><p><a href="news.cgi">Visualizza l'Archivio completo delle News</a></p>
+				</div><p><a href="news.cgi?i=0">Visualizza l'Archivio Completo delle News</a></p>
 		</div>
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
@@ -101,4 +100,5 @@ print <<EOF;
 	</body>
 	</html>
 EOF
-#Last Update by Carlo 28/07/16
+
+#Last Update by Luca 03/08/16

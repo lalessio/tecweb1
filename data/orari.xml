@@ -11,10 +11,10 @@
 		<ora>09:00 - 10:00</ora>
 	</giorno>
 	<giorno id="Giovedi">
-		<ora>adasdasdad</ora>
+		<ora>12:30 - 19:30</ora>
 	</giorno>
 	<giorno id="Venerdi">
-		<ora>8:00 - 18:00</ora>
+		<ora>08:30 - 19:30</ora>
 	</giorno>
 	<giorno id="Sabato">
 		<ora>08:00 - 21:00</ora>

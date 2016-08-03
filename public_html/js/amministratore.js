@@ -1,6 +1,5 @@
-
-function login_check(){
-
+function login_check()
+{
 
 	var username = document.getElementById("user_name").value;	
         var password=document.getElementById("user_pwd").value;
@@ -20,7 +19,5 @@ function login_check(){
 		}
 		else
 
-	//Finiti i controlli do l'ok
-                return true;
-		
+	return true;
 }

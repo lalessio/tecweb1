@@ -59,9 +59,9 @@ print "
 
 		<div class=\"contenuto\">	
 
-			<form class=\"form\" method=\"post\" onsubmit=\"return login_check()\" action=\"controllologin.cgi\">
+			<form id=\"form\" method=\"post\" onsubmit=\"return login_check()\" action=\"controllologin.cgi\">
 
-			<h1 class=\"blocco1\">Login</h1>
+			<h1>Login</h1>
 			<fieldset id=\"informazioni\">
 			<p id=\"errore\"></p>
 
@@ -112,4 +112,5 @@ else {
 			</body>
 			</html>"; 
 }
-<!-- Last Update by Carlo 27/07/16 -->
+
+# Last Update by Carlo 01/08/16
