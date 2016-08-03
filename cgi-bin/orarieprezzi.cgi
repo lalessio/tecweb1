@@ -12,7 +12,7 @@ use HTML::Parser;
 use HTML::Entities;
 
 #my $session = CGI::Session->load() or die $!;
-
+#servirà ancora auth?
 #my $auth = $session->param('auth');
 my $file1 = "../data/orari.xml";
 my $parser1 = XML::LibXML->new();
@@ -55,7 +55,7 @@ print "
 
 		<div class=\"contenuto\">
 			<h2 class=\"titolo_testo\">Orari</h2>
-			<p>Il Parco Naturale Monte Verde è aperto dal 1 Marzo al 31 Novembre. Il prezzo d'ingresso e' scontato per i ragazzi sotto i 12 anni e gli anziani sopra i 65 e inoltre durante il periodo estivo (15 Maggio - 15 Settembre) si risparmia sempre! I prezzi possono essere oggetto di variazioni.</p>
+			<p>Aggiungere paragrafo introduttivo</p>
 			<ul>
 
 ";
@@ -77,7 +77,7 @@ foreach my $orario (@orari)
 print"
 	</ul>
 	<h2 class=\"titolo_testo\">Prezzi</h2>
-	<p>L'orario di apertura al pubblico del Parco Naturale Monte Verde resta invariato tutto l'anno ed e' il seguente:</p>
+	<p>L'orario di apertura al pubblico del Parco Naturale Monte Verde e' il seguente:</p>
 	<ul>";
 	
 my @prezzi = $doc2->findnodes("/prezzi/ingresso");
@@ -117,4 +117,4 @@ print"
 	</html>
 ";
 
-#Last Update by Luca 03/08/2016
+#Last Update by Luca 25/07/2016

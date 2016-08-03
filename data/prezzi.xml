@@ -2,16 +2,16 @@
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <prezzi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" prezzi.xsd">
 	<ingresso id="intero">
-		<primaveraautunno>123</primaveraautunno>
-		<estate>123</estate>
+		<primaveraautunno>12</primaveraautunno>
+		<estate>12</estate>
 	</ingresso>
 	<ingresso id="ridotto ragazzi (sotto 12 anni)">
-		<primaveraautunno>5000</primaveraautunno>
-		<estate>50000</estate>
+		<primaveraautunno>100</primaveraautunno>
+		<estate>2000</estate>
 	</ingresso>
 	<ingresso id="ridotto anziani (sopra 65 anni)">
-		<primaveraautunno>10</primaveraautunno>
-		<estate>8</estate>
+		<primaveraautunno>80000</primaveraautunno>
+		<estate>1</estate>
 	</ingresso>
 </prezzi>
 <!-- Last Update by Luca 25/07/2016 -->

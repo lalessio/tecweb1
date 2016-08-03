@@ -32,6 +32,9 @@ print "
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
 		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
+		<script type=\"text/javascript\" src=\"../js/form.js\"></script>
+		<script type=\"text/javascript\" src=\"../js/form2.js\"></script>
+		<script type=\"text/javascript\" src=\"../js/form3.js\"></script>
 	</head>
 	<body>
 		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
@@ -47,14 +50,14 @@ print "
 			</ul>
 		</div>
 
-		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt; &gt;<a href=\"adminlogin.cgi\">Admin amministratore</a> &gt; &gt; Area amministratore</div>
+		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt; &gt; Area amministratore</div>
 
 		<div class=\"contenuto\">
 		
-		<form id=\"form\" method=\"post\" action=\"change_prezzo.cgi\">
+		<form class=\"form\" method=\"post\" action=\"change_prezzo.cgi\" onsubmit=\"return price_check()\">
 				<h1 class=\"blocco1\">Modifica prezzo</h1>
 				<p>Inserire un prezzo non negativo intero</p>
-				<fieldset id=\"informazioni\">
+				<fieldset class=\"informazioni\">
 					<p><label>Seleziona tipo prezzo:</label>
 						  <select  name=\"price\" title=\"price\">	
 						  <option value=\"intero\">intero</option> 
@@ -62,30 +65,30 @@ print "
 						  <option value=\"ridotto anziani (sopra 65 anni)\">ridotto anziani (sopra 65 anni)</option>
 					</select></p>
 
-					<p><label>Modifica Prezzo (Primavera/Autunno):</label>
-					<input type=\"text\" id=\"new_pricePA\" name=\"new_pricePA\"/></p>
+					<p><label>Modifica Prezzo (Primavera/Autunno): <span id=\"errore_prezzo1\"></span></label>
+					<input type=\"text\" id=\"new_pricePA\" name=\"new_pricePA\" title=\"Modifica prezzo (primavera/autunno)\"/></p>
 					
-					<p><label>Modifica Prezzo (Estate):</label>
-					<input type=\"text\" id=\"new_priceE\" name=\"new_priceE\"/></p>
+					<p><label>Modifica Prezzo (Estate): <span id=\"errore_prezzo2\"></span></label>
+					<input type=\"text\" id=\"new_priceE\" name=\"new_priceE\" title=\"Modifica prezzo (estate)\"/></p>
 				
 				</fieldset>
-				<fieldset id=\"conferma\">
+				<fieldset class=\"conferma\">
 				
-					<label for=\"modifica\"></label>
-					<input type=\"submit\" id=\"modifica\" value=\"Modifica\">
+					<label for=\"Modificaprezzo\"></label>
+					<input type=\"submit\" id=\"Modificaprezzo\" value=\"Modifica\" title=\"Modifica prezzo\"/>
 					
-					<label for=\"azzera\"></label>
-					<input type=\"reset\" id=\"azzera\" value=\"Azzera\"/>
+					<label for=\"Azzeraprezzo\"></label>
+					<input type=\"reset\" id=\"Azzeraprezzo\" value=\"Azzera\" title=\"Azzera campi\"/>
 					
 				</fieldset>
 				
 			</form>
 		
 			
-			<form id=\"form\" method=\"post\" action=\"change_orario.cgi\">
+			<form class=\"form\" method=\"post\" action=\"change_orario.cgi\" onsubmit=\"return orario_check()\">
 				<h1 class=\"blocco1\">Modifica orario</h1>
 				<p>Inserire un  orario nel formato  XX:YY-ZZ:KK</p>
-				<fieldset id=\"informazioni\">
+				<fieldset class=\"informazioni\">
 					<p><label>Seleziona giorno:</label>
 						  <select  name=\"day\" title=\"day\">	
 						  <option value=\"Lunedi\">Lunedi'</option> 
@@ -98,49 +101,49 @@ print "
 						  <option value=\"Festivi\">Festivi</option>
 					</select></p>
 
-					<p><label>Modifica Orario:</label>
-					<input type=\"text\" id=\"new_hour\" name=\"new_hour\"/></p>
+					<p><label>Modifica Orario: <span id=\"errore_orario\"></span></label>
+					<input type=\"text\" id=\"new_hour\" name=\"new_hour\" title=\"Modifica orario\"/></p>
 				
 				</fieldset>
-				<fieldset id=\"conferma\">
+				<fieldset class=\"conferma\">
 				
-					<label for=\"modifica\"></label>
-					<input type=\"submit\" id=\"modifica\" value=\"Modifica\">
+					<label for=\"Modificaorario\"></label>
+					<input type=\"submit\" id=\"Modificaorario\" value=\"Modifica\" title=\"Modifica orario\"/>
 					
-					<label for=\"azzera\"></label>
-					<input type=\"reset\" id=\"azzera\" value=\"Azzera\"/>
+					<label for=\"Azzeraorario\"></label>
+					<input type=\"reset\" id=\"Azzeraorario\" value=\"Azzera\" title=\"Azzera orario\"/>
 					
 				</fieldset>
 				
 			</form>
 
-		<form id=\"form\" method=\"post\" action=\"nuova_notizia.cgi\" enctype=\"multipart/form-data\">
+		<form class=\"form\" method=\"post\" action=\"nuova_notizia.cgi\" enctype=\"multipart/form-data\">
 
 			<h1 class=\"blocco1\">Inserisci nuova notizia</h1>
 			<p>Inserire una immagine che abbia una dimensione non superiore a 1Mega<span lang=\"eng\">byte</span></p>
 			<p>non vi e' la possibilita' di inserire una notizia senza testo o titolo. <span>Tutti i campi devono essere compilati</span></p>
-			<fieldset id=\"informazioni\">
-			<p id=\"\"></p>
+			<fieldset class=\"informazioni\">
 
 					<p><label for=\"new_title\">Titolo:</label>
-					<input type=\"text\" id=\"new_title\" name=\"new_title\"/></p>
+					<input type=\"text\" id=\"new_title\" name=\"new_title\" title=\"Titolo notizia\"/></p>
 
 				
 					<p><label for=\"new_content\">Testo:</label>
-					<input type=\"textarea\" id=\"new_content\" name=\"new_content\"/></p>
+					<textarea  rows=\"20\" cols=\"60\" id=\"new_content\" name=\"new_content\" title=\"Testo notizias\"></textarea></p>
+
 
 					<p><label for=\"new_image\">Carica un'immagine:</label>
-					<input type=\"file\" id=\"new_image\" name=\"new_image\"/></p>
+					<input type=\"file\" id=\"new_image\" name=\"new_image\" title=\"Carica immagine\"/></p>
 		
 
 			</fieldset>
-			<fieldset id=\"conferma\">
+			<fieldset class=\"conferma\">
 
 
-					<label for=\"invia\"></label><input type=\"submit\" name=\"submit\" id=\"invia\" value=\"Invia\"/>
+					<label for=\"Invianotizia\"></label><input type=\"submit\" name=\"submit\" id=\"Invianotizia\" value=\"Invia\" title=\"Invia notizia\"/>
 
-					<label for=\"azzera\"></label>
-					<input type=\"reset\" id=\"azzera\" value=\"Azzera\"/>
+					<label for=\"Azzeranotizia\"></label>
+					<input type=\"reset\" id=\"Azzeranotizia\" value=\"Azzera\" title=\"Azzera notizia\"/>
 				
 			</fieldset>
 			</form>
@@ -148,7 +151,7 @@ print "
 
 
 
-		
+		</div>
 		<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
@@ -161,4 +164,4 @@ print "
 </html>
 ";
 
-<!-- Last Update by Carlo 27/07/16 -->
+<!-- Last Update by Carlo 1/08/16 -->

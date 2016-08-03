@@ -5,6 +5,20 @@ h1{ text-align:center;font-family:Verdana,sans-serif;}
 h2{ font-family:Verdana,sans-serif;}
 
 
+#errore_prezzo1{
+float:left;
+color:purple;
+}
+
+#errore_prezzo2{
+float:left;
+color:purple;
+}
+#errore_orario{
+float:left;
+color:purple;
+}
+
 
 .titolo
 {
@@ -164,11 +178,13 @@ text-align:center;
           float: right;
             }
  
-        .blocco1{
-      clear:left;
-      margin-left:12%;
-      margin-right:12%;
+        .blocco{
+      margin-top:9em;
       }
+
+	.blocco1{
+	margin-top:3em;	
+	}
         .blocconews{
       clear:left;
       text-align:center;
@@ -223,8 +239,9 @@ text-align:center;
 }
 
 
-form {
+.form {
 width:auto;
+margin-top:9em;
 }
 .el_notizia{
 width auto;
@@ -235,7 +252,7 @@ padding: 1em;
 width:auto;
  }
 
-#informazioni label {
+.informazioni label {
 display:block;
 float:left;
 width:155px;
@@ -247,7 +264,12 @@ font-size:13px;
 
 }
 
-#informazioni input { 
+.informazioni p{
+float:left;
+clear:both;
+}
+
+.informazioni input { 
 font-weight: bold; 
 font-family: Verdana,helvetica,sans-serif;
 width:auto; 
@@ -352,7 +374,7 @@ padding: 0.825em;
 background: #fff;
 border-radius: 1em;
 box-shadow: 0 0 0.188em #c5c2a9;
-margin-right: 0.6em;
+margin-right: 0.3em;
 }
 
 @media all and (min-width:769px)

@@ -20,11 +20,15 @@ my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 
 my $notizia = $doc->findnodes("/news/notizia[\@\ID = $request]")->get_node(1);
-my $title = decode_entities($notizia->findvalue('titolo'));
+my $title =$notizia->findvalue('titolo');
 my $date = $notizia->findvalue('data');
-my $text = decode_entities($notizia->findvalue('contenuto'));
-my $image = decode_entities($notizia->findvalue('img'));
-my $id = $notizia->getAttribute('ID');
+my $text = $notizia->findvalue('contenuto');
+my $image = $notizia->findvalue('img');
+ my $id = $notizia->getAttribute('ID');
+
+
+decode_entities($title);
+decode_entities($text);
 
 print "Content-Type: text/html\n\n";
 
@@ -44,36 +48,42 @@ print "
 		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
 	</head>
 	<body>
-		<div><a href=\"../home.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
+		<div><a href=\"../home.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div>  
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
 		<div id=\"menu\">
 			<ul class=\"lista\">
 				<li><a href=\"../index.html\"><span lang=\"en\">HOME</span></a></li>
 				<li><a href=\"../chisiamo.html\">CHI SIAMO</a></li>
 				<li><a href=\"../naturaterritorio.html\">NATURA E TERRITORIO</a></li>
-				<li><a href=\"newsattivita.cgi\"><span lang=\"en\">NEWS</span> E ATTIVITÀ</a></li>
+				<li><a href=\"newsattivita.cgi\"><span lang=\"en\">NEWS</span> E ATTIVITA'</a></li>
 				<li><a href=\"orarieprezzi.cgi\">ORARI E PREZZI</a></li>
 				<li><a href=\"../infocontatti.html\">INFO E CONTATTI</a></li>
 			</ul>
 		</div>
 		
-		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; <a href=\"../newsattivita.html\"><span lang=\"en\">News</span> e Attività</a> &gt;&gt; <a href=\"news.cgi\">Archivio News</a> &gt;&gt; $title</div>
+		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; <a href=\"../newsattivita.html\"><span lang=\"en\">News</span> e Attivita'</a> &gt;&gt; <a href=\"news.cgi\">Archivio News</a> &gt;&gt; $title</div>
+
 
 		<div class=\"contenuto\">
+			<div class=\"blocconews\">
 			<h1 class=\"titolo_testo\">$title</h1>";
-			
-			if($auth eq "amministratoreautenticato")
-			{
-				print "<a href=\"delete_notizia.cgi?to_delete=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a>";
-			}
-	
-			print "
-			<p>$date</p>
-			<img src=\"../images/$image\" alt=\"$title\"/> 
-			<p>$text</p>
-		</div>
+			if($auth eq "amministratoreautenticato"){
 		
-		<div class=\"footer\">
+                                print "<form class=\"el_notizia\" action=\"delete_notizia.cgi\" method=\"post\">
+                                            <p>
+						<input type=\"hidden\" name=\"notizia\" value=\"$id\"/>
+						<input type=\"submit\" name=\"elimina\" value=\"Elimina\"/>
+                                            </p>
+					</form>";
+				}
+			print "<p>$date</p>
+			<img id=\"fotonews\"src=\"../images/$image\" alt=\"$title\"/> 
+			<p>$text</p>";
+				
+	
+		print"	</div>
+		</div> 	
+<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
@@ -82,4 +92,4 @@ print "
 	</html>
 ";
 
-#Last Update by Luca 28/07/2016
+#Last Update by Carlo 22/07/2016

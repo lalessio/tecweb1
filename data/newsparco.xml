@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <news xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" newsparco.xsd">
-	<!-- data sempre in formato YY/mm/dd -->
 	<notizia ID="1">
 		<titolo>“I Giardini del Brenta” a Val di Non Expo</titolo>
-		<data>2016/07/14</data>
+		<data>14-07-2016</data>
 		<contenuto>Sabato 16 luglio alle ore 18.15 presso le sale "Val di Non Expo" in Piazza Granda a Cles è stata inaugurata la nuova esposizione dal titolo "I GIARDINI DEL BRENTA", curata dal Parco Naturale Adamello Brenta.
 
 		Dall’autunno scorso, le sale di “Val di Non Expo” sono state generosamente messe a disposizione della comunità dal proprietario e, dopo aver ospitato una mostra delle tradizionali stufe a olle, ora ospiterà fino alla fine di agosto un percorso naturalistico e culturale dedicato all'area protetta più estesa del Trentino, di cui Cles è comune gestore.
@@ -22,18 +21,5 @@
 		Sono previste anche aperture serali in occasione delle iniziative "Negozi aperti" il 26 luglio e il 2 e 9 agosto.</contenuto>
 		<img>ValdiNonExpo.jpg</img>
 	</notizia>
-	<notizia ID="2"> 
-		<titolo>Chiusura temporanea DBB in Val Meledrio</titolo> 
-		<data>2016/07/15</data> 
-		<contenuto>Si segnala che, a causa dei lavori per la Centrale Idroelettrica del Comune di Dimaro Folgarida, è stato istituito divieto di transito sul percorso Dolomiti di Brenta Bike in Val Meledrio valido sia per i bikers che per i pedoni. 
-	 
-	La parte interessata dai lavori inizia dalla centrale idroelettrica fino alla località “Pont del Pastin". E’ stata individuata una viabilità alternativa con apposita segnaletica con partenza dalla frazione di Carciato (Dimaro) - strada per Malga Carciato e Via Plana. 
-	 
-	La cartina riporta il percorso originale in blu e la deviazione in arancione.  
-	 
-	Sono già posizionati i cartelli che illustrano il progetto della Centrale di ultima generazione e quindi il motivo della deviazione. 
-	Il divieto sarà valido fino a nuovo comunicazione e comunque per almeno 15 giorni.</contenuto> 
-		<img>cartina_val_meledrio_f3411bdfaa.jpg</img> 
-	</notizia>
-</news>
-<!-- Last Update by Luca 28/07/2016 -->
+<notizia ID="6"><titolo>prova </titolo><contenuto>prova</contenuto><data>2016/07/27</data><img>educazioneparco.jpg</img></notizia><notizia ID="8"><titolo>prova1</titolo><contenuto>prova1</contenuto><data>2016/07/28</data><img>cartina_big.jpg</img></notizia><notizia ID="9"><titolo>comunicazione di servizio</titolo><contenuto>sembra quasi che il sito cominci a funzionare come si deve, strano ma vero... ci sono ancora diverse cose da sistemare ma quello che deve fare lo fa, chi l&amp;#39;avrebbe mai detto?</contenuto><data>2016/08/01</data><img>logo.jpg</img></notizia></news>
+<!-- Last Update by carlo 25/07/2016 -->

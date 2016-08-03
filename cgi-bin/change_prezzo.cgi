@@ -28,7 +28,9 @@ my $file = "../data/prezzi.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 
-if($newprezzoE eq '' || $newprezzoPA eq '') #anche questo controllo dovrà essere fatto in js (oltre a questo che va bene chiaramente)
+my $b="fallita";
+
+if($newprezzoE eq '' || $newprezzoPA eq '')
 {
 print "Content-type:text/html\n\n";
 print <<EOF;
@@ -87,7 +89,7 @@ exit;
 	{
 		
 		$dacambiare->setData($newprezzoPA);
-	}
+		$b="buon fine";}
 
 
 
@@ -100,7 +102,7 @@ exit;
 		open(OUT,">$file") or die;
 		print OUT $doc->toString;
 		close(OUT);	
-	}
+		$b="buon fine";}
 
 
 
@@ -155,4 +157,8 @@ print <<EOF;
 EOF
 exit;
 		
-# Last Update by Luca 01/08/16
+	
+	
+
+
+

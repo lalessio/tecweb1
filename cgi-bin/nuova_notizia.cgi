@@ -28,6 +28,8 @@ encode_entities($nuovo_titolo);
 my $nuovo_contenuto = $cgi->param('new_content');
 encode_entities($nuovo_contenuto);
 
+
+#in questo if entra anche quando l'immagine è troppo grande
 if($filename eq "" or $nuovo_contenuto eq "")
 {
 	print "Content-type:text/html\n\n";
@@ -60,11 +62,11 @@ print <<EOF;
 			</ul>
 		</div>
 
-		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
+		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
 
 		<div class="contenuto">	
 		<h1 class="blocco1">Errore</h1>
-		<p>Uno o piu' campi sono vuoti, riprova di nuovo <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p> 
+		<p>I campi sono vuoti oppure immagine troppo grande, riprova di nuovo <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p> 
 		</div>
 		
 		<div class="footer">
@@ -179,8 +181,8 @@ print <<EOF;
 
 		<div class="contenuto">	
 		<h1 class="blocco1">Informazioni</h1>
-		<p>Inserimento avvenuto con successo! Puoi visualizzare le notizie più recenti in <a href="../newsattivita.html"><span lang="en">News</span> e attivita'</a></p> 
-		<p>Ritorna all' <a href="adminarea.cgi">Area Amministratore</a></p>
+		<p>Inserimento avvenuto con successo,per visualizzare le notizie <a href="newsattivita.cgi"><span lang="en">News</span> e attivita'</a></p> 
+		<p>oppure torna indietro <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p>
 		</div>
 		
 		<div class="footer">
@@ -250,5 +252,4 @@ print <<EOF;
 </html>
 EOF
 }
-
-#Last Update by Carlo 28/07/2016
+#Last Update by Carlo 25/07/2016

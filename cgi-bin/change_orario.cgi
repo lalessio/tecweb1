@@ -1,10 +1,5 @@
 #!/usr/bin/perl -w
 
-########################################################
-#tutto questo file è da rivedere anche se ora funziona #
-#dovrebbe essere gestito con i cookie (non sono sicuro)#
-########################################################
-
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -34,6 +29,7 @@ encode_entities($selected_day);
 my $new_orario = $cgi->param('new_hour');
 
 encode_entities($new_orario);
+
 
 my $file = "../data/orari.xml";
 my $parser = XML::LibXML->new();
@@ -157,5 +153,9 @@ print <<EOF;
 </html>
 EOF
 exit;
+		
+	
+	
 
-# Last Update by Luca 01/08/16
+
+

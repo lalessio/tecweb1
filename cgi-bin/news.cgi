@@ -13,14 +13,12 @@ use HTML::Entities;
 
 my $session = CGI::Session->load() or die $!;
 
+
 my $auth = $session->param('auth');
+
 my $file = "../data/newsparco.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
-
-my $cgi = CGI->new();
-my $i=$cgi->param('i');
-my $limit=$i+3;
 
 print "Content-type:text/html\n\n";
 print "
@@ -56,42 +54,46 @@ print "
 
 		<div class=\"contenuto\">
 			<h1 class=\"titolo_testo\">Archivio <span lang=\"en\">News</span></h1>
+			<div class=\"blocconews\">
 ";
+#attenzione che per adesso estraggo e mostro tutte quante le notizie in una sola pagina (sarà da inserire un limite es. 10 e poi mostrarle in una nuova pagina)
 
 my @notizie = $doc->findnodes("/news/notizia");
-@notizie = reverse(@notizie); #ribalto così mi mostra le notizie dalla più recente
-my $arraysize = @notizie
-
-for ($i;$i<$limit and $i<$arraysize;$i+1)
+foreach my $notizia (@notizie)
 {
-	$notizia=$notizie[i];
 	my $title = $notizia->findvalue('titolo');
 	my $date = $notizia->findvalue('data');
 	my $text = $notizia->findvalue('contenuto');
 	$text = substr($text,0,100);
 	my $image = $notizia->findvalue('img');
     my $id = $notizia->getAttribute('ID');
+
+
     decode_entities($title);
     decode_entities($text);
-	print "<div class=\"bloccosingolonew\">
+
+	#il motivo per cui estraggo ID è perchè magari in questa pagina mostriamo solo una anteprima di x caratteri del testo e poi ci mettiamo
+	#un continua a leggere che porta a un page_template per le new in cui l'utente può leggere tutto il testo (di questa cosa ne parleremo)
+	print "
+			<div class=\"bloccosingolonew\">
+
 				<p><strong>$title</strong></p>
 				<p>$date</p>
 				<img id=\"fotonews\" src=\"../images/$image\" alt=\"$title\"/> 
 				<p>$text...</p>
 				<a href=\"notizia.cgi?request=$id\">Continua a leggere</a>
 			";
-	if($auth eq "amministratoreautenticato")
-	{
-		print " <p><a href=\"delete_notizia.cgi?ID=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a></p>";
+				if($auth eq "amministratoreautenticato"){
+		
+                                print "
+                                            <p>
+											<a href=\"delete_notizia.cgi?ID=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a>
+                                            </p>
+					";
+		
 	}
 	print "</div>";
 }
-
-if($limit<$arraysize)
-{
-	print"<p><a href=\"news.cgi?i=$limit>Carica altre notizie</a></p>";
-}
-
 if($auth ne "amministratoreautenticato")
 {
 print"</div></div>
@@ -116,5 +118,5 @@ print"</div></div>
 	</html>
 ";
 }
+#Last update by Carlo 21/07/2016
 
-#Last update by Luca 02/08/2016
