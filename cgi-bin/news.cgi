@@ -18,20 +18,10 @@ my $file = "../data/newsparco.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 
-<<<<<<< Updated upstream
 my $cgi = CGI->new();
 my $i=$cgi->param('i');
-my $limit=$i+3;
+my $limit=$i+4; #mostrerò le prime 4
 
-=======
-<<<<<<< Updated upstream
-=======
-my $cgi = CGI->new();
-my $ii=$cgi->param('i');
-my $limit=$ii+3;
-
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 print "Content-type:text/html\n\n";
 print "
 <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"
@@ -69,23 +59,12 @@ print "
 ";
 
 my @notizie = $doc->findnodes("/news/notizia");
-<<<<<<< Updated upstream
 @notizie = reverse(@notizie); #ribalto così mi mostra le notizie dalla più recente
-my $arraysize = @notizie
+my $arraysize = @notizie;
 
-for ($i;$i<$limit and $i<$arraysize;$i+1)
-=======
-<<<<<<< Updated upstream
-foreach my $notizia (@notizie)
-=======
-@notizie = reverse(@notizie); #ribalto così mi mostra le notizie dalla più recente
-my $arraysize = @notizie
-
-for (my $i=$ii; $i<$limit and $i<$arraysize; $i+1)
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+for (; $i<$limit and $i<$arraysize; $i=$i+1)
 {
-	$notizia=$notizie[i];
+	my $notizia=$notizie[$i];
 	my $title = $notizia->findvalue('titolo');
 	my $date = $notizia->findvalue('data');
 	my $text = $notizia->findvalue('contenuto');
@@ -110,7 +89,7 @@ for (my $i=$ii; $i<$limit and $i<$arraysize; $i+1)
 
 if($limit<$arraysize)
 {
-	print"<p><a href=\"news.cgi?i=$limit>Carica altre notizie</a></p>";
+	print"<p><a href=\"news.cgi?i=$limit\">Carica altre notizie</a></p>";
 }
 
 if($auth ne "amministratoreautenticato")
@@ -138,4 +117,4 @@ print"</div></div>
 ";
 }
 
-#Last update by Luca 02/08/2016
+#Last update by Luca 03/08/2016

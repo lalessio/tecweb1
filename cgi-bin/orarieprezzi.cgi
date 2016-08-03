@@ -55,16 +55,8 @@ print "
 
 		<div class=\"contenuto\">
 			<h2 class=\"titolo_testo\">Orari</h2>
-<<<<<<< Updated upstream
-			<p>Il Parco Naturale Monte Verde è aperto dal 1 Marzo al 31 Novembre. Il prezzo d'ingresso e' scontato per i ragazzi sotto i 12 anni e gli anziani sopra i 65 e inoltre durante il periodo estivo (15 Maggio - 15 Settembre) si risparmia sempre! I prezzi possono essere oggetto di variazioni.</p>
-=======
-<<<<<<< Updated upstream
-			<p>Aggiungere paragrafo introduttivo</p>
-=======
 			<p>Il Parco Naturale Monte Verde e' aperto dal 1 Marzo al 31 Novembre.</p> 
 			<p>L'orario di apertura al pubblico del parco resta invariato tutto l'anno ed e' il seguente:</p>
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 			<ul>
 
 ";
@@ -87,15 +79,7 @@ print"
 	</ul>
 	
 	<h2 class=\"titolo_testo\">Prezzi</h2>
-<<<<<<< Updated upstream
-	<p>L'orario di apertura al pubblico del Parco Naturale Monte Verde resta invariato tutto l'anno ed e' il seguente:</p>
-=======
-<<<<<<< Updated upstream
-	<p>L'orario di apertura al pubblico del Parco Naturale Monte Verde e' il seguente:</p>
-=======
 	<p>Il prezzo d'ingresso e' scontato per i ragazzi sotto i 12 anni e gli anziani sopra i 65 e inoltre durante il periodo estivo (15 Maggio - 15 Settembre) si risparmia sempre!</p> 
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 	<ul>";
 	
 my @prezzi = $doc2->findnodes("/prezzi/ingresso");
