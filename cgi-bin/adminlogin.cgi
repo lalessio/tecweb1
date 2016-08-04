@@ -13,13 +13,9 @@ use POSIX;
 use URI;
 use utf8;
 
-
 my $session = CGI::Session->load() or die $!;
 
-
 my $auth = $session->param('auth');
-
-
 
 if($auth ne "amministratoreautenticato")
 	{
@@ -105,12 +101,11 @@ else {
 			<head>
 			<title>Controllo login</title>
 			<meta name=\"title\" content=\"Redirect\"/>
-			<meta http-equiv=\"refresh\"
-			content=\"0; url=adminarea.cgi\"/>
+			<meta http-equiv=\"refresh\" content=\"0; url=adminarea.cgi\"/>
 			</head>
 			<body>
 			</body>
 			</html>"; 
 }
 
-# Last Update by Carlo 01/08/16
+# Last Update by Luca 04/08/16

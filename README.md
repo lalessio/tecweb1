@@ -16,3 +16,4 @@ Progetto corso Tecnologie Web 2015/2016 UNIPD
 * **->** **area amministrativa**: rivedere completamente la struttura di presentazione interna, renderla accessibile e più intuitiva -> DA FARE
 * **->** permettiamo o no il **logout** da tutte le pagine? sarebbe da chiedere per mail se non troviamo un modo -> alla fine no, solo da area amministrativa (o chiediamo per mail)
 * inserire limite visualizzazione numero notizie per pagina in archivio news e tasti precedente successivo -> completato, bisogna testarlo ma ssh non va
+* ~~**->** cambiare input modifica prezzi~~

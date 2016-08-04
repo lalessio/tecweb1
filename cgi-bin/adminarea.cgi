@@ -13,10 +13,7 @@ use POSIX;
 use URI;
 use utf8;
 
-
 my $session = CGI::Session->load() or die $!;
-
-
 
 print "Content-type:text/html\n\n";
 print "
@@ -47,7 +44,7 @@ print "
 			</ul>
 		</div>
 
-		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt; &gt;<a href=\"adminlogin.cgi\">Admin amministratore</a> &gt; &gt; Area amministratore</div>
+		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt; &gt; Area amministratore</div>
 
 		<div class=\"contenuto\">
 		
@@ -60,13 +57,16 @@ print "
 						  <option value=\"intero\">intero</option> 
 						  <option value=\"ridotto ragazzi (sotto 12 anni)\">ridotto ragazzi (sotto 12 anni)</option>
 						  <option value=\"ridotto anziani (sopra 65 anni)\">ridotto anziani (sopra 65 anni)</option>
-					</select></p>
-
-					<p><label>Modifica Prezzo (Primavera/Autunno):</label>
-					<input type=\"text\" id=\"new_pricePA\" name=\"new_pricePA\"/></p>
+					</select></p>					
 					
-					<p><label>Modifica Prezzo (Estate):</label>
-					<input type=\"text\" id=\"new_priceE\" name=\"new_priceE\"/></p>
+					<p><label>Seleziona periodo:</label>
+						  <select  name=\"period\" title=\"period\">	
+						  <option value=\"primaveraautunno\">Primavera - Autunno</option> 
+						  <option value=\"estate\">Estate</option>
+					</select></p>
+									
+					<p><label>Modifica Prezzo:</label>
+					<input type=\"text\" id=\"new_price\" name=\"new_price\"/></p>
 				
 				</fieldset>
 				<fieldset id=\"conferma\">
@@ -81,7 +81,6 @@ print "
 				
 			</form>
 		
-			
 			<form id=\"form\" method=\"post\" action=\"change_orario.cgi\">
 				<h1 class=\"blocco1\">Modifica orario</h1>
 				<p>Inserire un  orario nel formato  XX:YY-ZZ:KK</p>
@@ -124,30 +123,22 @@ print "
 
 					<p><label for=\"new_title\">Titolo:</label>
 					<input type=\"text\" id=\"new_title\" name=\"new_title\"/></p>
-
-				
+					
 					<p><label for=\"new_content\">Testo:</label>
-					<input type=\"textarea\" id=\"new_content\" name=\"new_content\"/></p>
-
+					<textarea  rows=\"20\" cols=\"60\" id=\"new_content\" name=\"new_content\" title=\"Testo notizias\"></textarea></p>
+					
 					<p><label for=\"new_image\">Carica un'immagine:</label>
 					<input type=\"file\" id=\"new_image\" name=\"new_image\"/></p>
 		
-
 			</fieldset>
 			<fieldset id=\"conferma\">
 
-
 					<label for=\"invia\"></label><input type=\"submit\" name=\"submit\" id=\"invia\" value=\"Invia\"/>
-
 					<label for=\"azzera\"></label>
 					<input type=\"reset\" id=\"azzera\" value=\"Azzera\"/>
 				
 			</fieldset>
 			</form>
-			
-
-
-
 		
 		<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
@@ -161,4 +152,4 @@ print "
 </html>
 ";
 
-<!-- Last Update by Carlo 27/07/16 -->
+# Last Update by Luca 04/08/16

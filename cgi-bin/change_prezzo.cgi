@@ -21,14 +21,14 @@ use XML::LibXML::NodeList;
 my $cgi = CGI->new();
 
 my $tipoprezzo = $cgi->param('price');
-my $newprezzoPA = $cgi->param('new_pricePA');
-my $newprezzoE = $cgi->param('new_priceE');
+my $periodo = $cgi->param('period');
+my $newprezzo = $cgi->param('new_price');
 
 my $file = "../data/prezzi.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 
-if($newprezzoE eq '' || $newprezzoPA eq '') #anche questo controllo dovrà essere fatto in js (oltre a questo che va bene chiaramente)
+if($newprezzo eq '') #anche questo controllo dovrà essere fatto in js (oltre a questo che va bene chiaramente)
 {
 print "Content-type:text/html\n\n";
 print <<EOF;
@@ -82,27 +82,13 @@ exit;
 
 }
 
-
- for my $dacambiare ($doc->findnodes("/prezzi/ingresso[\@\id='$tipoprezzo']/primaveraautunno/text()"))
-	{
-		
-		$dacambiare->setData($newprezzoPA);
-	}
-
-
-
-
- for my $dacambiare1 ($doc->findnodes("/prezzi/ingresso[\@\id='$tipoprezzo']/estate/text()"))
-	{
-		
-		$dacambiare1->setData($newprezzoE);
-			
-		open(OUT,">$file") or die;
-		print OUT $doc->toString;
-		close(OUT);	
-	}
-
-
+for my $dacambiare ($doc->findnodes("/prezzi/ingresso[\@\id='$tipoprezzo']/$periodo/text()"))
+{
+	$dacambiare->setData($newprezzo);
+	open(OUT,">$file") or die;
+	print OUT $doc->toString;
+	close(OUT);	
+}
 
 print "Content-type:text/html\n\n";
 print <<EOF;
@@ -155,4 +141,4 @@ print <<EOF;
 EOF
 exit;
 		
-# Last Update by Luca 01/08/16
+# Last Update by Luca 04/08/16
