@@ -103,8 +103,8 @@ exit;
 
 			# creo il cookie
 			my $cookie1 = CGI::Cookie->new(-name => $session->name, -value => $session->id);
-			my $cookie2 = CGI::Cookie->new(-name => "JCC", -value => $username);
-                        my $cookie3 = CGI::Cookie->new(-name => "JCCA", -value => $auth);
+			my $cookie2 = CGI::Cookie->new(-name => "user", -value => $username);
+                        my $cookie3 = CGI::Cookie->new(-name => "autorizzazione", -value => $auth);
 			print header(-cookie => [$cookie1,$cookie2,$cookie3]);
 		print "Content-type:text/html\n\n";
 			print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
@@ -120,14 +120,14 @@ exit;
 		}
 		else{
 			my %cookie = CGI::Cookie->fetch;
-			my $cook = $cookie{'JCCA'};
-			my $cook2 = $cookie{'JCC'};
+			my $cook = $cookie{'autorizzazione'};
+			my $cook2 = $cookie{'user'};
 			if(!defined $cook){
-				my $cookie3 = CGI::Cookie->new(-name => "JCCA", -value => $auth);
+				my $cookie3 = CGI::Cookie->new(-name => "autorizzazione", -value => $auth);
 				print header(-cookie => $cookie3);				
 			}
 			if(!defined $cook2){
-			my $cookie2 = CGI::Cookie->new(-name => "JCC", -value => $username);
+			my $cookie2 = CGI::Cookie->new(-name => "user", -value => $username);
 				print header(-cookie => $cookie2);				
 			}
 
