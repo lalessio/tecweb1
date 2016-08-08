@@ -17,7 +17,7 @@ my $session = CGI::Session->load() or die $!;
 
 my $auth = $session->param('auth');
 
-if($auth ne "amministratoreautenticato")
+if($auth ne "checksession")
 	{
 print "Content-type:text/html\n\n";
 print "
@@ -38,6 +38,7 @@ print "
 
 	</head>
 	<body>
+		<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div><a href=\"index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
 		<div id=\"menu\">
@@ -53,11 +54,11 @@ print "
 
 		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt; &gt; Admin amministratore</div>
 
-		<div class=\"contenuto\">	
+		<div class=\"contenuto\" id=\"contenuto\">	
 
 			<form id=\"form\" method=\"post\" onsubmit=\"return login_check()\" action=\"controllologin.cgi\">
 
-			<h1>Login</h1>
+			<h1 class=\"blocco1\">Login</h1>
 			<fieldset id=\"informazioni\">
 			<p id=\"errore\"></p>
 
@@ -108,4 +109,4 @@ else {
 			</html>"; 
 }
 
-# Last Update by Luca 04/08/16
+# Last Update by Luca 08/08/16

@@ -39,6 +39,7 @@ print "
 		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
 	</head>
 	<body>
+	<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
 		<div id=\"menu\">
@@ -54,7 +55,7 @@ print "
 		
 		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; <a href=\"newsattivita.cgi\"><span lang=\"en\">News</span> e Attivita'</a> &gt;&gt; Archivio News</div>
 
-		<div class=\"contenuto\">
+		<div class=\"contenuto\" id=\"contenuto\">
 			<h1 class=\"titolo_testo\">Archivio <span lang=\"en\">News</span></h1>
 ";
 
@@ -80,7 +81,7 @@ for (; $i<$limit and $i<$arraysize; $i=$i+1)
 				<p>$text...</p>
 				<a href=\"notizia.cgi?request=$id\">Continua a leggere</a>
 			";
-	if($auth eq "amministratoreautenticato")
+	if($auth eq "checksession")
 	{
 		print " <p><a href=\"delete_notizia.cgi?ID=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a></p>";
 	}
@@ -92,13 +93,14 @@ if($limit<$arraysize)
 	print"<p><a href=\"news.cgi?i=$limit\">Carica altre notizie</a></p>";
 }
 
-if($auth ne "amministratoreautenticato")
+if($auth ne "checksession")
 {
 print"</div></div>
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
+		 <a href=\"adminlogin.cgi\"> Area amministratore</a>
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>

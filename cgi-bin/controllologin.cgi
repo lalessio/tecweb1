@@ -1,10 +1,5 @@
 #!/usr/bin/perl -w
 
-###############################################
-#file profondamente da rivedere				  #
-#per ora funziona ma ci sono cose da sistemare#
-###############################################
-
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -20,7 +15,7 @@ my $username = $cgi->param('user_name');
 
 my $password = $cgi->param('user_pwd');
 
-my $auth="amministratoreautenticato";
+my $auth="checksession";
 my $file = "../data/amministratore.xml";
 
 # creazione oggetto parser
@@ -57,6 +52,7 @@ print <<EOF;
 
 	</head>
 	<body>
+		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
 		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
 		<div id="menu">
@@ -72,7 +68,7 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt; Errore</div>
 
-		<div class="contenuto">	
+		<div class="contenuto" id="contenuto">	
 		<h1 class="blocco1">Errore</h1>
 		<p><span lang="en">Login</span> sbagliato, riprova di nuovo <a href="adminlogin.cgi"><span lang="en">Login</span></a></p> 
 		</div>

@@ -15,8 +15,8 @@ use utf8;
 use HTML::Parser;
 use HTML::Entities;
 
-#my $session = CGI::Session->load() or die $!;
-#my $auth = $session->param('auth');
+my $session = CGI::Session->load() or die $!;
+my $auth = $session->param('auth');
 $CGI::POST_MAX = 1024 * 1000; #limite upload 1 MB
 my $file_er = \"a-zA-Z0-9_.-";
 my $upload_dir = "../images";
@@ -47,6 +47,7 @@ print <<EOF;
 
 	</head>
 	<body>
+	<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
 		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
 		<div id="menu">
@@ -62,7 +63,7 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
 
-		<div class="contenuto">	
+		<div class="contenuto" id="contenuto">	
 		<h1 class="blocco1">Errore</h1>
 		<p>Uno o piu' campi sono vuoti, riprova di nuovo <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p> 
 		</div>
@@ -162,6 +163,7 @@ print <<EOF;
 
 	</head>
 	<body>
+		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
 		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
 		<div id="menu">
@@ -177,7 +179,7 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Inserimento avvenuto</div>
 
-		<div class="contenuto">	
+		<div class="contenuto" id="contenuto">	
 		<h1 class="blocco1">Informazioni</h1>
 		<p>Inserimento avvenuto con successo! Puoi visualizzare le notizie più recenti in <a href="../newsattivita.html"><span lang="en">News</span> e attivita'</a></p> 
 		<p>Ritorna all' <a href="adminarea.cgi">Area Amministratore</a></p>
@@ -218,6 +220,7 @@ print <<EOF;
 
 	</head>
 	<body>
+		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
 		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
 		<div id="menu">
@@ -233,7 +236,7 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="../adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
 
-		<div class="contenuto">	
+		<div class="contenuto" id="contenuto">	
 		<h1 class="blocco1">Errore</h1>
 		<p>Formato immagine non supportato, riprova di nuovo <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p> 
 		</div>
@@ -251,4 +254,4 @@ print <<EOF;
 EOF
 }
 
-#Last Update by Carlo 28/07/2016
+#Last Update by Luca 08/08/2016

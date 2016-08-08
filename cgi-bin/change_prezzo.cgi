@@ -14,9 +14,9 @@ use URI;
 use utf8;
 use XML::LibXML::NodeList;
 
-#my $session = CGI::Session->load() or die $!;
+my $session = CGI::Session->load() or die $!;
 
-#my $auth = $session->param('auth');
+my $auth = $session->param('auth');
 
 my $cgi = CGI->new();
 
@@ -28,7 +28,7 @@ my $file = "../data/prezzi.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
 
-if($newprezzo eq '') #anche questo controllo dovrà essere fatto in js (oltre a questo che va bene chiaramente)
+if($newprezzo eq '')
 {
 print "Content-type:text/html\n\n";
 print <<EOF;
@@ -47,6 +47,7 @@ print <<EOF;
 
 	</head>
 	<body>
+		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
 		<div><a href="../index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
 		<div id="menu">
@@ -62,7 +63,7 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
 
-		<div class="contenuto">	
+		<div class="contenuto" id="contenuto">	
 		<h1 class="blocco1">Errore</h1>
 		<p>Il campo Modifica Prezzo non puo' essere vuoto, riprova di nuovo <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p> 
 		</div>
@@ -72,7 +73,7 @@ print <<EOF;
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
 
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
-
+<a href="logout.cgi"><button type="submit" name="delete"><span xml:lang="en">Logout</span></button></a>
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>
 
 	</body>
@@ -107,6 +108,7 @@ print <<EOF;
 
 	</head>
 	<body>
+		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
 		<div><a href="../index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
 		<div id="menu">
@@ -122,7 +124,7 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Operazione Riuscita</div>
 
-		<div class="contenuto">	
+		<div class="contenuto" id="contenuto">	
 		<h1 class="blocco1">Operazione Riuscita</h1>
 		<p>Inserimento avvenuto con successo, puoi visualizzare le modifiche apportate nella pagina <a href="orarieprezzi.cgi">Orari e prezzi</a></p> 
 		<p><a href="adminarea.cgi">Ritorna all'area amministrativa</a></p>
@@ -133,7 +135,7 @@ print <<EOF;
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
 
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
-
+<a href="logout.cgi"><button type="submit" name="delete"><span xml:lang="en">Logout</span></button></a>
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>
 
 	</body>

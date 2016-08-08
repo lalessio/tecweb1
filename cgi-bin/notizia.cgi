@@ -44,6 +44,7 @@ print "
 		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
 	</head>
 	<body>
+	<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div><a href=\"../home.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
 		<div id=\"menu\">
@@ -59,27 +60,45 @@ print "
 		
 		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; <a href=\"../newsattivita.html\"><span lang=\"en\">News</span> e Attività</a> &gt;&gt; <a href=\"news.cgi\">Archivio News</a> &gt;&gt; $title</div>
 
-		<div class=\"contenuto\">
+		<div class=\"contenuto\" id=\"contenuto\">
+		<div class=\"blocconews\">
 			<h1 class=\"titolo_testo\">$title</h1>";
 			
-			if($auth eq "amministratoreautenticato")
+			if($auth eq "checksession")
 			{
-				print "<a href=\"delete_notizia.cgi?to_delete=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a>";
+				print "<a href=\"delete_notizia.cgi?ID=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a>";
 			}
 	
 			print "
 			<p>$date</p>
-			<img src=\"../images/$image\" alt=\"$title\"/> 
+			<img id=\"fotonews\" src=\"../images/$image\" alt=\"$title\"/> 
 			<p>$text</p>
-		</div>
+		";
 		
-		<div class=\"footer\">
+if($auth ne "checksession")
+{
+print"</div></div>
+	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
+		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
+		 <a href=\"adminlogin.cgi\"> Area amministratore</a>
+		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
+	</body>
+	</html>
+";
+}else
+{
+	print"</div></div>
+	<div class=\"footer\">
+		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>     
+		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
+		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>
 ";
+}
 
-#Last Update by Luca 28/07/2016
+#Last Update by Luca 08/08/2016

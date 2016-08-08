@@ -11,9 +11,9 @@ use URI;
 use HTML::Parser;
 use HTML::Entities;
 
-#my $session = CGI::Session->load() or die $!;
+my $session = CGI::Session->load() or die $!;
 
-#my $auth = $session->param('auth');
+my $auth = $session->param('auth');
 my $file1 = "../data/orari.xml";
 my $parser1 = XML::LibXML->new();
 my $doc1 = $parser1->parse_file($file1);
@@ -38,6 +38,7 @@ print "
 		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
 	</head>
 	<body>
+		<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
 		<div id=\"menu\">
@@ -53,7 +54,7 @@ print "
 		
 		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; Orari e Prezzi</div>
 
-		<div class=\"contenuto\">
+		<div class=\"contenuto\" id=\"contenuto\">
 			<h2 class=\"titolo_testo\">Orari</h2>
 			<p>Il Parco Naturale Monte Verde e' aperto dal 1 Marzo al 31 Novembre.</p> 
 			<p>L'orario di apertura al pubblico del parco resta invariato tutto l'anno ed e' il seguente:</p>
@@ -106,6 +107,24 @@ foreach my $prezzo (@prezzi)
 			</li>";
 }	
 
+if($auth eq "checksession")
+{
+print"
+	</ul>
+	<p><strong>Prezzi ed orari possono essere oggetto di variazioni.</strong></p>
+</div>			
+</div>
+	<div class=\"footer\">
+		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
+		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
+		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
+		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
+		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
+	</body>
+	</html>
+";
+}else
+{
 print"
 	</ul>
 	<p><strong>Prezzi ed orari possono essere oggetto di variazioni.</strong></p>
@@ -115,9 +134,11 @@ print"
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
-		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
+		 <a href=\"adminlogin.cgi\"> Area amministratore</a>
+		 <img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>
 ";
+}
 
-#Last Update by Luca 03/08/2016
+#Last Update by Luca 08/08/2016

@@ -1,10 +1,5 @@
 #!/usr/bin/perl -w
 
-########################################################
-#tutto questo file è da rivedere anche se ora funziona #
-#dovrebbe essere gestito con i cookie (non sono sicuro)#
-########################################################
-
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -21,9 +16,9 @@ use XML::LibXML::NodeList;
 use HTML::Parser;
 use HTML::Entities;
 
-#my $session = CGI::Session->load() or die $!;
+my $session = CGI::Session->load() or die $!;
 
-#my $auth = $session->param('auth');
+my $auth = $session->param('auth');
 
 my $cgi = CGI->new();
 
@@ -58,6 +53,7 @@ print <<EOF;
 
 	</head>
 	<body>
+		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
 		<div><a href="../index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
 		<div id="menu">
@@ -73,7 +69,7 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span> area</a> &gt; &gt; Errore</div>
 
-		<div class="contenuto">	
+		<div class="contenuto" id="contenuto" >	
 		<h1 class="blocco1">Errore</h1>
 		<p>Il campo Modifica Orario non puo' essere vuoto, riprova di nuovo <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p> 
 		</div>
@@ -83,7 +79,8 @@ print <<EOF;
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
 
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
-
+		 <a href="logout.cgi"><button type="submit" name="delete"><span xml:lang="en">Logout</span></button></a>
+		
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>
 
 	</body>
@@ -119,6 +116,7 @@ print <<EOF;
 
 	</head> 
 	<body>
+		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
 		<div><a href="../index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
 		<div id="menu">
@@ -134,7 +132,7 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Operazione Riuscita</div>
 
-		<div class="contenuto">	
+		<div class="contenuto" id="contenuto">	
 		<h1 class="blocco1">Operazione Riuscita</h1>
 		<p>Inserimento avvenuto con successo, puoi visualizzare le modifiche apportate nella pagina <a href="orarieprezzi.cgi">Orari e prezzi</a></p> 
 		<p><a href="adminarea.cgi">Ritorna all'area amministrativa</a></p>
@@ -145,6 +143,7 @@ print <<EOF;
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
 
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
+		 <a href="logout.cgi"><button type="submit" name="delete"><span xml:lang="en">Logout</span></button></a>
 
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>
 
@@ -153,4 +152,4 @@ print <<EOF;
 EOF
 exit;
 
-# Last Update by Luca 01/08/16
+# Last Update by Luca 08/08/16
