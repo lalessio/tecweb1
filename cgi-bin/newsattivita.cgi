@@ -118,5 +118,6 @@ print <<EOF;
 	</body>
 	</html>
 EOF
-;
+}
+
 #Last Update by Luca 08/08/16

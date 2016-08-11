@@ -95,28 +95,28 @@ if($limit<$arraysize)
 
 if($auth ne "checksession")
 {
-print"</div></div>
+print"</div>
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
-		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
-		 <a href=\"adminlogin.cgi\"> Area amministratore</a>
+		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN) <a href=\"adminlogin.cgi\"> Area amministratore</a></div>
+		 
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>
 ";
 }else
 {
-	print"</div></div>
+	print"</div>
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>     
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
-		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
-		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
+		 
+		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN) <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a></div>
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>
 ";
 }
 
-#Last update by Luca 03/08/2016
+#Last update by Luca 11/08/2016

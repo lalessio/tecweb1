@@ -1,6 +1,6 @@
 function manage_footer()
 {
-    var exist = document.cookie.indexOf("autorizzazione=amministratoreautenticato");
+    var exist = document.cookie.indexOf("autorizzazione=checksession");
 	if(exist == -1)
 	{
 		document.getElementById("dinamico").innerHTML = "<a href=\"cgi-bin/adminlogin.cgi\"> Area amministratore</a>";
@@ -11,4 +11,4 @@ function manage_footer()
 	}	
 } 
 
-//Last Update by Luca 04/08/16
+//Last Update by Luca 11/08/16

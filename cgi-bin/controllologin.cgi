@@ -18,21 +18,14 @@ my $password = $cgi->param('user_pwd');
 my $auth="checksession";
 my $file = "../data/amministratore.xml";
 
-# creazione oggetto parser
 my $parser = XML::LibXML->new();
-
-# apertura file e lettura input
 my $doc = $parser->parse_file($file);
-
-# estrazione radice
 my $root = $doc->getDocumentElement;
 
+my $pwd = $doc->findvalue("/amministratore/password");
+my $user = $doc->findvalue("/amministratore/username");
 
-	my $pwd = $doc->findvalue("/amministratore/password");
-	my $user = $doc->findvalue("/amministratore/username");
-	
-	# confronto le password
-	if ($pwd ne $password || $user ne $username)
+if ($pwd ne $password || $user ne $username)
 {
 print "Content-type:text/html\n\n";
 
@@ -86,23 +79,21 @@ print <<EOF;
 EOF
 exit;
 }
-	if ($pwd eq $password){
-		# controllo se la sessione esiste gia
+else
+{	
 		my $session = CGI::Session->load() or die $!;
 
-		if($session->is_expired || $session->is_empty){
-			# sessione non esiste quindi la creo
+		if($session->is_expired || $session->is_empty)
+		{
 			my $session = new CGI::Session(undef, undef, {Directory=>'/tmp'});
-			# aggiungo i parametri utente alla sessione
 			$session->param("username", $username);
 			$session->param("auth", $auth);
 
-			# creo il cookie
 			my $cookie1 = CGI::Cookie->new(-name => $session->name, -value => $session->id);
 			my $cookie2 = CGI::Cookie->new(-name => "user", -value => $username);
-                        my $cookie3 = CGI::Cookie->new(-name => "autorizzazione", -value => $auth);
+            my $cookie3 = CGI::Cookie->new(-name => "autorizzazione", -value => $auth);
 			print header(-cookie => [$cookie1,$cookie2,$cookie3]);
-		print "Content-type:text/html\n\n";
+			print "Content-type:text/html\n\n";
 			print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 			<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
 			<head>
@@ -139,6 +130,6 @@ exit;
 			</body>
 			</html>";
 		}
-	}
+}
 
-# Last Update by Luca 04/08/16
+# Last Update by Luca 11/08/16
