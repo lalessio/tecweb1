@@ -76,7 +76,7 @@ print "
 
 
 					<p><label>Modifica Prezzo: <span id=\"errore_prezzo2\"></span></label>
-					<input type=\"text\" id=\"new_price\" name=\"new_price\" title=\"Modifica prezzo\"/></p>
+					<input type=\"number\" id=\"new_price\" name=\"new_price\" title=\"Modifica prezzo\"/></p>
 				
 				</fieldset>
 				<fieldset class=\"conferma\">
