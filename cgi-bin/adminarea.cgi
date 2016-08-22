@@ -13,6 +13,7 @@ use POSIX;
 use URI;
 use utf8;
 
+
 my $session = CGI::Session->load() or die $!;
 
 my $auth = $session->param('auth');
@@ -56,8 +57,10 @@ print "
 		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt; &gt; Area amministratore</div>
 
 		<div class=\"contenuto\" id=\"contenuto\">
-		
-		<form class=\"form\" method=\"post\" action=\"change_prezzo.cgi\" onsubmit=\"return price_check()\">
+		<div id=\"form123\">
+		<div class=\"form12\">
+		<div class=\"form1\">
+		<form  method=\"post\" action=\"change_prezzo.cgi\" onsubmit=\"return price_check()\">
 				<h1 class=\"blocco1\">Modifica prezzo</h1>
 				<p>Inserire un prezzo non negativo intero</p>
 				<fieldset class=\"informazioni\">
@@ -76,7 +79,7 @@ print "
 
 
 					<p><label>Modifica Prezzo: <span id=\"errore_prezzo2\"></span></label>
-					<input type=\"number\" id=\"new_price\" name=\"new_price\" title=\"Modifica prezzo\"/></p>
+					<input type=\"text\" id=\"new_price\" name=\"new_price\" title=\"Modifica prezzo\"/></p>
 				
 				</fieldset>
 				<fieldset class=\"conferma\">
@@ -90,9 +93,10 @@ print "
 				</fieldset>
 				
 			</form>
+			</div>
 		
-			
-			<form class=\"form\" method=\"post\" action=\"change_orario.cgi\" onsubmit=\"return orario_check()\">
+			<div class=\"form2\">
+			<form method=\"post\" action=\"change_orario.cgi\" onsubmit=\"return orario_check()\">
 				<h1 class=\"blocco1\">Modifica orario</h1>
 				<p>Inserire un  orario nel formato  XX:YY-ZZ:KK</p>
 				<fieldset class=\"informazioni\">
@@ -123,8 +127,10 @@ print "
 				</fieldset>
 				
 			</form>
-
-		<form class=\"form\" method=\"post\" action=\"nuova_notizia.cgi\" enctype=\"multipart/form-data\" onsubmit=\"return notizia_check()\">
+			</div>
+			</div>
+		<div  class=\"form3\">
+		<form method=\"post\" action=\"nuova_notizia.cgi\" enctype=\"multipart/form-data\" onsubmit=\"return notizia_check()\">
 
 			<h1 class=\"blocco1\">Inserisci nuova notizia</h1>
 			<p>Inserire una immagine che abbia una dimensione non superiore a 1Mega<span lang=\"eng\">byte</span></p>
@@ -154,7 +160,8 @@ print "
 				
 			</fieldset>
 			</form>
-			
+			</div>
+			</div>
 
 
 
@@ -162,8 +169,8 @@ print "
 		<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
-		 
-		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN) <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a></div>
+		  <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
+		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 
@@ -209,7 +216,7 @@ print <<EOF;
 
 		<div class="contenuto" id=\"contenuto\">	
 		<h1 class="blocco1">Errore</h1>
-		<p><span lang="en">Login</span> non effettuato, devi eseguire l'accesso prima di accedere all'area amministratore: <a href="adminlogin.cgi"><span lang="en">Login</span></a></p> 
+		<p><span lang="en">Login</span> non avvenuto, devi eseguire il login prima di accedere all'area amministratore <a href="adminlogin.cgi"><span lang="en">Login</span></a></p> 
 		</div>
 		
 		<div class="footer">
@@ -227,4 +234,4 @@ exit;
 
 }
 
-# Last Update by Luca 11/08/16 
+<!-- Last Update by Carlo 4/08/16 -->

@@ -74,7 +74,7 @@ text-align:center;
 #foto1{width:60%;
 		margin-top:4em;
 		margin-left:2em;}
-#foto1{width:30%;
+.foto2{width:30%;
 		margin-top:4em;
 		margin-left:2em;}
 #fotonews{width:30%;}
@@ -267,10 +267,20 @@ text-align:center;
     border-color:black;
 }
 
-
-.form {
+.form12 {
 width:auto;
-margin-top:9em;
+float:left;
+clear:left;
+margin-right:6px;
+}
+
+.form3 {
+width:50%;
+float:left;
+margin-right:6px;
+}
+#form123 {
+display:inline;
 }
 .el_notizia{
 width auto;
@@ -308,9 +318,27 @@ padding:0;
 .informazioni textarea {
 	width:90%;
 }
+@media all and (max-width:1300px){
+
+.form1 {
+width:100%;
+
+}
+.form12 {
+width:100%;
+}
+
+.form2 {
+width:100%;
+
+}
+.form3 {
+width:100%;
+}
 
 
 
+}
 
 @media all and (max-width:768px){
 body{
@@ -375,6 +403,8 @@ margin-bottom:3%
 		margin-right:0;
 		margin-top:3%;
 	}
+
+
 
 
 
