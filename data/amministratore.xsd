@@ -6,19 +6,10 @@ elementFormDefault="qualified" >
 	<xsd:complexType>
 		<xsd:sequence>
 			<xsd:element name="username" type="xsd:string"/>
-			<xsd:element name="password" type="PWType"/>
+			<xsd:element name="password" type="xsd:string"/>
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:element>
 
-<xsd:element name="PWType">
-	<xsd:simpleType>
-		<xsd:restriction base="xsd:string">
-			<xsd:minLenght value="8"/>
-			<xsd:maxLenght value="12"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-</xsd:element>
 
 </xsd:schema>
-<!-- by Carlo Last Update 23/07/2016-->
