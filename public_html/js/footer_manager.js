@@ -1,4 +1,4 @@
-function manage_footer()
+ function manage_footer()
 {
     var exist = document.cookie.indexOf("autorizzazione=checksession");
 	if(exist == -1)
@@ -7,8 +7,8 @@ function manage_footer()
 	}
 	else
 	{
-		document.getElementById("dinamico").innerHTML = "<a href=\"cgi-bin/logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>";
+		document.getElementById("dinamico").innerHTML = "<a href=\"cgi-bin/logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a><a href=\"cgi-bin/adminarea.cgi\">TORNA AD ADMIN AREA</a>";
 	}	
 } 
 
-//Last Update by Luca 11/08/16
+//Last Update by Luca 04/08/16
