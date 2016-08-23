@@ -42,10 +42,10 @@ print "
 		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
 	</head>
 	<body>
-div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
-	<
+	
 		<div id=\"menu\">
 			<ul class=\"lista\">
 				<li><a href=\"../index.html\"><span lang=\"en\">HOME</span></a></li>
@@ -123,6 +123,7 @@ print"</div></div>
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
+		 <a href=\"adminlogin.cgi\">AREA AMMINISTRATORE</a>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>

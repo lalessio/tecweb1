@@ -110,6 +110,7 @@ print <<EOF;
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
+		 		 <a href=\"adminlogin.cgi\">AREA AMMINISTRATORE</a>
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>

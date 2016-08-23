@@ -71,7 +71,7 @@ print <<EOF;
 			</ul>
 		</div>
 
-		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="../adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
+		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
 
 		<div class="contenuto" id=\"contenuto\">	
 		<h1 class="blocco1">Errore</h1>
@@ -137,7 +137,7 @@ print <<EOF;
 			</ul>
 		</div>
 
-		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Inserimento avvenuto</div>
+		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Inserimento avvenuto</div>
 
 		<div class="contenuto" id=\"contenuto\">	
 		<h1 class="blocco1">Informazioni</h1>
