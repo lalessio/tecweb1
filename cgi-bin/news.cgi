@@ -92,7 +92,7 @@ my $id = $notizia->getAttribute('ID');
 
 				<p><strong>$title</strong></p>
 				<p>$date</p>
-				<img id=\"fotonews\" src=\"../images/$image\" alt=\"$title\"/> 
+				<img class=\"fotonews\" src=\"../images/$image\" alt=\"$title\"/> 
 				<p>$text...</p>
 				<a href=\"notizia.cgi?request=$id\">Continua a leggere</a>
 			";

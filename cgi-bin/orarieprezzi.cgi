@@ -111,8 +111,7 @@ if($auth eq "checksession")
 print"
 	</ul>
 	<p><strong>Prezzi ed orari possono essere oggetto di variazioni.</strong></p>
-</div>			
-</div>
+</div>						
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>

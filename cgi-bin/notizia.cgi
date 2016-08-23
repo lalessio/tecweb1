@@ -74,7 +74,7 @@ print "
                          print "<a href=\"delete_notizia.cgi?ID=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a>";
 				}
 			print "<p>$date</p>
-			<img id=\"fotonews\"src=\"../images/$image\" alt=\"$title\"/> 
+			<img class=\"fotonews\" src=\"../images/$image\" alt=\"$title\"/> 
 			<p>$text</p>";
 				
 	if($auth eq "checksession")

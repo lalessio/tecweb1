@@ -20,9 +20,20 @@ my $auth = $session->param('auth');
 
 my $cgi = CGI->new();
 
+require('funzioni.pl');
+
 my $tipoprezzo = $cgi->param('price');
+
+$tipoprezzo = rimuovi(string($tipoprezzo));
+
 my $period = $cgi->param('period');
+
+$period = rimuovi(string($period));
+
+
 my $newprezzo = $cgi->param('new_price');
+
+$newprezzo = rimuovi(string($newprezzo));
 
 my $file = "../data/prezzi.xml";
 my $parser = XML::LibXML->new();

@@ -17,16 +17,20 @@ use HTML::Entities;
 
 my $session = CGI::Session->load() or die $!;
 my $auth = $session->param('auth');
+require ('funzioni.pl');
 $CGI::POST_MAX = 1024 * 1000; #limite upload 1 MB
 my $file_er = \"a-zA-Z0-9_.-";
 my $upload_dir = "../images";
 my $cgi = CGI->new();
 my $filename = $cgi->param('new_image');
-encode_entities($filename);
+
 my $nuovo_titolo = $cgi->param('new_title');
-encode_entities($nuovo_titolo);
+
 my $nuovo_contenuto = $cgi->param('new_content');
-encode_entities($nuovo_contenuto);
+
+$filename = rimuovi(string($filename));
+$nuovo_titolo = rimuovi(string($nuovo_titolo));
+$nuovo_contenuto = rimuovi(string($nuovo_contenuto));
 
 
 #in questo if entra anche quando l'immagine è troppo grande

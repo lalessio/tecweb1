@@ -16,6 +16,8 @@ use XML::LibXML::NodeList;
 use HTML::Parser;
 use HTML::Entities;
 
+require ('funzioni.pl');
+
 my $session = CGI::Session->load() or die $!;
 
 my $auth = $session->param('auth');
@@ -24,11 +26,13 @@ my $cgi = CGI->new();
 
 my $selected_day = $cgi->param('day');
 
-encode_entities($selected_day);
+$selected_day = rimuovi(string($selected_day));
 
 my $new_orario = $cgi->param('new_hour');
 
-encode_entities($new_orario);
+$new_orario = rimuovi(string($new_orario));
+
+
 
 
 my $file = "../data/orari.xml";
