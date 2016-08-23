@@ -1,5 +1,6 @@
 #!/usr/bin/perl -w
 
+
 use strict;
 use CGI qw(:standard);
 use CGI::Carp qw(fatalsToBrowser);
@@ -18,14 +19,21 @@ my $password = $cgi->param('user_pwd');
 my $auth="checksession";
 my $file = "../data/amministratore.xml";
 
+# creazione oggetto parser
 my $parser = XML::LibXML->new();
+
+# apertura file e lettura input
 my $doc = $parser->parse_file($file);
+
+# estrazione radice
 my $root = $doc->getDocumentElement;
 
-my $pwd = $doc->findvalue("/amministratore/password");
-my $user = $doc->findvalue("/amministratore/username");
 
-if ($pwd ne $password || $user ne $username)
+	my $pwd = $doc->findvalue("/amministratore/password");
+	my $user = $doc->findvalue("/amministratore/username");
+	
+	# confronto le password
+	if ($pwd ne $password || $user ne $username)
 {
 print "Content-type:text/html\n\n";
 
@@ -45,15 +53,16 @@ print <<EOF;
 
 	</head>
 	<body>
-		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
+	
 		<div id="menu">
 			<ul class="lista">
 				<li><a href="../index.html"><span lang="en">HOME</span></a></li>
 				<li><a href="../chisiamo.html">CHI SIAMO</a></li>
 				<li><a href="../naturaterritorio.html">NATURA E TERRITORIO</a></li>
-				<li><a href="newsattivita.cgi"><span lang="en">NEWS</span> E ATTIVITÀ</a></li>
+				<li><a href="newsattivita.cgi"><span lang="en">NEWS</span> E ATTIVITA'</a></li>
 				<li><a href="orarieprezzi.cgi">ORARI E PREZZI</a></li>
 				<li><a href="../infocontatti.html">INFO E CONTATTI</a></li>
 			</ul>
@@ -61,7 +70,7 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt; Errore</div>
 
-		<div class="contenuto" id="contenuto">	
+		<div class="contenuto" id=\"contenuto\">	
 		<h1 class="blocco1">Errore</h1>
 		<p><span lang="en">Login</span> sbagliato, riprova di nuovo <a href="adminlogin.cgi"><span lang="en">Login</span></a></p> 
 		</div>
@@ -79,41 +88,52 @@ print <<EOF;
 EOF
 exit;
 }
-else
-{	
+	if ($pwd eq $password){
+		# controllo se la sessione esiste gia
 		my $session = CGI::Session->load() or die $!;
 
-		if($session->is_expired || $session->is_empty)
-		{
+		if($session->is_expired || $session->is_empty){
+			# sessione non esiste quindi la creo
 			my $session = new CGI::Session(undef, undef, {Directory=>'/tmp'});
+			# aggiungo i parametri utente alla sessione
 			$session->param("username", $username);
 			$session->param("auth", $auth);
 
+			# creo il cookie
 			my $cookie1 = CGI::Cookie->new(-name => $session->name, -value => $session->id);
 			my $cookie2 = CGI::Cookie->new(-name => "user", -value => $username);
-            my $cookie3 = CGI::Cookie->new(-name => "autorizzazione", -value => $auth);
+                        my $cookie3 = CGI::Cookie->new(-name => "autorizzazione", -value => $auth);
 			print header(-cookie => [$cookie1,$cookie2,$cookie3]);
+			
 			print "Content-type:text/html\n\n";
 			print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
 			<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
 			<head>
 			<title>Controllo login</title>
 			<meta name=\"title\" content=\"Redirect\"/>
-			<meta http-equiv=\"refresh\" content=\"0; url=adminarea.cgi\"/>
+			<meta http-equiv=\"refresh\"
+			content=\"0; url=adminarea.cgi\"/>
 			</head>
 			<body>
 			</body>
-			</html>";	
+			</html>";
+		
+
 		}
 		else{
+			# la sessione esiste
+			# controllo l'esistenza del cookie
 			my %cookie = CGI::Cookie->fetch;
 			my $cook = $cookie{'autorizzazione'};
 			my $cook2 = $cookie{'user'};
+			# se i 2 cookie fondamentali non sono presenti lo ricreo
 			if(!defined $cook){
+				# ricreo il cookie se mancante
 				my $cookie3 = CGI::Cookie->new(-name => "autorizzazione", -value => $auth);
 				print header(-cookie => $cookie3);				
 			}
 			if(!defined $cook2){
+                        # ricreo il cookie se mancante
 			my $cookie2 = CGI::Cookie->new(-name => "user", -value => $username);
 				print header(-cookie => $cookie2);				
 			}
@@ -124,12 +144,14 @@ else
 			<head>
 			<title>Controllo login</title>
 			<meta name=\"title\" content=\"Redirect\"/>
-			<meta http-equiv=\"refresh\" content=\"0; url=adminarea.cgi\"/>
+			<meta http-equiv=\"refresh\"
+			content=\"0; url=adminarea.cgi\"/>
 			</head>
 			<body>
 			</body>
 			</html>";
+		
 		}
-}
+	}
 
-# Last Update by Luca 11/08/16
+

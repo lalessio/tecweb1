@@ -13,9 +13,13 @@ use POSIX;
 use URI;
 use utf8;
 
+
 my $session = CGI::Session->load() or die $!;
 
+
 my $auth = $session->param('auth');
+
+
 
 if($auth ne "checksession")
 	{
@@ -38,15 +42,16 @@ print "
 
 	</head>
 	<body>
-		<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div><a href=\"index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
+		
 		<div id=\"menu\">
 			<ul class=\"lista\">
 				<li><a href=\"../index.html\"><span lang=\"en\">HOME</span></a></li>
 				<li><a href=\"../chisiamo.html\">CHI SIAMO</a></li>
 				<li><a href=\"../naturaterritorio.html\">NATURA E TERRITORIO</a></li>
-				<li><a href=\"newsattivita.cgi\"><span lang=\"en\">NEWS</span> E ATTIVITÀ</a></li>
+				<li><a href=\"newsattivita.cgi\"><span lang=\"en\">NEWS</span> E ATTIVITA'</a></li>
 				<li><a href=\"orarieprezzi.cgi\">ORARI E PREZZI</a></li>
 				<li><a href=\"../infocontatti.html\">INFO E CONTATTI</a></li>
 			</ul>
@@ -56,7 +61,7 @@ print "
 
 		<div class=\"contenuto\" id=\"contenuto\">	
 
-			<form id=\"form\" method=\"post\" onsubmit=\"return login_check()\" action=\"controllologin.cgi\">
+			<form class=\"form\" method=\"post\" onsubmit=\"return login_check()\" action=\"controllologin.cgi\">
 
 			<h1 class=\"blocco1\">Login</h1>
 			<fieldset id=\"informazioni\">
@@ -102,11 +107,11 @@ else {
 			<head>
 			<title>Controllo login</title>
 			<meta name=\"title\" content=\"Redirect\"/>
-			<meta http-equiv=\"refresh\" content=\"0; url=adminarea.cgi\"/>
+			<meta http-equiv=\"refresh\"
+			content=\"0; url=adminarea.cgi\"/>
 			</head>
 			<body>
 			</body>
 			</html>"; 
 }
-
-# Last Update by Luca 08/08/16
+<!-- Last Update by Carlo 8/08/16 -->

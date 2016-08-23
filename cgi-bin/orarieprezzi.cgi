@@ -38,16 +38,17 @@ print "
 		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
 	</head>
 	<body>
-		<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
+<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
+	
 		<div id=\"menu\">
 			<ul class=\"lista\">
 				<li><a href=\"../index.html\"><span lang=\"en\">HOME</span></a></li>
 				<li><a href=\"../chisiamo.html\">CHI SIAMO</a></li>
 				<li><a href=\"../naturaterritorio.html\">NATURA E TERRITORIO</a></li>
 				<li><a href=\"newsattivita.cgi\"><span lang=\"en\">NEWS</span> E ATTIVITA'</a></li>
-				<li class=\"active\">ORARI E PREZZI</a></li>
+				<li class=\"active\">ORARI E PREZZI</li>
 				<li><a href=\"../infocontatti.html\">INFO E CONTATTI</a></li>
 			</ul>
 		</div>
@@ -78,7 +79,6 @@ foreach my $orario (@orari)
 
 print"
 	</ul>
-	
 	<h2 class=\"titolo_testo\">Prezzi</h2>
 	<p>Il prezzo d'ingresso e' scontato per i ragazzi sotto i 12 anni e gli anziani sopra i 65 e inoltre durante il periodo estivo (15 Maggio - 15 Settembre) si risparmia sempre!</p> 
 	<ul>";
@@ -106,7 +106,6 @@ foreach my $prezzo (@prezzi)
 				</ul>
 			</li>";
 }	
-
 if($auth eq "checksession")
 {
 print"
@@ -117,8 +116,9 @@ print"
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
-		 
-		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN) <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a></div>
+		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
+		 <a href=\"adminarea.cgi\">TORNA AD ADMIN AREA</a>
+		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>
@@ -133,12 +133,11 @@ print"
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
-		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN) <a href=\"adminlogin.cgi\"> Area amministratore</a></div>
-		 
-		 <img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
+		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
+		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>
 ";
 }
 
-#Last Update by Luca 11/08/2016
+#Last Update by Luca 25/07/2016

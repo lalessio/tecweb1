@@ -57,7 +57,9 @@ print "
 		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt; &gt; Area amministratore</div>
 
 		<div class=\"contenuto\" id=\"contenuto\">
+		
 		<div id=\"form123\">
+		<h1 class=\"titolo_testo\">Per eliminare una notizia bisogna accedere alla pagina News e Attivita' e premere il pulsante \"elimina\" accanto ad ogni notizia</h1>
 		<div class=\"form12\">
 		<div class=\"form1\">
 		<form  method=\"post\" action=\"change_prezzo.cgi\" onsubmit=\"return price_check()\">

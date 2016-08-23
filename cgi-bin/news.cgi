@@ -13,10 +13,13 @@ use HTML::Entities;
 
 my $session = CGI::Session->load() or die $!;
 
+
 my $auth = $session->param('auth');
+
 my $file = "../data/newsparco.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
+
 
 my $cgi = CGI->new();
 my $i=$cgi->param('i');
@@ -39,9 +42,10 @@ print "
 		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
 	</head>
 	<body>
-	<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
+div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
+	<
 		<div id=\"menu\">
 			<ul class=\"lista\">
 				<li><a href=\"../index.html\"><span lang=\"en\">HOME</span></a></li>
@@ -57,66 +61,86 @@ print "
 
 		<div class=\"contenuto\" id=\"contenuto\">
 			<h1 class=\"titolo_testo\">Archivio <span lang=\"en\">News</span></h1>
+			<div class=\"blocconews\">
 ";
 
+
 my @notizie = $doc->findnodes("/news/notizia");
+
 @notizie = reverse(@notizie); #ribalto così mi mostra le notizie dalla più recente
 my $arraysize = @notizie;
 
 for (; $i<$limit and $i<$arraysize; $i=$i+1)
 {
+
 	my $notizia=$notizie[$i];
 	my $title = $notizia->findvalue('titolo');
 	my $date = $notizia->findvalue('data');
 	my $text = $notizia->findvalue('contenuto');
 	$text = substr($text,0,100);
 	my $image = $notizia->findvalue('img');
-    my $id = $notizia->getAttribute('ID');
+my $id = $notizia->getAttribute('ID');
+
+
     decode_entities($title);
     decode_entities($text);
-	print "<div class=\"bloccosingolonew\">
+
+	#il motivo per cui estraggo ID è perchè magari in questa pagina mostriamo solo una anteprima di x caratteri del testo e poi ci mettiamo
+	#un continua a leggere che porta a un page_template per le new in cui l'utente può leggere tutto il testo (di questa cosa ne parleremo)
+	print "
+			<div class=\"bloccosingolonew\">
+
 				<p><strong>$title</strong></p>
 				<p>$date</p>
 				<img id=\"fotonews\" src=\"../images/$image\" alt=\"$title\"/> 
 				<p>$text...</p>
 				<a href=\"notizia.cgi?request=$id\">Continua a leggere</a>
 			";
-	if($auth eq "checksession")
-	{
-		print " <p><a href=\"delete_notizia.cgi?ID=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a></p>";
+				if($auth eq "checksession"){
+		
+                                print "
+                                            <p>
+											<a href=\"delete_notizia.cgi?ID=$id\"><input type=\"submit\" value=\"ELIMINA\"></input></a>
+                                            </p>
+					";
+		
 	}
 	print "</div>";
 }
+
+
 
 if($limit<$arraysize)
 {
 	print"<p><a href=\"news.cgi?i=$limit\">Carica altre notizie</a></p>";
 }
 
+
+
 if($auth ne "checksession")
 {
-print"</div>
+print"</div></div>
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
-		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN) <a href=\"adminlogin.cgi\"> Area amministratore</a></div>
-		 
+		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>
 ";
 }else
 {
-	print"</div>
+	print"</div></div>
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>     
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
-		 
-		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN) <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a></div>
+		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
+		 <a href=\"adminarea.cgi\">TORNA AD ADMIN AREA</a>
+		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>
 ";
 }
+#Last update by Carlo 4/08/2016
 
-#Last update by Luca 11/08/2016

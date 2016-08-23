@@ -28,6 +28,8 @@ encode_entities($nuovo_titolo);
 my $nuovo_contenuto = $cgi->param('new_content');
 encode_entities($nuovo_contenuto);
 
+
+#in questo if entra anche quando l'immagine è troppo grande
 if($filename eq "" or $nuovo_contenuto eq "")
 {
 	print "Content-type:text/html\n\n";
@@ -47,9 +49,9 @@ print <<EOF;
 
 	</head>
 	<body>
-	<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
 		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
+	<div><a class=\"salta\" href=\".contenuto\"><span>Salta al contenuto</span></a></div>
 		<div id="menu">
 			<ul class="lista">
 				<li><a href="../index.html"><span lang="en">HOME</span></a></li>
@@ -61,17 +63,17 @@ print <<EOF;
 			</ul>
 		</div>
 
-		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
+		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
 
-		<div class="contenuto" id="contenuto">	
+		<div class="contenuto">	
 		<h1 class="blocco1">Errore</h1>
-		<p>Uno o piu' campi sono vuoti, riprova di nuovo <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p> 
+		<p>I campi sono vuoti oppure immagine troppo grande, riprova di nuovo <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p> 
 		</div>
 		
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
-
+		  <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>
@@ -163,9 +165,10 @@ print <<EOF;
 
 	</head>
 	<body>
-		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
+	<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
+	
 		<div id="menu">
 			<ul class="lista">
 				<li><a href="../index.html"><span lang="en">HOME</span></a></li>
@@ -179,16 +182,17 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Inserimento avvenuto</div>
 
-		<div class="contenuto" id="contenuto">	
+		<div class="contenuto" id=\"contenuto\">	
 		<h1 class="blocco1">Informazioni</h1>
-		<p>Inserimento avvenuto con successo! Puoi visualizzare le notizie più recenti in <a href="../newsattivita.html"><span lang="en">News</span> e attivita'</a></p> 
-		<p>Ritorna all' <a href="adminarea.cgi">Area Amministratore</a></p>
+		<p>Inserimento avvenuto con successo,per visualizzare le notizie <a href="newsattivita.cgi"><span lang="en">News</span> e attivita'</a></p> 
+		<p>oppure torna indietro <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p>
 		</div>
 		
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
-
+		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
+		 <a href=\"adminarea.cgi\">TORNA AD ADMIN AREA</a>
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>
@@ -220,9 +224,9 @@ print <<EOF;
 
 	</head>
 	<body>
-		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
 		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
+	<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div id="menu">
 			<ul class="lista">
 				<li><a href="../index.html"><span lang="en">HOME</span></a></li>
@@ -236,7 +240,7 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="../adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
 
-		<div class="contenuto" id="contenuto">	
+		<div class="contenuto" id=\"contenuto\">	
 		<h1 class="blocco1">Errore</h1>
 		<p>Formato immagine non supportato, riprova di nuovo <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p> 
 		</div>
@@ -244,7 +248,8 @@ print <<EOF;
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="images/css.png"/>
-
+		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
+		 <a href=\"adminarea.cgi\">TORNA AD ADMIN AREA</a>
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 
 		<img class="valido" alt="xhtml valido" src="images/xhtml.png"/></div>
@@ -253,5 +258,4 @@ print <<EOF;
 </html>
 EOF
 }
-
-#Last Update by Luca 08/08/2016
+#Last Update by Carlo 25/07/2016

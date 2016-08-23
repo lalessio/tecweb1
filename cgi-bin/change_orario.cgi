@@ -30,9 +30,12 @@ my $new_orario = $cgi->param('new_hour');
 
 encode_entities($new_orario);
 
+
 my $file = "../data/orari.xml";
 my $parser = XML::LibXML->new();
 my $doc = $parser->parse_file($file);
+
+my $b="fallita";
 
 if($new_orario eq '')
 {
@@ -53,9 +56,10 @@ print <<EOF;
 
 	</head>
 	<body>
-		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
-		<div><a href="../index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
+<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
+		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
+		
 		<div id="menu">
 			<ul class="lista">
 				<li><a href="../index.html"><span lang="en">HOME</span></a></li>
@@ -67,9 +71,9 @@ print <<EOF;
 			</ul>
 		</div>
 
-		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span> area</a> &gt; &gt; Errore</div>
+		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="../adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
 
-		<div class="contenuto" id="contenuto" >	
+		<div class="contenuto" id=\"contenuto\">	
 		<h1 class="blocco1">Errore</h1>
 		<p>Il campo Modifica Orario non puo' essere vuoto, riprova di nuovo <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p> 
 		</div>
@@ -77,10 +81,10 @@ print <<EOF;
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
-
+		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
+		 <a href=\"adminarea.cgi\">TORNA AD ADMIN AREA</a>
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
-		 <a href="logout.cgi"><button type="submit" name="delete"><span xml:lang="en">Logout</span></button></a>
-		
+
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>
 
 	</body>
@@ -90,14 +94,17 @@ exit;
 
 }
 
-for my $dacambiare ($doc->findnodes("/orari/giorno[\@\id='$selected_day']/ora/text()"))
-{
+
+ for my $dacambiare ($doc->findnodes("/orari/giorno[\@\id='$selected_day']/ora/text()"))
+	{
 		
 		$dacambiare->setData($new_orario);
 		open(OUT,">$file") or die;
 		print OUT $doc->toString;
 		close(OUT);	
-}
+		$b="buon fine";}
+
+
 
 print "Content-type:text/html\n\n";
 print <<EOF;
@@ -114,11 +121,11 @@ print <<EOF;
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="../css/styleprova.css" type="text/css" media="screen"/>
 
-	</head> 
+	</head>
 	<body>
-		<div><a class="salta" href="#contenuto"><span>Salta al contenuto</span></a></div>
-		<div><a href="../index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
+		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
+	<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div id="menu">
 			<ul class="lista">
 				<li><a href="../index.html"><span lang="en">HOME</span></a></li>
@@ -130,20 +137,20 @@ print <<EOF;
 			</ul>
 		</div>
 
-		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Operazione Riuscita</div>
+		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminlogin.cgi"><span lang="en">Admin</span> amministratore</a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Inserimento avvenuto</div>
 
-		<div class="contenuto" id="contenuto">	
-		<h1 class="blocco1">Operazione Riuscita</h1>
-		<p>Inserimento avvenuto con successo, puoi visualizzare le modifiche apportate nella pagina <a href="orarieprezzi.cgi">Orari e prezzi</a></p> 
-		<p><a href="adminarea.cgi">Ritorna all'area amministrativa</a></p>
+		<div class="contenuto" id=\"contenuto\">	
+		<h1 class="blocco1">Informazioni</h1>
+		<p>Inserimento avvenuto con successo,per visualizzare gli orari <a href="orarieprezzi.cgi">Orari e prezzi</a></p> 
+		<p>oppure torna indietro <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p>
 		</div>
 		
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
-
+		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
+		 <a href=\"adminarea.cgi\">TORNA AD ADMIN AREA</a>
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
-		 <a href="logout.cgi"><button type="submit" name="delete"><span xml:lang="en">Logout</span></button></a>
 
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>
 
@@ -151,5 +158,9 @@ print <<EOF;
 </html>
 EOF
 exit;
+		
+	
+	
 
-# Last Update by Luca 08/08/16
+
+
