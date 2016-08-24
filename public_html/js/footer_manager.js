@@ -3,12 +3,12 @@
     var exist = document.cookie.indexOf("autorizzazione=checksession");
 	if(exist == -1)
 	{
-		document.getElementById("dinamico").innerHTML = "<a href=\"cgi-bin/adminlogin.cgi\">Area Amministratore</a>";
+		document.getElementById("dinamico").innerHTML = "<div class=\"indirizzo\"><a href=\"cgi-bin/adminlogin.cgi\"> Area amministratore</a></div>";
 	}
 	else
 	{
-		document.getElementById("dinamico").innerHTML = "<a href=\"cgi-bin/logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a> <a href=\"cgi-bin/adminarea.cgi\">Area Amministratore</a>";
+		document.getElementById("dinamico").innerHTML = "<div class=\"indirizzo\"><a href=\"cgi-bin/logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a></div><div class=\"indirizzo\"><a href=\"cgi-bin/adminarea.cgi\">TORNA AD ADMIN AREA</a></div>";
 	}	
 } 
 
-//Last Update by Luca 24/08/16
+//Last Update by Luca 04/08/16
