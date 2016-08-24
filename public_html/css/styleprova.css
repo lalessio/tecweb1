@@ -10,6 +10,13 @@ float:left;
 color:purple;
 }
 
+.citazione{
+font-style:Italic;
+width:auto;
+height:auto;
+clear:both;
+}
+
 #errore_prezzo2{
 float:left;
 color:purple;
@@ -69,6 +76,8 @@ border:1px solid;
 margin-left:3%;
 margin-right:3%;
 text-align:center;
+border-radius:50px;
+background-color:white;
 }
 
 #foto1{width:60%;
@@ -77,7 +86,7 @@ text-align:center;
 .foto2{width:30%;
 		margin-top:4em;
 		margin-left:2em;}
-#fotonews{width:30%;}
+.fotonews{width:30%;}
 	
 .footer{
         background-color:#9fe49f;
@@ -96,14 +105,7 @@ text-align:center;
     max-width: 10em;
   margin-left:3%;}
 
-.indirizzo{
-        padding: 0;
-        vertical-align: middle;
-        padding-left: 5%;
-        padding-right: 5%;
-        width: 90%;
-        display: inline;
-        vertical-align: middle;}
+
 
 .valido{
         padding:0;
@@ -208,7 +210,7 @@ text-align:center;
             }
  
         .blocco{
-      margin-top:9em;
+	margin-top:1em;
       }
 
 	.blocco1{
@@ -314,12 +316,40 @@ font-family: Verdana,helvetica,sans-serif;
 width:100%; 
 border:#73848C 1px solid; 
 padding:0;
+height:2em;
 }
 
 .informazioni textarea {
 	width:90%;
 }
-@media all and (max-width:1300px){
+
+
+.categorie {
+width:100%;
+float:left;
+}
+.immagine_cat{ 
+display:block; margin:0 auto;
+max-width:100%;
+max-height: 15em;
+}
+.titolo_categoria{
+text-align: center;
+text-transform: uppercase;
+float: left;
+padding: 0.825em;
+background: #fff;
+border-radius: 1em;
+box-shadow: 0 0 0.188em #c5c2a9;
+margin-right: 0.3em;
+}
+.indirizzo{
+        padding: 0;
+        vertical-align: middle;
+        width: 90%;
+        display: inline;
+        vertical-align: middle;}
+@media all and (max-width:1350px){
 
 .form1 {
 width:100%;
@@ -336,12 +366,33 @@ width:100%;
 .form3 {
 width:100%;
 }
+.categorie {
+width:100%;
+float:left;
+}
+.immagine_cat{ 
+display:block; margin:0 auto;
+max-width:100%;
+max-height: 15em;
+}
+.titolo_categoria{
+text-align: center;
+text-transform: uppercase;
+float: left;
+padding: 0.825em;
+width:45%;
+background: #fff;
+border-radius: 1em;
+box-shadow: 0 0 0.188em #c5c2a9;
+margin-right: 0.3em;
+clear:right;
+}
 
 
 
 }
 
-@media all and (max-width:768px){
+@media all and (max-width:878px){
 body{
 margin:0;
 }
@@ -357,6 +408,26 @@ padding:0;
 text-align:center;
 display:block; margin:0 auto;
 margin-bottom:3%
+}
+.categorie {
+width:100%;
+float:left;
+}
+.immagine_cat{ 
+display:block; margin:0 auto;
+max-width:100%;
+max-height: 15em;
+}
+.titolo_categoria{
+text-align: center;
+text-transform: uppercase;
+float: none;
+width:93%;
+padding: 0.825em;
+background: #fff;
+border-radius: 1em;
+box-shadow: 0 0 0.188em #c5c2a9;
+margin-right: 0.3em;
 }
 
 #menu ul
@@ -406,34 +477,25 @@ margin-bottom:3%
 	}
 
 
+#foto1 {
+width:80%;}
+
+.fotonews{
+width:90%;
+}
+
+.foto2{
+width:80%;}
 
 
 
 }
 
 
-.categorie {
-width:100%;
-float:none;
-}
-.immagine_cat{ 
-display:block; margin:0 auto;
-max-width:100%;
-max-height: 15em;
-}
-.titolo_categoria{
-text-align: center;
-text-transform: uppercase;
-float: left;
-padding: 0.825em;
-background: #fff;
-border-radius: 1em;
-box-shadow: 0 0 0.188em #c5c2a9;
-margin-right: 0.3em;
-}
 
 @media all and (min-width:769px)
 {
+
 
 .nav{
 
@@ -441,7 +503,9 @@ margin-right: 0.3em;
     padding-bottom:1em;
     margin-left:3%;
     margin-right:3%;
-}	
+}
+
+	
 
 
 

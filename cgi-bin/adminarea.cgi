@@ -64,7 +64,7 @@ print "
 		<div class=\"form1\">
 		<form  method=\"post\" action=\"change_prezzo.cgi\" onsubmit=\"return price_check()\">
 				<h1 class=\"blocco1\">Modifica prezzo</h1>
-				<p>Inserire un prezzo non negativo intero</p>
+				<p>Inserire un prezzo compreso tra € 5 ed € 30</p>
 				<fieldset class=\"informazioni\">
 					<p><label>Seleziona tipo prezzo:</label>
 						  <select  name=\"price\" title=\"price\">	
@@ -87,7 +87,7 @@ print "
 				<fieldset class=\"conferma\">
 				
 					<label for=\"Modificaprezzo\"></label>
-					<input type=\"submit\" id=\"Modificaprezzo\" value=\"Modifica\" title=\"Modifica prezzo\"/>
+					<input type=\"submit\" id=\"Modificaprezzo\" value=\"Modifica\" title=\"Modifica prezzo\" onsubmit=\"return this.value.match(^[0-9]*\$);\"/>
 					
 					<label for=\"Azzeraprezzo\"></label>
 					<input type=\"reset\" id=\"Azzeraprezzo\" value=\"Azzera\" title=\"Azzera campi\"/>
@@ -172,9 +172,7 @@ print "
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
-
-		  <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
-
+		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 
 	</body>
@@ -237,4 +235,4 @@ exit;
 
 }
 
-<!-- Last Update by Luca 24/08/16 -->
+<!-- Last Update by Carlo 4/08/16 -->
