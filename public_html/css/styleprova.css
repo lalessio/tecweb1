@@ -26,6 +26,15 @@ float:left;
 color:purple;
 }
 
+#errore_notizia1{
+color:purple;
+float:left;
+}
+#errore_notizia2{
+color:purple;
+float:left;
+}
+
 a.salta {
 
 left:-999px;
@@ -126,7 +135,7 @@ background-color:white;
         list-style-type: none;
 	      display:inline;
 	    	float:left;
-	     	width:97%;
+	     	width:96.4%;
 	    	margin:0;
 	    	padding:0;
 	     	background-color:white;
@@ -265,9 +274,11 @@ background-color:white;
 	}
 
 .lista{
-    border-top:1px solid;
-    border-bottom:1px solid;
+    border-top:3px solid;
+    border-bottom:3px solid;
     border-color:black;
+    border-left:3px solid;
+    border-right:3px solid;
 }
 
 .form12 {
@@ -432,9 +443,10 @@ margin-right: 0.3em;
 
 #menu ul
 		{
-		margin-left:-3%;
+		margin-left:-0;
 		text-align:center;
-		padding-left:4.3%;
+		padding-left:0;
+		width:97%;
 }
 #menu ul li{
 		float:none;
