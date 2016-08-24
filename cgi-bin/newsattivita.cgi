@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+﻿#!/usr/bin/perl -w
 
 use strict;
 use CGI qw(:standard);
@@ -93,9 +93,10 @@ if($auth eq "checksession")
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
-		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
-		 <a href=\"adminarea.cgi\">TORNA AD ADMIN AREA</a>
-		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
+<div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>		 
+<a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
+		 <a href=\"adminarea.cgi\">Area Amministratore</a>
+		 
 
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>
 
@@ -110,8 +111,9 @@ print <<EOF;
 		<div class="footer">
 		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
-		 		 <a href=\"adminlogin.cgi\">AREA AMMINISTRATORE</a>
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
+		 <a href=\"adminlogin.cgi\">Area Amministratore</a>
+		 
 
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>
 
@@ -120,4 +122,4 @@ print <<EOF;
 EOF
 
 }
-#Last Update by Carlo 28/07/16
+#Last Update by Luca 28/08/16

@@ -1,4 +1,4 @@
-# tecweb1
+﻿# tecweb1
 Progetto corso Tecnologie Web 2015/2016 UNIPD
 ##LISTA COSE DA FARE
 ##NUOVE COSE AGGIUNTE!
@@ -13,6 +13,7 @@ Progetto corso Tecnologie Web 2015/2016 UNIPD
 * rifare css footer
 * leggere slide accessibilità e vedere se è stato rispettato tutto
 * fare testare il sito da altre persone esterne
+* **nella relazione scrivere da dove abbiamo preso il contenuto o eventuali script**
 
 ##COSE FATTE
 * ~~**cookies maledetti**~~
