@@ -220,6 +220,7 @@ background-color:white;
  
         .blocco{
 	margin-top:1em;
+	margin-left:6%;
       }
 
 	.blocco1{
@@ -229,6 +230,9 @@ background-color:white;
       clear:left;
       text-align:center;
       }
+      
+      strong{margin-right:3%;}
+      ul{border-radius:3px solid black;}
        .bloccosingolonew{
       clear:left;
       text-align:center;
@@ -239,6 +243,9 @@ background-color:white;
         width:50%;
 
       } 
+input#user_pwd{
+padding-left:2em;
+}
 	   
      .testo_centrato {
       text-align:center;
@@ -399,6 +406,8 @@ margin-right: 0.3em;
 clear:right;
 }
 
+.blocco{margin-left:0;}
+
 
 
 }
@@ -498,6 +507,16 @@ width:90%;
 
 .foto2{
 width:80%;}
+
+input#invia{
+width:auto;
+display:block;
+}
+
+input#azzera{
+width:auto;
+display:block;
+}
 
 
 
