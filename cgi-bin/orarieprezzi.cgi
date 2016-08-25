@@ -39,7 +39,7 @@ print "
 	</head>
 	<body>
 <div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
-		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
+		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo del parco\" src=\"../images/logo.jpg\"/></a></div> 
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
 	
 		<div id=\"menu\">
@@ -56,7 +56,7 @@ print "
 		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt;&gt; Orari e Prezzi</div>
 
 		<div class=\"contenuto\" id=\"contenuto\">
-			<h2 class=\"titolo_testo\">Orari</h2>
+			<h1 class=\"titolo_testo\">Orari</h1>
 			<p>Il Parco Naturale Monte Verde e' aperto dal 1 Marzo al 31 Novembre.</p> 
 			<p>L'orario di apertura al pubblico del parco resta invariato tutto l'anno ed e' il seguente:</p>
 			<ul>
@@ -74,12 +74,12 @@ foreach my $orario (@orari)
     
     decode_entities($id);
     
-	print "<li><strong>$id:</strong>$ora</li>";
+	print "<li><strong>$id:</strong><ul><li>$ora</li></ul></li>";
 }
 
 print"
 	</ul>
-	<h2 class=\"titolo_testo\">Prezzi</h2>
+	<h1 class=\"titolo_testo\">Prezzi</h1>
 	<p>Il prezzo d'ingresso e' scontato per i ragazzi sotto i 12 anni e gli anziani sopra i 65 e inoltre durante il periodo estivo (15 Maggio - 15 Settembre) si risparmia sempre!</p> 
 	<ul>";
 	
@@ -128,7 +128,6 @@ print"
 	</ul>
 	<p><strong>Prezzi ed orari possono essere oggetto di variazioni.</strong></p>
 </div>			
-</div>
 	<div class=\"footer\">
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
