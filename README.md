@@ -4,13 +4,13 @@ Progetto corso Tecnologie Web 2015/2016 UNIPD
 ##NUOVE COSE AGGIUNTE!
 
 ##COSE CHE MANCANO 
-* dentro storia: si potrebbe inserire qualcos'altro su organi istituzionali o partner ecc come nei vari siti -> DA FARE (opzionale)
+* ~~dentro storia: si potrebbe inserire qualcos'altro su organi istituzionali o partner ecc come nei vari siti -> DA FARE (opzionale)~~
 * decidere un'aspetto definitivo della **home** -> **IN CORSO**
 * validare tutte le pagine e verificarne l'accessibilità -> fatto per alcune pagine, da rivedere al termine del progetto
-* aggiustare login e logout (tutti a destra dell'indirizzo e possibilità di tornare all'area amministratore) -> quasi fatto
+* ~~aggiustare login e logout (tutti a destra dell'indirizzo e possibilità di tornare all'area amministratore) -> quasi fatto~~
 * relazione
-* rifare css header
-* rifare css footer
+* ~~rifare css header~~
+* ~~rifare css footer~~
 * leggere slide accessibilità e vedere se è stato rispettato tutto
 * fare testare il sito da altre persone esterne
 * **nella relazione scrivere da dove abbiamo preso il contenuto o eventuali script**
