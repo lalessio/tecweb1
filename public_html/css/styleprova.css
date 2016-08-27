@@ -5,6 +5,17 @@ h1{ text-align:center;font-family:Verdana,sans-serif;}
 h2{ font-family:Verdana,sans-serif;}
 
 
+.box-orari{
+background:white;
+border-radius:2px solid white;
+margin-top:7em;
+}
+.box-prezzi{
+background:white;
+border-radius:2px solid white;
+}
+
+
 #errore_prezzo1{
 float:left;
 color:purple;
@@ -220,7 +231,6 @@ background-color:white;
  
         .blocco{
 	margin-top:1em;
-	margin-left:6%;
       }
 
 	.blocco1{
@@ -252,7 +262,7 @@ padding-left:2em;
       }
 
       .contenuto{
-      padding-left:3%;
+      padding-left:4%;
       padding-right:3%;
       padding-top:3em;
 
@@ -348,8 +358,9 @@ float:left;
 }
 .immagine_cat{ 
 display:block; margin:0 auto;
-max-width:100%;
-max-height: 15em;
+max-width:200px;
+max-height:200px;
+min-height:200px;
 }
 .titolo_categoria{
 text-align: center;
@@ -390,8 +401,9 @@ float:left;
 }
 .immagine_cat{ 
 display:block; margin:0 auto;
-max-width:100%;
-max-height: 15em;
+max-width:200px;
+max-height:200px;
+min-height:200px;
 }
 .titolo_categoria{
 text-align: center;
