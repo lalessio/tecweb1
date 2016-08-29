@@ -96,6 +96,7 @@ text-align:center;
 
 .titolo_testo{
 	clear:left;
+    margin-top:0em;
 }
 
 .logo {float:left;
