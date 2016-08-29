@@ -11,7 +11,7 @@ function orario_check(){
         
         if (!hour.replace(/^\s+/g, '').length)
         {
-           document.getElementById("errore_orario").innerHTML = "il campo orario è obligatorio*";
+           document.getElementById("errore_orario").innerHTML = "il campo orario è obbligatorio*";
            document.getElementById("new_hour").focus();
            return false;
 	}
