@@ -37,13 +37,14 @@ print "
 		<meta name=\"author\" content=\"Carlo Sindico , Luca Alessio\"/>
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-		<link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
+		<link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
+		<link rel=\"stylesheet\" href=\"../css/styleprint.css\" type=\"text/css\" media=\"print\"/>
 		<script type=\"text/javascript\" src=\"../js/amministratore.js\"></script>
 
 	</head>
 	<body>
 <div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
-		<div><a href=\"index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
+		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo del parco\" src=\"../images/logo.jpg\"/></a></div> 
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
 		
 		<div id=\"menu\">
@@ -60,8 +61,8 @@ print "
 		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt; &gt; Admin amministratore</div>
 
 		<div class=\"contenuto\" id=\"contenuto\">	
-
-			<form class=\"form\" method=\"post\" onsubmit=\"return login_check()\" action=\"controllologin.cgi\">
+            <div class=\"formadmin\">
+			<form method=\"post\" onsubmit=\"return login_check()\" action=\"controllologin.cgi\">
 
 			<h1 class=\"blocco1\">Login</h1>
 			<fieldset id=\"informazioni\">
@@ -78,13 +79,14 @@ print "
 			<fieldset id=\"conferma\">
 
 
-					<label for=\"invia\"></label><input type=\"submit\" name=\"submit\" id=\"invia\" value=\"Invia\"/>
+					<label for=\"invia\">Invia:</label><input type=\"submit\" name=\"submit\" id=\"invia\" value=\"Invia\"/>
 
-					<label for=\"azzera\"></label>
+					<label for=\"azzera\">Azzera:</label>
 					<input type=\"reset\" id=\"azzera\" value=\"Azzera\"/>
 				
 			</fieldset>
 			</form>
+        </div>
 		</div>
 		
 		<div class=\"footer\">
@@ -101,17 +103,8 @@ print "
 }
 
 else {
-	print "Content-type:text/html\n\n";
-			print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">
-			<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"it\" lang=\"it\"> 
-			<head>
-			<title>Controllo login</title>
-			<meta name=\"title\" content=\"Redirect\"/>
-			<meta http-equiv=\"refresh\"
-			content=\"0; url=adminarea.cgi\"/>
-			</head>
-			<body>
-			</body>
-			</html>"; 
+
+print "Content-type:text/html\n\n";
+print "Location: adminarea.cgi\n\n";
 }
 <!-- Last Update by Carlo 8/08/16 -->

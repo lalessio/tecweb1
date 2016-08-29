@@ -11,7 +11,7 @@
 		<ora>Chiuso</ora>
 	</giorno>
 	<giorno id="Giovedi">
-		<ora>adasdasdad</ora>
+		<ora>8:00-12:00</ora>
 	</giorno>
 	<giorno id="Venerdi">
 		<ora>8:00 - 18:00</ora>

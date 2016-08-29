@@ -35,7 +35,8 @@ print "
 		<meta name=\"author\" content=\"Carlo Sindico , Luca Alessio\"/>
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
+		 <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
+		 <link rel=\"stylesheet\" href=\"../css/styleprint.css\" type=\"text/css\" media=\"print\"/>
 	</head>
 	<body>
 <div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>

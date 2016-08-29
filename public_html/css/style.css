@@ -1,7 +1,7 @@
 html {background-color:#d4d4d4;  font-family:verdana,sans-serif; font-size: 1em;}
 body {background-color:#d0f2d0; margin-left: 13%; margin-right:13%; margin-top:0; }
 
-h1{ text-align:center;font-family:Verdana,sans-serif;}
+h1{ text-align:center;font-family:Verdana,sans-serif;margin-top:4em;}
 h2{ font-family:Verdana,sans-serif;}
 
 #errore_prezzo1{
@@ -14,6 +14,7 @@ font-style:Italic;
 width:auto;
 height:auto;
 clear:both;
+margin-top:0em;
 }
 
 #errore_prezzo2, #errore_orario, #errore_notizia1, #errore_notizia2{
@@ -70,18 +71,17 @@ background-color:white;
 }
 
 .foto{
-margin-top:10em;
+margin-top:3em;
 }
 
 #foto1
 {width:60%;
-margin-top:4em;
-margin-left:4em;}
+}
 
--.foto2
+.foto2
 {width:30%;
 margin-top:4em;
-margin-left:2em;}
+}
 
 .fotonews{width:30%;}
 	
@@ -273,7 +273,7 @@ border-color:black;
 border-left:3px solid;
 border-right:3px solid;
 }
-
+.formadmin{margin-top:6em;}
 .form12 {
 width:auto;
 float:left;

@@ -33,14 +33,15 @@ print "
 		<meta name=\"author\" content=\"Carlo Sindico , Luca Alessio\"/>
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
-		 <link rel=\"stylesheet\" href=\"../css/styleprova.css\" type=\"text/css\" media=\"screen\"/>
+		 <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
+		 <link rel=\"stylesheet\" href=\"../css/styleprint.css\" type=\"text/css\" media=\"print\"/>
 		<script type=\"text/javascript\" src=\"../js/form.js\"></script>
 		<script type=\"text/javascript\" src=\"../js/form2.js\"></script>
 		<script type=\"text/javascript\" src=\"../js/form3.js\"></script>
 	</head>
 	<body>
 <div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
-		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo\" src=\"../images/logo.jpg\"/></a></div> 
+		<div><a href=\"../index.html\"><img class=\"logo\" alt=\"logo del parco\" src=\"../images/logo.jpg\"/></a></div> 
 		<div class=\"titolo\"><a href=\"../index.html\">Parco Naturale</a></div><div class=\"sottotitolo\"><a href=\"../index.html\">Monte Verde</a></div>
 		
 		<div id=\"menu\">
@@ -86,10 +87,10 @@ print "
 				</fieldset>
 				<fieldset class=\"conferma\">
 				
-					<label for=\"Modificaprezzo\"></label>
-					<input type=\"submit\" id=\"Modificaprezzo\" value=\"Modifica\" title=\"Modifica prezzo\" onsubmit=\"return this.value.match(^[0-9]*\$);\"/>
+					<label for=\"Modificaprezzo\">Modifica:</label>
+					<input type=\"submit\" id=\"Modificaprezzo\" value=\"Modifica\" title=\"Modifica prezzo\"/>
 					
-					<label for=\"Azzeraprezzo\"></label>
+					<label for=\"Azzeraprezzo\">Azzera:</label>
 					<input type=\"reset\" id=\"Azzeraprezzo\" value=\"Azzera\" title=\"Azzera campi\"/>
 					
 				</fieldset>
@@ -120,10 +121,10 @@ print "
 				</fieldset>
 				<fieldset class=\"conferma\">
 				
-					<label for=\"Modificaorario\"></label>
+					<label for=\"Modificaorario\">Modifica:</label>
 					<input type=\"submit\" id=\"Modificaorario\" value=\"Modifica\" title=\"Modifica orario\"/>
 					
-					<label for=\"Azzeraorario\"></label>
+					<label for=\"Azzeraorario\">Azzera:</label>
 					<input type=\"reset\" id=\"Azzeraorario\" value=\"Azzera\" title=\"Azzera orario\"/>
 					
 				</fieldset>
@@ -155,9 +156,9 @@ print "
 			<fieldset class=\"conferma\">
 
 
-					<label for=\"Invianotizia\"></label><input type=\"submit\" name=\"submit\" id=\"Invianotizia\" value=\"Invia\" title=\"Invia notizia\"/>
+					<label for=\"Invianotizia\">Invia:</label><input type=\"submit\" name=\"submit\" id=\"Invianotizia\" value=\"Invia\" title=\"Invia notizia\"/>
 
-					<label for=\"Azzeranotizia\"></label>
+					<label for=\"Azzeranotizia\">Azzera:</label>
 					<input type=\"reset\" id=\"Azzeranotizia\" value=\"Azzera\" title=\"Azzera notizia\"/>
 				
 			</fieldset>
@@ -194,12 +195,13 @@ print <<EOF;
 		<meta name="author" content="Carlo Sindico , Luca Alessio"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href="../css/styleprova.css" type="text/css" media="screen"/>
+		<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="../css/styleprint.css" type="text/css" media="print"/>
 
 	</head>
 	<body>
 <div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
-		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
+		<div><a href="../index.html"><img class="logo" alt="logo del parco" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
 	
 		<div id="menu">

@@ -13,7 +13,7 @@ function price_check(){
         
         if (!price.replace(/^\s+/g, '').length)
         {
-           document.getElementById("errore_prezzo2").innerHTML = "il campo prezzo è obbligatorio*";
+           document.getElementById("errore_prezzo2").innerHTML = "il campo prezzo è obligatorio*";
            document.getElementById("new_price").focus();
            return false;
 	}
