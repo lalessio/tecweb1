@@ -58,7 +58,7 @@ print "
 			</ul>
 		</div>
 
-		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt; &gt; Admin amministratore</div>
+		<div class=\"nav\">Ti trovi qui: <a href=\"../index.html\"><span lang=\"en\">Home</span></a> &gt; &gt; <span lan=\"en\">Admin</span> amministratore</div>
 
 		<div class=\"contenuto\" id=\"contenuto\">	
             <div class=\"formadmin\">
@@ -90,6 +90,7 @@ print "
 		</div>
 		
 		<div class=\"footer\">
+        <a href=\"../mappasito.html\"><span id=\"up\">MAPPA DEL SITO</span></a>
 		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
 
