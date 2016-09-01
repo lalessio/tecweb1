@@ -7,7 +7,7 @@
 	}
 	else
 	{
-		document.getElementById("dinamico").innerHTML = "<div class=\"indirizzo\"><a href=\"cgi-bin/logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a></div><div class=\"indirizzo\"><a href=\"cgi-bin/adminarea.cgi\">TORNA AD ADMIN AREA</a></div>";
+		document.getElementById("dinamico").innerHTML = "<div class=\"indirizzo\"><a href=\"cgi-bin/logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a></div><div class=\"indirizzo\"><a href=\"cgi-bin/adminarea.cgi\">TORNA AD <span lang=\"en\">ADMIN</span>AREA</a></div>";
 	}	
 } 
 
