@@ -352,7 +352,7 @@ padding: 0.825em;
 background: #fff;
 border-radius: 1em;
 box-shadow: 0 0 0.188em #c5c2a9;
-margin-right: 0.3em;
+margin-right: 0.15em;
 }
 
 .indirizzo{
@@ -396,7 +396,7 @@ vertical-align: middle;}
 	.blocco{margin-left:0;}
 }
 
-@media all and (max-width:878px){
+@media all and (max-width:922px){
 	body{
 	margin:0;
 	}
