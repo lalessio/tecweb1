@@ -1,7 +1,7 @@
 html {background-color:#d4d4d4;  font-family:verdana,sans-serif; font-size: 1em;}
 body {background-color:#d0f2d0; margin-left: 13%; margin-right:13%; margin-top:0; }
 
-h1{ text-align:center;font-family:Verdana,sans-serif;margin-top:4em;}
+h1{ text-align:center;font-family:Verdana,sans-serif;margin-top:5em;}
 h2{ font-family:Verdana,sans-serif;}
 
 #indice h1{margin-top:1em;}
@@ -278,7 +278,7 @@ border-color:black;
 border-left:3px solid;
 border-right:3px solid;
 }
-.formadmin{margin-top:6em;}
+.formadmin{margin-top:10em;}
 .form12 {
 width:auto;
 float:left;
@@ -364,7 +364,7 @@ vertical-align: middle;}
 
 @media all and (max-width:1350px){
 
-	.form1, form12, form2, form3{
+	.form1, .form12, .form2, .form3{
 	width:100%;
 	}
 
@@ -518,10 +518,20 @@ vertical-align: middle;}
 	}
 }
 
-@media all and (min-width:1900px) 
+@media all and (min-width:1660px) 
 {
-    body{
-    margin: 0 auto; 
-    width: 1900px;
-    }
+.titolo_categoria {
+text-align: center;
+text-transform: uppercase;
+float: left;
+padding: 0.825em;
+background: 
+white;
+border-radius: 1em;
+box-shadow: 0 0 0.188em #c5c2a9;
+margin-right: 3.0%;
+margin-left:2%;
+}
+}
+
 }
