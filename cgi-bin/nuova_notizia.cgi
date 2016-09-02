@@ -76,7 +76,7 @@ print <<EOF;
 		</div>
 		
 		<div class="footer">
-		<a href=\"mappasito.html\"><span class=\"up\">MAPPA DEL SITO</span></a>
+		<a href=\"../mappasito.html\"><span class=\"up\">MAPPA DEL SITO</span></a>
 		<a href="#menu"><span class="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
@@ -139,7 +139,7 @@ if (($estensione =~ /.png/i) || ($estensione =~ /.jpg/i) || ($estensione =~ /.jp
 	$new_node->appendChild($contenuto);
 	
 	my $datacorrente = XML::LibXML::Element->new('data');
-	my $ymd = strftime "%Y/%m/%d", localtime;
+	my $ymd = strftime "%Y-%m-%d", localtime;
 	$datacorrente->appendText($ymd);
 	$new_node->appendChild($datacorrente);
 	
@@ -195,7 +195,7 @@ print <<EOF;
 		</div>
 		
 		<div class="footer">
-		<a href=\"mappasito.html\"><span class=\"up\">MAPPA DEL SITO</span></a>
+		<a href=\"../mappasito.html\"><span class=\"up\">MAPPA DEL SITO</span></a>
 		<a href="#menu"><span class="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
@@ -253,6 +253,7 @@ print <<EOF;
 		</div>
 		
 		<div class="footer">
+		<a href=\"../mappasito.html\"><span class=\"up\">MAPPA DEL SITO</span></a>
 		<a href="#menu"><span class="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="images/css.png"/>
 		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>

@@ -238,5 +238,3 @@ EOF
 exit;
 
 }
-
-<!-- Last Update by Carlo 4/08/16 -->

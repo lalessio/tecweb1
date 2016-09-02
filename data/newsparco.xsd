@@ -14,9 +14,9 @@
 	<xsd:complexType name="typeNotizia">
 		<xsd:sequence>		
 			<xsd:element name="titolo" type="xsd:string"/> 
-			<xsd:element name="data" type="xsd:string"/> <!-- qui forse potremmo usare xsd:date -->
 			<xsd:element name="contenuto" type="xsd:string"/>
-            		<xsd:element name="img" type="xsd:string"/>
+			<xsd:element name="data" type="xsd:date"/>
+            <xsd:element name="img" type="xsd:string"/>
 		</xsd:sequence>
 		<xsd:attribute name="ID" type="typeID" use="required"/>			
 	</xsd:complexType>
@@ -30,4 +30,4 @@
 
 </xsd:schema>
 
-<!-- Last Update by Luca 20/07/2016 -->
+<!-- Last Update by Luca 02/09/2016 -->
