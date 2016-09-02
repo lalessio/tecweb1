@@ -19,4 +19,5 @@
 			
 		<xsd:attribute name="id" type="xsd:string" use="required"/>			
 	</xsd:complexType>
+</xsd:schema>
 <!-- Last Update by Luca 25/07/2016 -->

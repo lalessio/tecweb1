@@ -122,7 +122,8 @@ if($auth ne "checksession")
 {
 print"</div></div>
 	<div class=\"footer\">
-		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
+	<a href=\"mappasito.html\"><span class=\"up\">MAPPA DEL SITO</span></a>
+		<a href=\"#menu\"><span class=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 		<div class=\"indirizzo\"><a href=\"adminlogin.cgi\">AREA AMMINISTRATORE</a></div>
@@ -134,11 +135,12 @@ print"</div></div>
 {
 	print"</div></div>
 	<div class=\"footer\">
-		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>     
+		<a href=\"mappasito.html\"><span class=\"up\">MAPPA DEL SITO</span></a>
+		<a href=\"#menu\"><span class=\"up\">TORNA ALL'INIZIO</span></a>     
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 		 <div class=\"indirizzo\"><a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a></div>
-		 <div class=\"indirizzo\"><a href=\"adminarea.cgi\">TORNA AD ADMIN AREA</a></div>
+		 <div class=\"indirizzo\"><a href=\"adminarea.cgi\">TORNA AD <span lang=\"en\">ADMIN</span> AREA</a></div>
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>

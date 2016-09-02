@@ -77,8 +77,8 @@ print <<EOF;
 		</div>
 		
 		<div class="footer">
-        <a href="../mappasito.html"><span id="up">MAPPA DEL SITO</span></a>
-		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
+        <a href="../mappasito.html"><span class="up">MAPPA DEL SITO</span></a>
+		<a href="#menu"><span class="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
 
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>

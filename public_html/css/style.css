@@ -2,8 +2,10 @@ html {background-color:#d4d4d4;  font-family:verdana,sans-serif; font-size: 1em;
 body {background-color:#d0f2d0; margin-left: 13%; margin-right:13%; margin-top:0; }
 
 h1{ text-align:center;font-family:Verdana,sans-serif;margin-top:5em;}
-h2{ font-family:Verdana,sans-serif;}
+h2{ font-family:Verdana,sans-serif;margin-top:2em;}
 #titolo_contenuto h1{margin-top:1em;}
+#titolo_contenuto1 h1{margin-top:1em;}
+#titolo_contenuto2 h1{margin-top:1em;}
 
 #indice h1{margin-top:1em;}
 
@@ -75,13 +77,11 @@ background-color:white;
 
 
 .foto {
-    margin-top: 3em;
-    margin-left: 10%;
+ margin-left: 10%;
 }
 
 #foto1
 {width:60%;
-padding-top:3em;
 }
 
 .foto2
@@ -172,47 +172,29 @@ color: purple;
 #volpe{
 clear: right;
 padding-top: 1em;
-width: 30%;
+width: 40%;
 float: right;
 }
 
-#volpetesto{
-float:right;
-font-size:0.7em;
-clear:right;
-margin-bottom:2%;
-max-width:40%;
-}
+
 
 #gallo{
 clear: right;
 padding-top: 1em;
-width: 25%;
+width: 30%;
 float: right;
 }
 
-#gallotesto{
-float:right;
-font-size:0.7em;
-clear:right;
-margin-bottom:2%;
-max-width:40%;
-}
+
 
 #pianta{
 clear: right;
 padding-top: 1em;
-width: 25%;
+padding-left:1em;
+width: 30%;
 float: right;
 }
 
-#piantatesto{
-float:right;
-font-size:0.7em;
-clear:right;
-margin-bottom:2%;
-max-width:40%;
-}
 
 .attivita{
 clear: right;
@@ -231,7 +213,6 @@ text-align:center;
 }
 
 strong{margin-right:3%;}
-ul{border-radius:3px solid black;}
 .bloccosingolonew{
 clear:left;
 text-align:center;
@@ -253,6 +234,7 @@ text-align:center;
 .contenuto{
 padding-left:4%;
 padding-right:3%;
+margin-top:10em;
 }
 
 .contenutoform{
@@ -264,7 +246,7 @@ padding-left:3%;
 padding-right:3%;
 }
 
-#up { 
+.up { 
 text-align: center;
 width: 100%;
 display: inline-block;
@@ -401,6 +383,12 @@ vertical-align: middle;}
 	}
 
 	.blocco{margin-left:0;}
+
+	.contenuto{
+	padding-left:4%;
+	padding-right:3%;
+	margin-top:14em;
+	}
 }
 
 @media all and (max-width:922px){
@@ -445,6 +433,13 @@ vertical-align: middle;}
 	box-shadow: 0 0 0.188em #c5c2a9;
 	margin-right: 0.3em;
 	}
+
+	.contenuto{
+	padding-left:4%;
+	padding-right:3%;
+	margin-top:24em;
+	}
+
 
 	#menu ul
 	{
@@ -546,4 +541,4 @@ margin-left:2%;
 }
 }
 
-}
+

@@ -64,7 +64,7 @@ print "
 		<div class=\"form12\">
 		<div class=\"form1\">
 		<form  method=\"post\" action=\"change_prezzo.cgi\" onsubmit=\"return price_check()\">
-				<h1 class=\"blocco1\">Modifica prezzo</h1>
+				<div id=\"titolo_contenuto\"><h1>Modifica prezzo</h1></div>
 				<p>Inserire un prezzo compreso tra € 5 ed € 30</p>
 				<fieldset class=\"informazioni\">
 					<p><label>Seleziona tipo prezzo:</label>
@@ -100,7 +100,7 @@ print "
 		
 			<div class=\"form2\">
 			<form method=\"post\" action=\"change_orario.cgi\" onsubmit=\"return orario_check()\">
-				<h1 class=\"blocco1\">Modifica orario</h1>
+				<div id=\"titolo_contenuto1\"><h1>Modifica orario</h1></div>
 				<p>Inserire un  orario nel formato  XX:YY-ZZ:KK</p>
 				<fieldset class=\"informazioni\">
 					<p><label>Seleziona giorno:</label>
@@ -135,7 +135,7 @@ print "
 		<div  class=\"form3\">
 		<form method=\"post\" action=\"nuova_notizia.cgi\" enctype=\"multipart/form-data\" onsubmit=\"return notizia_check()\">
 
-			<h1 class=\"blocco1\">Inserisci nuova notizia</h1>
+			<div id=\"titolo_contenuto2\"><h1 >Inserisci nuova notizia</h1></div>
 			<p>Inserire una immagine che abbia una dimensione non superiore a 1Mega<span lang=\"eng\">byte</span></p>
 			<p>non vi e' la possibilita' di inserire una notizia senza testo o titolo. <span>Tutti i campi devono essere compilati</span></p>
 			<fieldset class=\"informazioni\">
@@ -170,8 +170,8 @@ print "
 
 		</div>
 		<div class=\"footer\">
-        <a href=\"../mappasito.html\"><span id=\"up\">MAPPA DEL SITO</span></a>
-		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
+        <a href=\"../mappasito.html\"><span class=\"up\">MAPPA DEL SITO</span></a>
+		<a href=\"#menu\"><span class=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 		 <a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a>
@@ -219,14 +219,13 @@ print <<EOF;
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt; Errore</div>
 
 		<div class="contenuto" id=\"contenuto\">	
-		<h1 class="blocco1">Errore</h1>
-		<p><span lang="en">Login</span> non avvenuto, devi eseguire il login prima di accedere all'area amministratore <a href="adminlogin.cgi"><span lang="en">Login</span></a></p> 
+		<h1>Errore</h1>
+		<p><span lang="en">Login</span> non avvenuto, devi eseguire il <span lang="en">login</span> prima di accedere all'area amministratore <a href="adminlogin.cgi"><span lang="en">Login</span></a></p> 
 		</div>
 		
 		<div class="footer">
-        <a href="../mappasito.html"><span id="up">MAPPA DEL SITO</span></a>
-        <a href="mappasito.html"><span id="up">MAPPA DEL SITO</span></a>
-		<a href="#menu"><span id="up">TORNA ALL'INIZIO</span></a>
+        <a href="../mappasito.html"><span class="up">MAPPA DEL SITO</span></a>
+		<a href="#menu"><span class="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
 
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>

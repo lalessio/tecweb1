@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
-<orari xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" orari.xsd">
+<orari xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="orari.xsd">
 	<giorno id="Lunedi">
 		<ora>8:00-20:00</ora>
 	</giorno>

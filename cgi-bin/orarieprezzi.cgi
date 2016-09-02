@@ -58,6 +58,7 @@ print "
 
 		<div class=\"contenuto\" id=\"contenuto\">
 			<h1 class=\"titolo_testo\">Orari</h1>
+            <img class=\"foto4\" alt=\"orari e prezzi del parco\" src=\"../images/orariprezzi.jpg\"/>
 			<p>Il Parco Naturale Monte Verde e' aperto dal 1 Marzo al 31 Novembre.</p> 
 			<p>L'orario di apertura al pubblico del parco resta invariato tutto l'anno ed e' il seguente:</p>
 			<ul>
@@ -114,11 +115,12 @@ print"
 	<p><strong>Prezzi ed orari possono essere oggetto di variazioni.</strong></p>
 </div>						
 	<div class=\"footer\">
-		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
+		<a href=\"mappasito.html\"><span class=\"up\">MAPPA DEL SITO</span></a>
+		<a href=\"#menu\"><span class=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 		 <div class=\"indirizzo\"><a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a></div>
-		 <div class=\"indirizzo\"><a href=\"adminarea.cgi\">TORNA AD ADMIN AREA</a></div>
+		 <div class=\"indirizzo\"><a href=\"adminarea.cgi\">TORNA AD <span lang=\"en\">ADMIN</span> AREA</a></div>
 		<img class=\"valido\" alt=\"xhtml valido\" src=\"../images/xhtml.png\"/></div>
 	</body>
 	</html>
@@ -130,7 +132,8 @@ print"
 	<p><strong>Prezzi ed orari possono essere oggetto di variazioni.</strong></p>
 </div>			
 	<div class=\"footer\">
-		<a href=\"#menu\"><span id=\"up\">TORNA ALL'INIZIO</span></a>
+		<a href=\"mappasito.html\"><span class=\"up\">MAPPA DEL SITO</span></a>
+		<a href=\"#menu\"><span class=\"up\">TORNA ALL'INIZIO</span></a>
 		 <img class=\"valido\" alt=\"css valido\" src=\"../images/css.png\"/>
 		 <div class=\"indirizzo\"> Via Nazionale, 22 38085  Bolzano (TN)</div>
 		 <div class=\"indirizzo\"><a href=\"adminlogin.cgi\">AREA AMMINISTRATORE</a></div>
