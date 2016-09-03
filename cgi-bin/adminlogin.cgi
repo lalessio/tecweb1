@@ -36,6 +36,7 @@ print "
 		<meta name=\"language\" content=\"italian it\"/>
 		<meta name=\"author\" content=\"Carlo Sindico , Luca Alessio\"/>
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
+		<meta http-equiv=\"Content-Script-Type\" content=\"text/javascript\"/>
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
 		<link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
 		<link rel=\"stylesheet\" href=\"../css/styleprint.css\" type=\"text/css\" media=\"print\"/>
@@ -69,20 +70,20 @@ print "
 			<p id=\"errore\"></p>
 
 					<p><label for=\"user_name\"><span lang=\"en\">Username:</span></label>
-					<input type=\"text\" id=\"user_name\" name=\"user_name\"/></p>
+					<input type=\"text\" id=\"user_name\" name=\"user_name\" title=\"Inserisci il tuo username qui\"/></p>
 
 				
 					<p><label for=\"user_pwd\"><span lang=\"en\">Password:</span></label>
-					<input type=\"password\" id=\"user_pwd\" name=\"user_pwd\"/></p>
+					<input type=\"password\" id=\"user_pwd\" name=\"user_pwd\" title=\"Inserisci la tua password qui\"/></p>
 				
 			</fieldset>
 			<fieldset id=\"conferma\">
 
 
-					<label for=\"invia\">Invia:</label><input type=\"submit\" name=\"submit\" id=\"invia\" value=\"Invia\"/>
+					<label for=\"invia\">Invia:</label><input type=\"submit\" name=\"submit\" id=\"invia\" value=\"Invia\" title=\"Invia\"/>
 
 					<label for=\"azzera\">Azzera:</label>
-					<input type=\"reset\" id=\"azzera\" value=\"Azzera\"/>
+					<input type=\"reset\" id=\"azzera\" value=\"Azzera\" title=\"Azzera\"/>
 				
 			</fieldset>
 			</form>

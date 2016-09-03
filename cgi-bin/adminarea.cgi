@@ -32,6 +32,7 @@ print "
 		<meta name=\"language\" content=\"italian it\"/>
 		<meta name=\"author\" content=\"Carlo Sindico , Luca Alessio\"/>
 		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"/>
+		<meta http-equiv=\"Content-Script-Type\" content=\"text/javascript\"/>
 		<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>
 		 <link rel=\"stylesheet\" href=\"../css/style.css\" type=\"text/css\" media=\"screen\"/>
 		 <link rel=\"stylesheet\" href=\"../css/styleprint.css\" type=\"text/css\" media=\"print\"/>
@@ -68,14 +69,14 @@ print "
 				<p>Inserire un prezzo compreso tra € 5 ed € 30</p>
 				<fieldset class=\"informazioni\">
 					<p><label>Seleziona tipo prezzo:</label>
-						  <select  name=\"price\" title=\"price\">	
+						  <select  name=\"price\" title=\"prezzo bliglietto\">	
 						  <option value=\"intero\">intero</option> 
 						  <option value=\"ridotto ragazzi (sotto 12 anni)\">ridotto ragazzi (sotto 12 anni)</option>
 						  <option value=\"ridotto anziani (sopra 65 anni)\">ridotto anziani (sopra 65 anni)</option>
 					</select></p>
 
 				<p><label>Seleziona periodo:</label>
-						  <select  name=\"period\" title=\"period\">	
+						  <select  name=\"period\" title=\"stagione\">	
 						  <option value=\"primaveraautunno\">Primavera - Autunno</option> 
 						  <option value=\"estate\">Estate</option>
 					</select></p>
@@ -104,7 +105,7 @@ print "
 				<p>Inserire un  orario nel formato  XX:YY-ZZ:KK</p>
 				<fieldset class=\"informazioni\">
 					<p><label>Seleziona giorno:</label>
-						  <select  name=\"day\" title=\"day\">	
+						  <select  name=\"day\" title=\"Giorni\">	
 						  <option value=\"Lunedi\">Lunedi'</option> 
 						  <option value=\"Martedi\">Martedi'</option>
 						  <option value=\"Mercoledi\">Mercoledi'</option>
@@ -125,7 +126,7 @@ print "
 					<input type=\"submit\" id=\"Modificaorario\" value=\"Modifica\" title=\"Modifica orario\"/>
 					
 					<label for=\"Azzeraorario\">Azzera:</label>
-					<input type=\"reset\" id=\"Azzeraorario\" value=\"Azzera\" title=\"Azzera orario\"/>
+					<input type=\"reset\" id=\"Azzeraorario\" value=\"Azzera\" title=\"Azzera campi\"/>
 					
 				</fieldset>
 				
@@ -145,7 +146,7 @@ print "
 
 				
 					<p><label for=\"new_content\">Testo: <span id=\"errore_notizia2\"></span></label>
-					<textarea  rows=\"20\" cols=\"60\" id=\"new_content\" name=\"new_content\" title=\"Testo notizias\"></textarea></p>
+					<textarea  rows=\"20\" cols=\"60\" id=\"new_content\" name=\"new_content\" title=\"Testo notizia\"></textarea></p>
 
 
 					<p><label for=\"new_image\">Carica un'immagine:</label>
@@ -159,7 +160,7 @@ print "
 					<label for=\"Invianotizia\">Invia:</label><input type=\"submit\" name=\"submit\" id=\"Invianotizia\" value=\"Invia\" title=\"Invia notizia\"/>
 
 					<label for=\"Azzeranotizia\">Azzera:</label>
-					<input type=\"reset\" id=\"Azzeranotizia\" value=\"Azzera\" title=\"Azzera notizia\"/>
+					<input type=\"reset\" id=\"Azzeranotizia\" value=\"Azzera\" title=\"Azzera campi\"/>
 				
 			</fieldset>
 			</form>
@@ -195,6 +196,7 @@ print <<EOF;
 		<meta name="language" content="italian it"/>
 		<meta name="author" content="Carlo Sindico , Luca Alessio"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta http-equiv=\"Content-Script-Type\" content=\"text/javascript\"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="../css/styleprint.css" type="text/css" media="print"/>

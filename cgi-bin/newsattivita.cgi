@@ -31,6 +31,7 @@ print <<EOF;
 		<meta name="language" content="italian it"/>
 		<meta name="author" content="Carlo Sindico , Luca Alessio"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta http-equiv=\"Content-Script-Type\" content=\"text/javascript\"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		 <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen"/>
 		 <link rel=\"stylesheet\" href=\"../css/styleprint.css\" type=\"text/css\" media=\"print\"/>
@@ -83,7 +84,7 @@ for (my $i=0; $i<3; $i=$i+1)
 				<p><strong>$title</strong></p>
 				<p>$date</p>
 				<img class=\"fotonews\" src=\"../images/$image\" alt=\"$title\"/> 
-				<p>$text...</p>
+				<p>$text ...</p>
 				<a href=\"notizia.cgi?request=$id\">Continua a leggere</a>	
 			</div>";
 }
