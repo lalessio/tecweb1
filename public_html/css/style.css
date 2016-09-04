@@ -85,8 +85,8 @@ background-color:white;
 }
 
 .foto2
-{width:30%;
-margin-top:4em;
+{width:40%;
+ margin-left:30%;
 }
 .foto4
 {width:40%;
@@ -277,6 +277,8 @@ margin-right:6px;
 
 .form3 {
 margin-right:6px;
+width: 50%;
+float: right;
 }
 
 #form123 {
@@ -349,7 +351,7 @@ margin-right: 0.15em;
 }
 
 .indirizzo{
-padding: 0;
+padding: 0.4em;
 vertical-align: middle;
 width: 90%;
 display: inline;
@@ -511,7 +513,8 @@ vertical-align: middle;}
 	}
 
 	.foto2{
-	width:80%;}
+	width: 60%;
+	margin-left: 20%;}
 
     .foto4
     {width:80%;
