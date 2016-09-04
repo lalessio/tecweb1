@@ -103,10 +103,16 @@ clear:both;
 font-variant:small-caps; 
 text-align:center;
 }
+#form123 .titolo_testo{
+	clear:left;
+    margin-top:0em;
+	font-size:1em;
+}
 
 .titolo_testo{
 	clear:left;
     margin-top:0em;
+
 }
 
 .logo {float:left;
