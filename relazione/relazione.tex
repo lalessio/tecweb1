@@ -23,7 +23,7 @@
 		%----------------------------------------------------------------------------------------
 		
 		\HRule \\[0.4cm]
-		{ \huge  Monte Verde}\\[0.3cm] 
+		{ \huge  Parco Naturale Monte Verde}\\[0.3cm] 
 		\HRule \\[0.4cm]
 		
 		
@@ -90,55 +90,76 @@
 	
 	\section{Abstract}
 	\begin{itemize}
-		\item Il sito realizzato riguarda il fittizio Parco Naturale Monte Verde. L'obiettivo principale che il portale monteverde.it si pone \`e quello di fornire tutte le informazioni possibili sul parco agli utenti visitatori. Il sito \`e in lingua italiana.
+		\item Il sito realizzato riguarda il fittizio Parco Naturale Monte Verde.\\ L'obiettivo principale che il portale monteverde.it si pone \`e quello di fornire tutte le informazioni possibili sul parco agli utenti visitatori. Il sito \`e in lingua italiana.
 		
 		\item L'utenza che accede al sito ha la possibilit\`a di visualizzare pagine informative che descrivono flora, fauna, storia e conformazione del parco e le attivit\`a che si possono svolgere al suo interno.
 
 		\item Nel sito sono presenti anche pagine contenenti contenuto dinamico come gli orari e i prezzi d'ingresso al parco ed una pagina dedicata alle notizie.
 
-		\item L'amministratore del sito ha la possibilit\`a di alterare prezzi ed orari del parco e di creare nuove notizie. Una dettagliata spiegazione sulle funzionalit\`a accessibili dall'amministratore è presente nella sezione "Amministrazione del sito". Credenziali di accesso \textit{Login:} admin \textit{Password:} admin
+		\item L'amministratore del sito ha la possibilit\`a di alterare prezzi ed orari del parco e di creare nuove notizie.\\ \\ Una dettagliata spiegazione sulle funzionalit\`a accessibili dall'amministratore \`e presente nella sezione "Amministrazione del sito".
 
-		\item \textbf{Disclaimer:} Il Parco Naturale Monte Verde\`e un luogo puramente fantastico e senza alcuna corrispondenza nel mondo reale. La maggior parte dei testi contenuti nel nostro sito sono stati presi in prestito da http://www.pnab.it/ perch\`e, nonostante il Parco Naturale Monte Verde sia un luogo fittizio, ci \`e sembrato poco elegante riempire le pagine di "lorem ipsum" e allo stesso tempo la stesura di testo verosimile e originale avrebbe richiesto troppo tempo. Per quanto riguarda le immagini, esse sono state ricercate tramite Google Images, su richiesta del docente possiamo fornire la provenienza di ciascuna immagine (non includeremo tali dati in questa relazione in quanto superflui). Il logo \`e stato preso dal sito https://greenmountainbaptist.org/ .
+		\item \textbf{Disclaimer:} Il Parco Naturale Monte Verde \`e un luogo puramente fantastico e senza alcuna corrispondenza nel mondo reale.\\ \\ La maggior parte dei testi contenuti nel nostro sito sono stati presi in prestito da http://www.pnab.it/ perch\`e, nonostante il Parco Naturale Monte Verde sia un luogo fittizio, ci \`e sembrato poco elegante riempire le pagine di "lorem ipsum" e allo stesso tempo la stesura di testo verosimile e originale avrebbe richiesto troppo tempo.\\ \\ Per quanto riguarda le immagini, esse sono state ricercate tramite Google Images, su richiesta del docente possiamo fornire la provenienza di ciascuna immagine (non includeremo tali dati in questa relazione in quanto superflui).\\ \\ Il logo \`e stato preso dal sito https://greenmountainbaptist.org/ .
 
 	\end{itemize}
 
-		\section{Utenti destinatari DA FARE}
-		\begin{itemize}
-			\item Il target di riferimento di questo sito \`e molto ampio, un sito di cucina viene visitato solitamente da persone appartenenti a varie fasce d'et\`a e con differenti bagagli culturali perci\`o \`e stato scelto di rendere il sito il più semplice ed intuitivo possibile, in particolare \`e stata posta molta attenzione all'accessibilità per utenti non vedenti (ma questo verr\`a approfondito in una sezione apposita). 
+\newpage
 
-		\end{itemize}
-		
+\section{Materiale consegnato}
+			
+			 I file consegnati sono organizzati su quattro cartelle:
+			\begin{itemize}
+				\item cgi-bin: cartella nella quale sono presenti i file .cgi
+				\item data: in questa cartella sono contenuti i file .xml ed i relativi .xsd
+				\item public-html: contiene i file .html e le sotto-cartelle:
+\begin{itemize}
+\item css: cartella contenente i file .css
+		\item		 images: cartella contenente tutte le foto del sito
+			\item	 js: cartella contenente i vari script realizzati in JavaScript
+\end{itemize}		
+\item relazione: cartella contenente la presente relazione in formato .pdf e le immagini in essa contenute a dimensioni originali		 
+			\end{itemize}	
+			Ciascun file verr\`a esaminato in dettaglio nelle successive sezioni. 
+			
+			\newpage
+
 \section{Struttura del sito}
 Il sito \`e diviso nelle seguenti aree primarie: 
 		\begin{itemize}
 			\item \textbf{Home}: pagina di benvenuto, contiene una breve descrizione del parco e vari link alle sezioni principali del sito
 			\item \textbf{Chi Siamo}: pagina puramente a scopo informativo, contiene un elenco degli avvenimenti importanti nella storia del parco, dall'inaugurazione al giorno d'oggi
 			\item \textbf{Natura e Territorio}: altra pagina descrittiva, fornisce informazioni sulla conformazione territoriale del parco e su flora e fauna presenti in esso
-			\item \textbf{News e Attivit\`a}: pagina divisa in due sezioni, un primo settore riguardante le attivit\`a che \`e possibile svolgere nel parco ed una seconda zona contente le notizie più recenti
-			\item \textbf{Orari e Prezzi}: come suggerisce il nome, da questa pagina l'utente può conoscere orari e prezzi d'ingresso al parco
+			\item \textbf{News e Attivit\`a}: pagina divisa in due sezioni, un primo settore riguardante le attivit\`a che \`e possibile svolgere nel parco ed una seconda zona contente le notizie pi\`u recenti
+			\item \textbf{Orari e Prezzi}: come suggerisce il nome, da questa pagina l'utente pu\`o conoscere orari e prezzi d'ingresso al parco
 			\item \textbf{Info e Contatti}: contiene informazioni quali il regolamento del parco, le istruzioni per raggiungerlo e contatti utili
 		\end{itemize}				
-Da ogni pagina \`e possibile raggiungere la mappa del sito dal link posto prima del footer.		
-\section{Amministrazione del sito DA FARE}
+Da ogni pagina \`e possibile raggiungere la Mappa del Sito dal link posto prima del footer.	
 
-\section{da qualche parte bisognerà parlare bene anche di header e footer, sezione apposita?}
+\newpage
 
-			\section{Materiale consegnato DA FARE}
-			
-			 I file consegnati sono organizzati su quattro cartelle:
-			\begin{itemize}
-				\item cgi-bin: cartella nella quale sono presenti i file .cgi
-				\item data: in questa cartella sono contenuti i file xml ed i relativi XMLSchema.
-				\item public-html: contiene index.html e le sotto-cartelle:
+\section{Struttura delle pagine}
+Le pagine del sito differiscono per contenuto ma condividono i seguenti elementi:
 \begin{itemize}
-\item css: cartella contenente i file .css;
-		\item		 images: cartella contenente tutte le foto del sito;
-			\item	 js: cartella contenente i vari script realizzati in JavaScript.
-\end{itemize}		
-\item relazione: cartella contenente la presente relazione in formato pdf e le immagini in essa contenute a dimensioni originali		 
-			\end{itemize}	Andiamo ora ad esaminare nel dettaglio le applicazioni di ciascuna tecnologia impiegata nel sito e le loro interazioni. 
-			
-			\newpage
+\item \textbf{Header}: la parte superiore di ogni pagina contiene il logo (che linka alla home) e il nome del sito in alto a sinistra, subito sotto sono invece presenti dei collegamenti alle aree principali del sito (vedi Struttura del sito). L'header pu\`o essere saltato da un utente che utilizza uno screen reader tramite apposite ancore d'aiuto (vedi sezione Accessibilit\`a)
+\item \textbf{Breadcrumb}: rende noto all'utente la sua posizione precisa all'interno del sito, dal breadcrumb \`e possibile risalire alle pagine precedentemente visitate
+\item \textbf{Link d'aiuto}: in ogni pagina \`e sempre presente un link alla Mappa del Sito e l'ancora "Torna all'Inizio" che riporta la visuale all'inizio della pagina, utile nelle pagine con contenuto corposo
+\item \textbf{Footer}: contiene brevi informazioni come l'indirizzo del parco e le certificazioni di aderenza agli standard del sito; dal footer \`e possibile loggare/sloggare come amministratore
+\end{itemize}
+
+\newpage
+
+\section{Amministrazione del sito}
+\textit{Login:} admin \textit{Password:} admin
+\begin{itemize}
+\item \`E possibile accedere all'area amministrativa da qualsiasi pagina tramite un link posto nel footer.
+\item L'amministratore ha la possibilit\`a di modificare gli orari e i prezzi d'ingresso al parco utilizzando i form appositi. 
+\item I form presentano delle liste a cascata da cui \`e possibile scegliere il preciso dato da modificare (una lista con i giorni della settimana per gli orari, due liste con tipologia e periodo di validit\`a per il prezzo del biglietto) e un campo testuale in cui inserire i nuovi valori.\\ \\ Il form per il cambio dell'orario accetta qualsiasi input testuale (perch\`e sono permessi sia valori misti come "8:30 - 18:30" sia valori puramente testuali come "Chiuso") mentre il prezzo del biglietto dovr\`a necessariamente essere un intero.
+\item L'amministratore pu\`o pubblicare nuove notizie riguardanti eventi, promozioni e attivit\`a inerenti al parco. Di una notizia \`e necessario conoscere il titolo, il corpo dell'articolo e un' immagine ad essa associata (oltre alla data che per\`o viene automaticamente memorizzata dal sistema senza dover essere inserita manualmente).
+\item L'amministratore pu\`o eliminare individualmente le varie notizie recandosi nella pagina "Archivio News" (News e Attivit\`a $\rightarrow$ Archivio News link in basso) e cliccando su "Elimina". Alternativamente \`e possibile eliminare una notizia direttamente nella pagina che la visualizza.
+\item Quando l'amministratore \`e loggato il footer cambia (vedi footer\_manager.js) permettendo il logout tramite l'apposito pulsante o il ritorno all'area amministratore in caso ci si trovi in un'altra pagina.
+\end{itemize}
+
+\newpage
+
 			\section{HTML DA FARE}
 
  La struttura HTML del sito viene interamente "stampata" da vari file .cgi: questa scelta \`e dovuta alla grande presenza di contenuto dinamico all'interno del sito per cui non sono presenti file .html "puri" se non index.html che \`e per\`o un semplice redirect a menu.cgi, file Perl che effettivamente stampa la homepage. \\ \\
@@ -146,7 +167,7 @@ Le pagine HTML del sito (stampate dal cgi) sono state realizzate rispettando lo 
 
 
 			\section{Perl DA FARE}
-			
+		
 				  Le pagine scritte in Perl si dividono principalmente in due tipologie: pagine "dinamiche" di rappresentazione e pagine di elaborazione dei dati.\\ \\
 				Alla prima tipologia appartengono i file .cgi che eseguono il "print" della pagina html con il contenuto richiesto (ne \`e un esempio la pagina page\_template.cgi che si occupa della stampa a video di ogni ricetta) mentre le pagine della seconda tipologia sono solitamente "pagine di servizio" ovvero codice che esegue operazioni dietro le quinte come salvataggi ed eliminazioni di dati sui file xml. \\ \\Nel dettaglio, questo \`e ci\`o di cui ciascun file si occupa:
 \begin{itemize}
