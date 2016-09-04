@@ -55,9 +55,9 @@ print <<EOF;
 
 	</head>
 	<body>
-		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
+		<div><a href="../index.html"><img class="logo" alt="logo del parco" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
-	<div><a class=\"salta\" href=\".contenuto\"><span>Salta al contenuto</span></a></div>
+	<div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
 		<div id="menu">
 			<ul class="lista">
 				<li><a href="../index.html"><span lang="en">HOME</span></a></li>
@@ -71,7 +71,7 @@ print <<EOF;
 
 		<div class="nav">Ti trovi qui: <a href="../index.html"><span lang="en">Home</span></a> &gt; &gt;<a href="adminarea.cgi"><span lang="en">Admin</span>area</a> &gt; &gt; Errore</div>
 
-		<div class="contenuto">	
+		<div class="contenuto" id="contenuto">	
 		<h1 class="blocco1">Errore</h1>
 		<p>I campi sono vuoti oppure immagine troppo grande, riprova di nuovo <a href="adminarea.cgi"><span lang="en">Admin</span>area</a></p> 
 		</div>
@@ -81,7 +81,7 @@ print <<EOF;
 		<a href="#menu"><span class="up">TORNA ALL'INIZIO</span></a>
 		 <img class="valido" alt="css valido" src="../images/css.png"/>
 		 <div class="indirizzo"> Via Nazionale, 22 38085  Bolzano (TN)</div>
-		  <div class=\"indirizzo\"><a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a></div>
+		 <div class=\"indirizzo\"><a href=\"logout.cgi\"><button type=\"submit\" name=\"delete\"><span xml:lang=\"en\">Logout</span></button></a></div>
 		<img class="valido" alt="xhtml valido" src="../images/xhtml.png"/></div>
 
 	</body>

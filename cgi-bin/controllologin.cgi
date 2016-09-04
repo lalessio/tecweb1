@@ -56,7 +56,7 @@ print <<EOF;
 	</head>
 	<body>
 <div><a class=\"salta\" href=\"#contenuto\"><span>Salta al contenuto</span></a></div>
-		<div><a href="index.html"><img class="logo" alt="logo" src="../images/logo.jpg"/></a></div> 
+		<div><a href="../index.html"><img class="logo" alt="logo del parco" src="../images/logo.jpg"/></a></div> 
 		<div class="titolo"><a href="../index.html">Parco Naturale</a></div><div class="sottotitolo"><a href="../index.html">Monte Verde</a></div>
 	
 		<div id="menu">

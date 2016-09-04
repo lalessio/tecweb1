@@ -61,7 +61,7 @@ print "
 		<div class=\"contenuto\" id=\"contenuto\">
 		
 		<div id=\"form123\">
-		<h1 class=\"titolo_testo\">Per eliminare una notizia bisogna accedere alla pagina  <a href=\"news.cgi\">Archivio News</a>  e premere il pulsante \"elimina\" accanto ad ogni notizia</h1>
+		<h1 class=\"titolo_testo\">Per eliminare una notizia e' necessario utilizzare il pulsante \"ELIMINA\" posto accanto a ciascun articolo nella pagina <a href=\"news.cgi\">Archivio News</a></h1>
 		<div class=\"form12\">
 		<div class=\"form1\">
 		<form  method=\"post\" action=\"change_prezzo.cgi\" onsubmit=\"return price_check()\">
