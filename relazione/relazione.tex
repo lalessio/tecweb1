@@ -160,50 +160,41 @@ Le pagine del sito differiscono per contenuto ma condividono i seguenti elementi
 
 \newpage
 
-			\section{HTML DA FARE}
+			\section{HTML}
 
- La struttura HTML del sito viene interamente "stampata" da vari file .cgi: questa scelta \`e dovuta alla grande presenza di contenuto dinamico all'interno del sito per cui non sono presenti file .html "puri" se non index.html che \`e per\`o un semplice redirect a menu.cgi, file Perl che effettivamente stampa la homepage. \\ \\
-Le pagine HTML del sito (stampate dal cgi) sono state realizzate rispettando lo standard XHTML 1.0 Strict.
+Le pagine .html del sito sono state realizzate rispettando lo standard XHTML 1.0 Strict.\\ \\
+Analizziamo brevemente il contenuto di ciascun file .html:
+\begin{itemize}
+\item \textit{index.html}: homepage del sito, contiene una breve descrizione del parco e vari link alle sezioni principali del sito
+\item \textit{chisiamo.html}:  pagina puramente a scopo informativo, contiene un elenco degli avvenimenti importanti nella storia del parco, dall'inaugurazione al giorno d'oggi
+\item \textit{naturaterritorio.html}:  altra pagina descrittiva, fornisce informazioni sulla conformazione territoriale del parco e su flora e fauna presenti in esso
+\item \textit{flora.html}: altra pagina puramente informativa, accessibile passando da naturaterritorio.html, contiene una descrizione più approfondita della flora del parco
+\item \textit{fauna.html}: altra pagina puramente informativa, accessibile passando da naturaterritorio.html, contiene una descrizione più approfondita della fauna del parco
+\item \textit{infocontatti.html}: contiene informazioni quali il regolamento del parco, le istruzioni per raggiungerlo e contatti utili
+\item \textit{regolamento.html}: accessibile da infocontatti.html, contiene una lista dei dieci punti da rispettare per rendere la propria permanenza al parco piacevole a se stessi e agli altri\\ (http://www.pnab.it/vivere-il-parco/10-regole-per-rispettare-il-parco.html)
+\item \textit{attivita.html}: pagina di approfondimento sulle attività che si possono svolgere al Parco Naturale Monte Verde, è accessibile passando per newsattivita.cgi
+\item \textit{mappasito.html}: mappa del sito, contiene collegamenti a tutte le zone principali e secondarie del sito
+\end{itemize}
+body on load
 
-
-			\section{Perl DA FARE}
+			\section{Perl} dire che alcune parti di codice sono ispirate dal vecchio progetto (semplici operazioni creazione eliminazione)
 		
 				  Le pagine scritte in Perl si dividono principalmente in due tipologie: pagine "dinamiche" di rappresentazione e pagine di elaborazione dei dati.\\ \\
-				Alla prima tipologia appartengono i file .cgi che eseguono il "print" della pagina html con il contenuto richiesto (ne \`e un esempio la pagina page\_template.cgi che si occupa della stampa a video di ogni ricetta) mentre le pagine della seconda tipologia sono solitamente "pagine di servizio" ovvero codice che esegue operazioni dietro le quinte come salvataggi ed eliminazioni di dati sui file xml. \\ \\Nel dettaglio, questo \`e ci\`o di cui ciascun file si occupa:
+				Alla prima tipologia appartengono i file .cgi che eseguono il "print" della pagina con il contenuto richiesto (ne \`e un esempio la pagina notizia.cgi che si occupa della stampa a video di una notizia) mentre le pagine della seconda tipologia sono solitamente "pagine di servizio" ovvero codice che esegue operazioni dietro le quinte come salvataggi ed eliminazioni di dati sui file xml. \\ \\Nel dettaglio, questo \`e ci\`o di cui ciascun file si occupa:
 \begin{itemize}
-
-				\item  menu.cgi - pagina principale del sito, contiene del contenuto dinamico in quanto le "ricette consigliate" che compaiono nella pagina sono casuali e variano ad ogni accesso alla pagina (inoltre in ogni pagina del sito il footer varia leggermente a seconda se l'amministratore sia loggato oppure meno).
-				
-				\item  antipasti.cgi, secondi.cgi, primo.cgi, dessert.cgi - semplici sottomen\`u interni che si occupano di raggruppare le ricette appartenenti alla stessa categoria per facilitare la navigazione dell'utente
-
-				\item page\_template.cgi - pagina dinamica che visualizza la ricetta richiesta, funziona nel seguente modo: il link cliccato dall'utente che lo indirizza a questa pagina contiene un parametro (id) differente per ogni ricetta, page\_template.cgi cerca il parametro passato tra gli attributi IDCode delle singole ricette nel file 4forchette.xml (vedi sezione XML) ed identifica quale era la ricetta richiesta di cui va poi a restituirne le informazioni su schermo.
-
-				\item proponiricetta.cgi - stampa la pagina "Proponi una ricetta" attraverso la quale l'utente ha la possibilit\`a di proporre nuove ricette da inserire nel sito. La pagina contiene un form di discrete dimensioni e delle istruzioni sul suo completamento. Un'analisi pi\`u dettagliata su come avviene il processo di creazione, memorizzazione e approvazione delle ricette verr\`a effettuata in un successivo paragrafo.
-
-				\item handle\_proposta.cgi - quando l'utente ha compilato correttamente (vedi sezione Javascript) il form per la proposta di una nuova ricetta, la ricetta viene salvata nel "database" xml. La nuova ricetta non verr\`a tuttavia ancora visualizzata nel sito, prima dovr\`a infatti venire approvata dall'amministratore (vedi accept\_ricetta.cgi).
-
-				\item contatti.cgi - stampa la pagina dei contatti, qui l'utente ha la possibilità di vedere i messaggi lasciati da altri utenti ed eventualmente pu\`o lasciarne uno proprio compilando il form apposito dove viene richiesto un nome ed il testo effettivo del commento (sarebbe stato interessante implementare un sistema di registrazione e gestione degli utenti nel sito ma date le scarse dimensioni del gruppo e il tempo disponibile si \`e optato per una soluzione meno impegnativa).
-
-				\item inserisci\_commento.cgi - gestisce l'inserimento di un nuovo commento traducendo l'input dell'utente in dati xml.
-
-				\item amministratore\_login.cgi - contiene il form che l'amministratore utilizza per effettuare l'accesso all'area riservata. Questa pagina \`e accessibile solamente dal link posto nel footer della pagina principale (menu.cgi).
-
-				\item controllo\_login.cgi - controlla la correttezza delle credenziali inserite nel form del punto precedente. Al momento \`e previsto un solo amministratore per il sistema. L'amministratore viene identificato come autenticato quando un parametro apposito (\$auth) \`e impostato ad un preciso valore e ci\`o viene settato in degli appositi cookie (vedi codice del file per i dettagli) per rendere l'informazione nota tra le diverse pagine.
-
-				\item console\_admin.cgi - stampa l'hub amministrativo da cui \'e possibile gestire semplicemente l'intero sito. Da questa pagina l'amministratore ha la possibilit\`a di accettare o rifiutare le nuove ricette, eliminare vecchie ricette ed eliminare eventuali commenti ritenuti offensivi.
-
-				\item accept\_ricetta.cgi - concede ad una ricetta il permesso di venire visualizzata nel sito (semplicemente il suo attributo accepted viene settato positivamente).
-
-				\item delete\_ricetta.cgi - elimina una ricetta dal file xml. Operazione irreversibile.
-
-				\item delete\_commento.cgi - elimina un commento dal file xml. Operazione irreversibile.
-
-				\item logout.cgi - breve script che effettua il logout dell'amministratore. Viene invocato alla pressione del tasto "logout" visibile sul footer di ogni pagina qualora l'amministratore sia attualmente autenticato nel sistema.
-
-				\item cercaricetta.cgi - nell'header di ogni pagina è presente una barra di ricerca, qualora l'utente digitasse una stringa di caratteri e ne richiedesse l'elaborazione, questo \`e lo script che verrebbe eseguito: cercaricetta.cgi stampa una pagina contente un elenco di tutte le ricette il cui titolo matcha in parte o totalmente il parametro di ricerca inserito dall'utente. La ricerca avviene semplicemente scorrendo l'xml isolandone nomi ed id di tutte le ricette e restituendo solamente quelle che contengono una corrispondenza.
-
-				\item funzioni.pl  contiene funzioni di servizio usate in diversi contesti (ad es. trim degli input).	
-
+\item \textit{adminlogin.cgi}: contiene il form che l'amministratore utilizza per effettuare l'accesso all'area riservata
+\item \textit{controllologin.cgi}: controlla la correttezza delle credenziali inserite nel form della pagina adminlogin.cgi
+\item \textit{adminarea.cgi}: 
+\item \textit{change\_orario.cgi}: 
+\item \textit{change\_prezzo.cgi}: 
+\item \textit{nuova\_notizia.cgi}: 
+\item \textit{delete\_notizia.cgi}: 
+\item \textit{logout.cgi}: 
+\item \textit{newsattivita.cgi}: 
+\item \textit{news.cgi}: 
+\item \textit{notizia.cgi}: 
+\item \textit{orarieprezzi.cgi}: 
+\item \textit{funzioni.pl}: contiene funzioni di servizio usate da diversi file .cgi
 \end{itemize}	
 			
 		\newpage	
@@ -221,7 +212,7 @@ Le pagine HTML del sito (stampate dal cgi) sono state realizzate rispettando lo 
 				\subitem style.css: modella lo stile di visualizzazione del sito sia per gli utenti desktop (che hanno uno schermo largo al massimo 1200px) che per gli utenti mobile con dispositivi con schermo piccolo (che hanno uno schermo largo massimo 390px) e dispositivi con dimensioni schermo intermedie ( max-width=730px).
 
 
-				\subitem print.css: modella lo stile di stampa delle pagine del sito.(particolare attenzione si \'e data alla stampa delle pagine delle ricette).
+				\subitem styleprint.css: modella lo stile di stampa delle pagine del sito.(particolare attenzione si \'e data alla stampa delle pagine delle ricette).
 
 \end{itemize}
 					\newpage

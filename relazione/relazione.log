@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.14)  4 SEP 2016 15:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.14)  4 SEP 2016 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -331,100 +331,97 @@ Underfull \hbox (badness 10000) in paragraph at lines 165--167
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
-
+Overfull \hbox (25.16235pt too wide) in paragraph at lines 169--170
+\OT1/cmr/m/n/12 elenco degli avven-i-menti im-por-tanti nella sto-ria del parco
+, dall'inaugurazione
  []
 
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¹ in font cmr12!
 
-Overfull \hbox (6.67587pt too wide) in paragraph at lines 171--173
-\OT1/cmr/m/n/12 ina html con il con-tenuto richiesto (ne ^^Re un es-em-pio la p
-ag-ina page[]template.cgi
+Overfull \hbox (24.24847pt too wide) in paragraph at lines 174--175
+\OT1/cmr/m/n/12 (http://www.pnab.it/vivere-il-parco/10-regole-per-rispettare-il
+-parco.html) 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
-
- []
-
-[6]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
- [7]
-Overfull \hbox (1.02742pt too wide) in paragraph at lines 201--202
-[]\OT1/cmr/m/n/12 logout.cgi - breve script che ef-fet-tua il lo-gout dell'ammi
-nistratore. Viene
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 182--184
+
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--184
+
+ []
+
+[7]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-Overfull \hbox (2.57648pt too wide) in paragraph at lines 203--204
-\OT1/cmr/m/n/12 ricerca, qualora l'utente dig-i-tasse una stringa di carat-teri
- e ne richiedesse
+Overfull \hbox (24.66534pt too wide) in paragraph at lines 215--216
+[]| \OT1/cmr/m/n/12 styleprint.css: modella lo stile di stampa delle pagine del
+ sito.(particolare
  []
 
 [8]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-
-Overfull \hbox (1.10031pt too wide) in paragraph at lines 224--225
-[]| \OT1/cmr/m/n/12 print.css: modella lo stile di stampa delle pagine del sito
-.(particolare
- []
-
-[9]
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
- [10] [11] [12]
+ [9] [10] [11]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
- <deuteranopia.png, id=155, 1371.1225pt x 770.88pt>
+ <deuteranopia.png, id=151, 1371.1225pt x 770.88pt>
 File: deuteranopia.png Graphic file (type png)
 
 <use deuteranopia.png>
-Package pdftex.def Info: deuteranopia.png used on input line 280.
+Package pdftex.def Info: deuteranopia.png used on input line 271.
 (pdftex.def)             Requested size: 256.0748pt x 143.96327pt.
- <protanopia.png, id=156, 1371.1225pt x 770.88pt>
+ <protanopia.png, id=152, 1371.1225pt x 770.88pt>
 File: protanopia.png Graphic file (type png)
 
 <use protanopia.png>
-Package pdftex.def Info: protanopia.png used on input line 286.
+Package pdftex.def Info: protanopia.png used on input line 277.
 (pdftex.def)             Requested size: 256.0748pt x 143.96327pt.
- <tritanopia.png, id=157, 1371.1225pt x 770.88pt>
+ <tritanopia.png, id=153, 1371.1225pt x 770.88pt>
 File: tritanopia.png Graphic file (type png)
 
 <use tritanopia.png>
-Package pdftex.def Info: tritanopia.png used on input line 292.
+Package pdftex.def Info: tritanopia.png used on input line 283.
 (pdftex.def)             Requested size: 256.0748pt x 143.96327pt.
- [13] [14 <./deuteranopia.png (PNG copy)> <./protanopia.png (PNG copy)> <./trit
-anopia.png (PNG copy)>] [15]
-Overfull \hbox (3.8614pt too wide) in paragraph at lines 319--319
+ [12] [13 <./deuteranopia.png (PNG copy)> <./protanopia.png (PNG copy)> <./trit
+anopia.png (PNG copy)>] [14]
+Overfull \hbox (3.8614pt too wide) in paragraph at lines 310--310
 []\OT1/cmr/bx/n/17.28 Usabilit^^Ra DA FARE MEGLIO STA-VOLTA 
  []
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 340.
-[16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 331.
+[15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 331.
  (./relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 340.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 331.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 331.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
-(rerunfilecheck)             Checksum: 79192952D251CF0068764A35679CF42E;1062.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 340.
+(rerunfilecheck)             Checksum: F8B66F5D375FDD5D97F3692BDE9FA7C2;1046.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 331.
  ) 
 Here is how much of TeX's memory you used:
- 6190 strings out of 493033
- 94978 string characters out of 6137754
+ 6189 strings out of 493033
+ 94971 string characters out of 6137754
  180670 words of memory out of 5000000
  9663 multiletter control sequences out of 15000+600000
  10699 words of font info for 37 fonts, out of 8000000 for 9000
@@ -438,10 +435,10 @@ type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr17.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb>
-Output written on relazione.pdf (18 pages, 5007791 bytes).
+Output written on relazione.pdf (17 pages, 5006009 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
+ 214 PDF objects out of 1000 (max. 8388607)
+ 182 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
  152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
