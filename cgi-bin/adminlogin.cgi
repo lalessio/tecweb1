@@ -65,7 +65,7 @@ print "
             <div class=\"formadmin\">
 			<form method=\"post\" onsubmit=\"return login_check()\" action=\"controllologin.cgi\">
 
-			<h1 class=\"blocco1\">Login</h1>
+			<h1>Login</h1>
 			<fieldset id=\"informazioni\">
 			<p id=\"errore\"></p>
 
@@ -73,7 +73,7 @@ print "
 					<input type=\"text\" id=\"user_name\" name=\"user_name\" title=\"Inserisci il tuo username qui\"/></p>
 
 				
-					<p><label for=\"user_pwd\"><span lang=\"en\">Password:</span></label>
+					<p id=\"allinea\"><label for=\"user_pwd\"><span lang=\"en\">Password:</span></label>
 					<input type=\"password\" id=\"user_pwd\" name=\"user_pwd\" title=\"Inserisci la tua password qui\"/></p>
 				
 			</fieldset>

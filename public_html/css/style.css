@@ -175,6 +175,8 @@ color: purple;
 
 .mappa{margin-left:20%;font-size:19px;}
 
+#allinea{margin-left:0.5em;}
+
 #volpe{
 clear: right;
 padding-top: 1em;
@@ -515,12 +517,13 @@ vertical-align: middle;}
 	.fotonews{
 	width:90%;
 	}
-.attivita {
-    clear: right;
-    width: 50%;
-    float: right;
-    margin-right: 2em;
-}
+	.attivita {
+	    clear: right;
+	    width: 50%;
+	    float: right;
+	    margin-right: 2em;
+	}
+	#allinea{margin-left:0;}
 
 	.foto2{
 	width: 60%;
