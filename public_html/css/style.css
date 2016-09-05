@@ -202,11 +202,11 @@ float: right;
 }
 
 
-.attivita{
-clear: right;
-padding-top: 1em;
-width: 30%;
-float: right;
+.attivita {
+    clear: right;
+    padding-top: 1em;
+    width: 50%;
+    float: right;
 }
 
 .blocco{
@@ -225,9 +225,7 @@ text-align:center;
 border:1px solid black;
 }
 
-#blocco2{
-width:50%;
-}
+
 
 input#user_pwd{
 padding-left:2em;
@@ -517,6 +515,12 @@ vertical-align: middle;}
 	.fotonews{
 	width:90%;
 	}
+.attivita {
+    clear: right;
+    width: 50%;
+    float: right;
+    margin-right: 2em;
+}
 
 	.foto2{
 	width: 60%;
