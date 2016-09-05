@@ -182,21 +182,27 @@ body on load
 				  Le pagine scritte in Perl si dividono principalmente in due tipologie: pagine "dinamiche" di rappresentazione e pagine di elaborazione dei dati.\\ \\
 				Alla prima tipologia appartengono i file .cgi che eseguono il "print" della pagina con il contenuto richiesto (ne \`e un esempio la pagina notizia.cgi che si occupa della stampa a video di una notizia) mentre le pagine della seconda tipologia sono solitamente "pagine di servizio" ovvero codice che esegue operazioni dietro le quinte come salvataggi ed eliminazioni di dati sui file xml. \\ \\Nel dettaglio, questo \`e ci\`o di cui ciascun file si occupa:
 \begin{itemize}
-\item \textit{adminlogin.cgi}: contiene il form che l'amministratore utilizza per effettuare l'accesso all'area riservata
-\item \textit{controllologin.cgi}: controlla la correttezza delle credenziali inserite nel form della pagina adminlogin.cgi
-\item \textit{adminarea.cgi}: 
-\item \textit{change\_orario.cgi}: 
-\item \textit{change\_prezzo.cgi}: 
-\item \textit{nuova\_notizia.cgi}: 
-\item \textit{delete\_notizia.cgi}: 
-\item \textit{logout.cgi}: 
-\item \textit{newsattivita.cgi}: 
-\item \textit{news.cgi}: 
-\item \textit{notizia.cgi}: 
-\item \textit{orarieprezzi.cgi}: 
+\item \textit{adminlogin.cgi}: contiene il form che l'amministratore utilizza per effettuare l'accesso all'area riservata (vedi Cookies per Login e Logout)
+\item \textit{controllologin.cgi}: controlla la correttezza delle credenziali inserite nel form della pagina adminlogin.cgi, se sono corrette reindirizza ad adminarea.cgi (in particolare verifica la correttezza dei valori dei cookie) altrimenti visualizza un messaggio d'errore (vedi Cookies per Login e Logout)
+\item \textit{adminarea.cgi}: cuore dell'area amministrativa, da questa pagina l'admin ha la possibilità di modificare orari e prezzi e di creare nuove notizie tramite gli appositi form
+\item \textit{change\_orario.cgi}: si occupa di processare l'operazione di modifica di un orario e ne notifica l'esito all'amministratore visualizzando un messaggio positivo o negativo; viene richiamato in seguito all'invio dei dati del form per la modifica di un orario in adminarea.cgi
+\item \textit{change\_prezzo.cgi}: si occupa di processare l'operazione di modifica di un prezzo e ne notifica l'esito all'amministratore visualizzando un messaggio positivo o negativo; viene richiamato in seguito all'invio dei dati del form per la modifica di un prezzo in adminarea.cgi
+\item \textit{nuova\_notizia.cgi}: si occupa di processare l'operazione di creazione di una notizia e ne notifica l'esito all'amministratore visualizzando un messaggio positivo o negativo; viene richiamato in seguito all'invio dei dati del form per la creazione di una notizia in adminarea.cgi
+\item \textit{delete\_notizia.cgi}: si occupa di processare l'operazione di eliminazione di una notizia e ne notifica l'esito all'amministratore visualizzando un messaggio positivo o negativo; viene richiamato in seguito alla pressione del tasto "Elimina" accanto a una notizia
+\item \textit{logout.cgi}: codice richiamato alla pressione del tasto "Logout", effettua la disconnessione dell'account dell'amministratore (vedi Cookies per Login e Logout)
+\item \textit{newsattivita.cgi}:  pagina divisa in due sezioni, un primo settore riguardante le attivit\`a che \`e possibile svolgere nel parco (sezione approfondita in attivita.html) ed una seconda zona contente le anteprime delle tre notizie pubblicate pi\`u di recente, da questa pagina \`e possibile accedere l'Archivio delle News (news.cgi) mediante il collegamento apposito posto di seguito alle notizie pi\`u recenti
+\item \textit{news.cgi}: Archivio News, contiene un' anteprima di tutte le notizie presenti nel database ordinate cronologicamente dalla pi\`u recente: le notizie vengono visualizzate 4 alla volta per non deformare la pagina (e rendere i tempi di caricamento interminabili) qualora siano presenti un elevato numero di notizie, per caricare le notizie successive \`e sufficiente cliccare sul link "Carica altre notizie"; questa pagina riceve in ingresso un parametro tramite get, \`e semplicemente un indice per tenere traccia di dove si \`e arrivati nello scorrimento delle notizie nell .xml, in questo documento non esamineremo in dettaglio il suo utilizzo ma siamo pronti a fornire eventuali chiarimenti qualora il codice risulti poco chiaro; l'amministratore ha la possibilità di eliminare una notizia tramite il tasto "Elimina"
+\item \textit{notizia.cgi}: pagina a contenuto dinamico che visualizza una notizia completa, la pagina prende in input tramite get un parametro numerico corrispondente all'identificativo (ID nell' .xml) della notizia da visualizzare; l'amministratore ha la possibilità di eliminare la notizia tramite il tasto "Elimina"
+\item \textit{orarieprezzi.cgi}: pagina a contenuto dinamico che visualizza prezzi ed orari del parco
 \item \textit{funzioni.pl}: contiene funzioni di servizio usate da diversi file .cgi
 \end{itemize}	
-			
+
+\textbf{Disclaimer:} per quanto riguarda i file change\_orario.cgi, change\_prezzo.cgi, notizia.cgi, nuova\_notizia.cgi e delete\_notizia.cgi, essi sono stati riadattati da alcuni file dello scorso progetto. Il motivo di tale riuso (sebbene parziale) è che le operazioni eseguite da tali file sono semplici passaggi basilari di lettura e scrittura/modifica su file .xml, ci sembrava perciò difficile e inutile riscrivere un codice che non fosse troppo analogo al precedente senza renderlo inutilmente più complicato; abbiamo preferito essere trasparenti comunicandole questa nostra scelta.
+
+\subsection{Cookies per Login e Logout}
+
+
+	
 		\newpage	
 	\section{CSS}
 			\begin{itemize}
@@ -241,13 +247,6 @@ body on load
 				\item Si \`e optato quindi per lasciare la zona di inserimento degli ingredienti come una semplice area di testo all'interno della quale per\`o vengono applicate delle regole per l'identificazione dei singoli ingredienti: dopo ogni ingrediente \`e necessario inserire il carattere di separazione ";" (punto e virgola senza virgolette) ed andare a capo. Se il testo inserito dall'utente rispetta questa sintassi l'input verr\`a accettato, altrimenti verr\`a fornito un messaggio d'errore. Nella pagina sono presenti delle istruzioni sull'utilizzo del form che spiegano anche l'appropriato inserimento degli ingredienti; riteniamo che la maggior parte degli utenti non trovi difficolt\`a ad usare questa sintassi che \`e inoltre pienamente accessibile ed utilizzabile da utenti non vedenti.		
 		
 			\end{itemize}
-	\newpage
-	Come interagiscono le varie tecnologie tra di loro? Vediamo un esempio...
-	\section{Spiegazioen archivio news? forse la includo in un altra sezione non so ancora}
-			
-
-\newpage
-
 	\newpage
 		\section{Accessibilit\`a DA FARE MEGLIO STAVOLTA}
 		\subsection{Separazione tra struttura,presentazione e comportamento}
