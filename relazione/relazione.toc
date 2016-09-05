@@ -5,13 +5,13 @@
 \contentsline {section}{\numberline {5}Amministrazione del sito}{5}{section.5}
 \contentsline {section}{\numberline {6}HTML}{6}{section.6}
 \contentsline {section}{\numberline {7}Perl}{7}{section.7}
-\contentsline {section}{\numberline {8}CSS DA FARE}{8}{section.8}
+\contentsline {section}{\numberline {8}CSS}{8}{section.8}
 \contentsline {section}{\numberline {9}XML DA FARE}{9}{section.9}
 \contentsline {section}{\numberline {10}Javascript DA FARE}{9}{section.10}
 \contentsline {section}{\numberline {11}Spiegazioen archivio news? forse la includo in un altra sezione non so ancora}{11}{section.11}
-\contentsline {section}{\numberline {12}Accessibilit\`a DA FARE MEGLIO STAVOLTA}{12}{section.12}
+\contentsline {section}{\numberline {12}Accessibilit\`a}{12}{section.12}
 \contentsline {subsection}{\numberline {12.1}Separazione tra struttura,presentazione e comportamento}{12}{subsection.12.1}
 \contentsline {subsection}{\numberline {12.2}Colori}{12}{subsection.12.2}
-\contentsline {subsection}{\numberline {12.3}Tag meta}{14}{subsection.12.3}
-\contentsline {subsection}{\numberline {12.4}Screen reader}{14}{subsection.12.4}
-\contentsline {section}{\numberline {13}Usabilit\`a DA FARE MEGLIO STAVOLTA}{15}{section.13}
+\contentsline {subsection}{\numberline {12.3}Tag meta}{16}{subsection.12.3}
+\contentsline {subsection}{\numberline {12.4}Screen reader}{16}{subsection.12.4}
+\contentsline {section}{\numberline {13}Usabilit\`a DA FARE MEGLIO STAVOLTA}{17}{section.13}
