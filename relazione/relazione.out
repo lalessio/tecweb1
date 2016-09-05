@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \BOOKMARK [1][-]{section.1}{Abstract}{}% 1
 \BOOKMARK [1][-]{section.2}{Materiale consegnato}{}% 2
 \BOOKMARK [1][-]{section.3}{Struttura del sito}{}% 3
@@ -15,3 +16,22 @@
 \BOOKMARK [2][-]{subsection.11.3}{Tag meta}{section.11}% 15
 \BOOKMARK [2][-]{subsection.11.4}{Screen reader}{section.11}% 16
 \BOOKMARK [1][-]{section.12}{Usabilit\340 DA FARE MEGLIO STAVOLTA}{}% 17
+=======
+\BOOKMARK [1][-]{section.1}{Abstract}{}% 1
+\BOOKMARK [1][-]{section.2}{Materiale consegnato}{}% 2
+\BOOKMARK [1][-]{section.3}{Struttura del sito}{}% 3
+\BOOKMARK [1][-]{section.4}{Struttura delle pagine}{}% 4
+\BOOKMARK [1][-]{section.5}{Amministrazione del sito}{}% 5
+\BOOKMARK [1][-]{section.6}{HTML}{}% 6
+\BOOKMARK [1][-]{section.7}{Perl}{}% 7
+\BOOKMARK [1][-]{section.8}{CSS}{}% 8
+\BOOKMARK [1][-]{section.9}{XML DA FARE}{}% 9
+\BOOKMARK [1][-]{section.10}{Javascript DA FARE}{}% 10
+\BOOKMARK [1][-]{section.11}{Spiegazioen archivio news? forse la includo in un altra sezione non so ancora}{}% 11
+\BOOKMARK [1][-]{section.12}{Accessibilit\340}{}% 12
+\BOOKMARK [2][-]{subsection.12.1}{Separazione tra struttura,presentazione e comportamento}{section.12}% 13
+\BOOKMARK [2][-]{subsection.12.2}{Colori}{section.12}% 14
+\BOOKMARK [2][-]{subsection.12.3}{Tag meta}{section.12}% 15
+\BOOKMARK [2][-]{subsection.12.4}{Screen reader}{section.12}% 16
+\BOOKMARK [1][-]{section.13}{Usabilit\340 DA FARE MEGLIO STAVOLTA}{}% 17
+>>>>>>> origin/master
