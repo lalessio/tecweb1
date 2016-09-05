@@ -29,6 +29,7 @@ my $image = $notizia->findvalue('img');
 
 decode_entities($title);
 decode_entities($text);
+encode_entities($image);
 
 print "Content-Type: text/html\n\n";
 

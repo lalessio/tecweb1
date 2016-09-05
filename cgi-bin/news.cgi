@@ -86,6 +86,7 @@ my $id = $notizia->getAttribute('ID');
 
     decode_entities($title);
     decode_entities($text);
+    encode_entities($image);
 
 	#il motivo per cui estraggo ID è perchè magari in questa pagina mostriamo solo una anteprima di x caratteri del testo e poi ci mettiamo
 	#un continua a leggere che porta a un page_template per le new in cui l'utente può leggere tutto il testo (di questa cosa ne parleremo)

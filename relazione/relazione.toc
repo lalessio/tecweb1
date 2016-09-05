@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \contentsline {section}{\numberline {1}Abstract}{1}{section.1}
 \contentsline {section}{\numberline {2}Materiale consegnato}{2}{section.2}
 \contentsline {section}{\numberline {3}Struttura del sito}{3}{section.3}
@@ -15,3 +16,23 @@
 \contentsline {subsection}{\numberline {11.3}Tag meta}{15}{subsection.11.3}
 \contentsline {subsection}{\numberline {11.4}Screen reader}{15}{subsection.11.4}
 \contentsline {section}{\numberline {12}Usabilit\`a DA FARE MEGLIO STAVOLTA}{17}{section.12}
+=======
+\contentsline {section}{\numberline {1}Abstract}{1}{section.1}
+\contentsline {section}{\numberline {2}Materiale consegnato}{2}{section.2}
+\contentsline {section}{\numberline {3}Struttura del sito}{3}{section.3}
+\contentsline {section}{\numberline {4}Struttura delle pagine}{4}{section.4}
+\contentsline {section}{\numberline {5}Amministrazione del sito}{5}{section.5}
+\contentsline {section}{\numberline {6}HTML}{6}{section.6}
+\contentsline {section}{\numberline {7}Perl}{7}{section.7}
+\contentsline {subsection}{\numberline {7.1}Cookies per Login e Logout}{9}{subsection.7.1}
+\contentsline {section}{\numberline {8}CSS}{10}{section.8}
+\contentsline {section}{\numberline {9}XML DA FARE}{11}{section.9}
+\contentsline {section}{\numberline {10}Javascript DA FARE}{11}{section.10}
+\contentsline {section}{\numberline {11}Spiegazioen archivio news? forse la includo in un altra sezione non so ancora}{13}{section.11}
+\contentsline {section}{\numberline {12}Accessibilit\`a}{14}{section.12}
+\contentsline {subsection}{\numberline {12.1}Separazione tra struttura,presentazione e comportamento}{14}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Colori}{14}{subsection.12.2}
+\contentsline {subsection}{\numberline {12.3}Tag meta}{18}{subsection.12.3}
+\contentsline {subsection}{\numberline {12.4}Screen reader}{18}{subsection.12.4}
+\contentsline {section}{\numberline {13}Usabilit\`a}{19}{section.13}
+>>>>>>> origin/master
