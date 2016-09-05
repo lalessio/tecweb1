@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
-<prezzi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:noNamespaceSchemaLocation="prezzi.xsd">
+<prezzi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="prezzi.xsd">
 	<ingresso id="intero">
-		<primaveraautunno>15</primaveraautunno>
+		<primaveraautunno>12</primaveraautunno>
 		<estate>18</estate>
 	</ingresso>
 	<ingresso id="ridotto ragazzi (sotto 12 anni)">

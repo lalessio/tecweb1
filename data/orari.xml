@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
-<orari xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:noNamespaceSchemaLocation="orari.xsd">
+<orari xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="orari.xsd">
 	<giorno id="Lunedi">
 		<ora>8:00-20:00</ora>
 	</giorno>
@@ -21,10 +20,10 @@ xsi:noNamespaceSchemaLocation="orari.xsd">
 		<ora>08:00 - 21:00</ora>
 	</giorno>
 	<giorno id="Domenica">
-		<ora>chiuso</ora>
+		<ora>CHIUSO</ora>
 	</giorno>
 	<giorno id="Festivi">
-		<ora>8:00-20:00</ora>
+		<ora>09:00 - 18:00</ora>
 	</giorno>
 </orari>
 <!-- Last Update by Luca 25/07/2016 -->
