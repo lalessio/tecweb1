@@ -248,7 +248,14 @@ body on load
 		
 			\end{itemize}
 	\newpage
-		\section{Accessibilit\`a DA FARE MEGLIO STAVOLTA}
+	Come interagiscono le varie tecnologie tra di loro? Vediamo un esempio...
+	\section{Spiegazioen archivio news? forse la includo in un altra sezione non so ancora}
+			
+
+\newpage
+
+	\newpage
+		\section{Accessibilit\`a}
 		\subsection{Separazione tra struttura,presentazione e comportamento}
 		\begin{itemize}
 			\item Per una maggiore accessibilit\'a al sito da parte di utenti disabili e per favorire gli algoritmi dei motori di ricerca si \'e deciso di separarare la struttura dalla presentazione e dal comportamento.
@@ -260,32 +267,52 @@ body on load
 		\end{itemize}
 			\subsection{Colori}
 			\begin{itemize}
-				\item Si \'e scelto uno schema di colori non particolarmente vivace (un mix di azzuri chiaro); anche se non sono colori di base comunque la lettura dei testi risulta accessibile. Per un sito di cucina inoltre è opportuno non utilizzare colori troppi aggressivi e decisi ma attenersi ad uno stile più sobrio e rilassato. 
+				\item Si \'e scelto uno schema di colori non particolarmente vivace (verde chiaro e bianco);Essendo un sito che descrive un parco naturale, i colori scelti si avvicinano il pi\'u possibile al contenuto (il colore verde per la natura).
 
 				\item I link sono sempre sottolineati, e diventano di colore viola quando vengono cliccati.
+				\item In particolare nel menu, il link della pagina in cui si trova l'utente \'e' di colore rosso per distinguerlo dagli altri link che possono essere di colore viola se sono gi\'a stati visitati, oppure di colore blu se non visitati.
+				In questo modo l'utente ha una guida in pi\'u.
 
 			Di seguito sono riportate le visualizzazioni del sito attraverso alcuni disturbi visivi:
 
 			\begin{figure}
 			\centering
-			\includegraphics[width=90mm]{deuteranopia}
-			\caption{vedi file deuteranopia.png}
+			\includegraphics[width=90mm]{deuteranopia1}
+			\caption{vedi file deuteranopia1.png}
 			\end{figure} 
 
 			\begin{figure}
 			\centering
-			\includegraphics[width=90mm]{protanopia}
-			\caption{vedi file protanopia.png}
+			\includegraphics[width=90mm]{deuteranopia2}
+			\caption{vedi file deuteranopia2.png}
 			\end{figure}
 
 			\begin{figure}
 			\centering
-			\includegraphics[width=90mm]{tritanopia}
-			\caption{vedi file tritanopia.png}
+			\includegraphics[width=90mm]{protanopia1}
+			\caption{vedi file protanopia1.png}
+			\end{figure}
+
+
+			\begin{figure}
+			\centering
+			\includegraphics[width=90mm]{protanopia2}
+			\caption{vedi file protanopia2.png}
+			\end{figure}
+
+
+			\begin{figure}
+			\centering
+			\includegraphics[width=90mm]{tritanopia1}
+			\caption{vedi file tritanopia1.png}
 			\end{figure}
 			
+			\begin{figure}
+			\centering
+			\includegraphics[width=90mm]{tritanopia2}
+			\caption{vedi file tritanopia2.png}
+			\end{figure}
 			\end{itemize}	
-
 			
 			\newpage
 			\subsection{Tag meta}
@@ -305,20 +332,28 @@ body on load
 				\item Ogni foto ha il suo attributo alt che descrive ci\'o che l'immagine ritrae.
 				Si \`e evitato di utilizzare immagini per visualizzare il testo, quindi il contenuto informativo rimane accessibile anche quando fallisce il caricamento delle immagini o del CSS.
 				\item Si \'e fornita particolare attenzione alle parole straniere che sono state segnalate agli screenreader attraverso il tag "span xml:lang=en" segnalando la lingua con cui leggere correttamente i vocaboli. 
-				\item Inoltre, nelle pagine contenenti form, \`e stato inserito un link skip nav per saltare direttamente al contenuto qualora l'utente dello screen reader non voglia riascoltare nuovamente il men\`u
+				\item Inoltre, in tutte le pagine, \`e stato inserito un link skip nav per saltare direttamente al contenuto qualora l'utente dello screen reader non voglia riascoltare nuovamente il men\`u
+				
 			\end{itemize}
-\newpage			\section{Usabilit\`a DA FARE MEGLIO STAVOLTA}
-			L'utente riesce ad orientarsi nel sito? Analizziamo alcuni degli assi principali del giornalismo. Ometteremo gli assi Who e When dato che nel nostro contesto non \`e necessario dare all'utente informazioni su chi c'\`e dietro al sito (\`e un progetto didattico) n\`e sono presenti novità continue.
+\newpage			\section{Usabilit\`a}
+			L'utente riesce ad orientarsi nel sito? Analizziamo alcuni degli assi principali del giornalismo.
 			\begin{itemize}
 				
 				\item What?: 
-				Un utente appena entra nella home capisce subito che si tratta di un sito di ricette, dalla barra dei men\'u (Proponi ricetta, Cerca ricetta), e dal contenuto in primo piano che mette in evidenza alcune ricette proposte.
+				Un utente appena entra nella home capisce subito che si tratta di un sito di un parco naturale, dall'immagine e dal logo del parco, e dal contenuto in primo piano in cui vengono messe in evidenza (attraverso box con immagine e link) le principali sezioni del sito(Chi siamo,Natura,Orari e prezzi,Info e contatti).
+				
+				\item Who?:
+				L'asse who viene descritto nella pagina Chi siamo,
+				in cui viene descritta la storia del parco dagli inizio fino ad oggi.La pagina Chi siamo \'e accessibile dal men\'u.
+				
 				
 				\item Where?: 
 				L'utente riesce sempre a capire dove si trova grazie al breadcrumb, inoltre l'header costituisce un importante punto di riferimento per la navigazione dell'utente.
 				
 				\item Why?: 
-				Perch\'e un utente dovrebbe rimanere nel sito o dovrebbe ritornarci? Il sito \'e principalmente espositivo,(gli utenti possono liberamente visualizzare le ricette), si \'e cercato di renderlo pi\'u interessante, aggiungendo una sezione proponi ricetta (l'utente ha la possibilit\'a di inserire la propria ricetta), e anche una sezione commenti.
+				Perch\'e un utente dovrebbe rimanere nel sito o dovrebbe ritornarci? Il sito \'e principalmente espositivo,(gli utenti possono liberamente visualizzare le news e novit\'a riguardanti il parco),
+				gli orari e i prezzi dei biglietti per entrare nel parco. 
+				Solo da lato amministratore \'e possibile inserire nuove notizie, modificare i prezzi e gli orari.
 				
 				\item How?:
 				 La barra di navigazione mostra tutte le sezioni principali del sito alle quali un utente pu\'o accedere.
