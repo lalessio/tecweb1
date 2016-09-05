@@ -175,7 +175,8 @@ Analizziamo brevemente il contenuto di ciascun file .html:
 \item \textit{attivita.html}: pagina di approfondimento sulle attività che si possono svolgere al Parco Naturale Monte Verde, è accessibile passando per newsattivita.cgi
 \item \textit{mappasito.html}: mappa del sito, contiene collegamenti a tutte le zone principali e secondarie del sito
 \end{itemize}
-Si veda la sezione Javascript per ulteriori approfondimenti sulla generazione dinamica del footer.
+Si veda la sezione Javascript per ulteriori approfondimenti sulla generazione dinamica del footer.\\
+Il codice .html rispetta interamente le imposizioni del validatore W3C https://validator.w3.org/ .
 
 			\section{Perl} dire che alcune parti di codice sono ispirate dal vecchio progetto (semplici operazioni creazione eliminazione)
 		
@@ -198,9 +199,9 @@ Si veda la sezione Javascript per ulteriori approfondimenti sulla generazione di
 \end{itemize}	
 
 \textbf{Disclaimer:} per quanto riguarda i file change\_orario.cgi, change\_prezzo.cgi, notizia.cgi, nuova\_notizia.cgi e delete\_notizia.cgi, essi sono stati riadattati da alcuni file dello scorso progetto. 
-\\ Il motivo di tale riuso (sebbene parziale) \`e che le operazioni eseguite da tali file sono semplici passaggi basilari di lettura e scrittura/modifica su file .xml, ci sembrava perci\`o difficile e inutile riscrivere un codice che non fosse troppo analogo al precedente senza renderlo inutilmente pi\`u complicato; abbiamo preferito essere trasparenti comunicandole questa nostra scelta.
+\\ Il motivo di tale riuso (sebbene parziale) \`e che le operazioni eseguite da tali file sono semplici passaggi basilari di lettura e scrittura/modifica su file .xml, ci sembrava perci\`o difficile e inutile riscrivere un codice che non fosse troppo analogo al precedente senza renderlo inutilmente pi\`u complicato; abbiamo preferito essere trasparenti comunicandole questa nostra scelta.\\ Il codice .html stampato dai file .cgi rispetta le imposizioni del validatore W3C https://validator.w3.org/ .
 
-\subsection{Cookies per Login e Logout}
+\subsection*{Cookies per Login e Logout}
 Alcune osservazioni sulla procedura di accesso e uscita dall'account amministratore:
 \begin{itemize}
 \item \`E possibile accedere all'area riservata da ogni pagina tramite il link sul footer
@@ -215,7 +216,25 @@ Alcune osservazioni sulla procedura di accesso e uscita dall'account amministrat
 	
 		\newpage	
 	\section{CSS}
-			
+	\begin{itemize}
+	
+	
+		\item Nella realizzazione dell'interfaccia grafica del sito \`e stato rispettato lo standard CSS3.
+		\item Per il design del sito sono state adottate delle scelte il pi\`u possibile minimali per mantenere alti livelli di usabilit\`a
+		\item Nella cartella \textit{public\_html/css/} sono presenti i seguenti fogli di stile:
+		\begin{itemize}
+
+				\item \textit{style.css:} modella lo stile di visualizzazione del sito sia per gli utenti desktop che per gli utenti che utilizzano tablet e dispositivi mobile
+
+				\item \textit{styleprint.css:} regola la trasposizione su carta stampata del sito
+		\end{itemize}
+\item Per la realizzazione dell'header abbiamo preso spunto dalle direttive sull'accessibilit\`a messe a disposizione dal sito http://lau.csi.it/
+\item Sono stati utilizzati fogli di stile CSS tali da rendere fruibile il contenuto delle pagine anche qualora essi fossero disabilitati o non supportati
+\item I punti di rottura delle media query avvengono a 1350px, 922px e 769px per garantire una corretta visualizzazione su diverse risoluzioni
+\item Si \`e prestata particolare attenzione al layout della homepage dove (in modalit\`a desktop) le categoria principali sono presenti nell'inquadratura principale evitando all'utente lo scroll del mouse
+\item Il men\`u di navigazione posto nell'header \`e responsive e diventa verticale in versione smartphone
+\item Il codice CSS rispetta le indicazioni del validatore W3C https://jigsaw.w3.org/css-validator/
+		\end{itemize}
 					\newpage
 				
 		\section{XML}
@@ -234,7 +253,8 @@ Alcune osservazioni sulla procedura di accesso e uscita dall'account amministrat
 		Il campo ora \`e di tipo stringa perch\`e pu\`o contenere sia valori come "09:00-18:00" sia valori come "Chiuso".
 		\item \textit{prezzi}: contiene i prezzi del parco, contiene tre tag \textit{ingresso} per le tre tipologie di biglietto (intero, ridotto ragazzi e ridotto anziani usati come id) ciascuno contente a sua volta due sottotag \textit{primaveraautunno} ed \textit{estate} per suddividere i prezzi in base al periodo dell'anno.
 		\item  \textit{amministratore} semplice schema ausiliario per il controllo del corretto login nell'area amministrativa, contiene solamente due campi per il login e la password.
-		\end{itemize}				
+		\end{itemize}	
+		I file .xml e i .xsd corrispondenti sono considerati validi dal validatore W3C http://www.utilities-online.info/xsdvalidation .			
 					\newpage
 			\section{Javascript}
 				 Javascript \'e stato utilizzato principalmente per il controllo degli input nei form e per la generazione automatica del footer nelle pagine .html\\
@@ -251,88 +271,85 @@ Alcune osservazioni sulla procedura di accesso e uscita dall'account amministrat
 				 \item lo script analizza il valore attuale del cookie \textit{autorizzazione} (vedi Cookies per Login e Logout)
 				 \item in base al valore del cookie viene aggiornato un innerHTML nel footer con l'elemento apposito
 				 \end{itemize}
-				 \textbf{Disclaimer:} L'idea di usare l'attributo \textit{onload} \`e stata ispirata da alcune discussioni sul sito www.stackoverflow.com
+				 L'idea di usare l'attributo \textit{onload} \`e stata ispirata da alcune discussioni sul sito www.stackoverflow.com
 				 \end{itemize}
 				
 	\newpage
-		\section{Accessibilit\`a DA FARE MEGLIO STAVOLTA}
-		\subsection{Separazione tra struttura,presentazione e comportamento}
+		\section{Accessibilit\`a}
 		\begin{itemize}
-			\item Per una maggiore accessibilit\'a al sito da parte di utenti disabili e per favorire gli algoritmi dei motori di ricerca si \'e deciso di separarare la struttura dalla presentazione e dal comportamento.
-			Infatti il contenuto del sito \'e rapprentato dai file HTML e CGI, i quali richiamano i fogli di stile CSS e si utilizzano (anche in questo caso attraverso percorsi esterni),controlli in JavaScript in particolare per la compilazione dei form. 
-
-			\item Il contenuto rimane accessibile anche se JavaScript \'e disabilitato. Infatti opportuni controlli in Perl ne verificano la validit\`a.
+			\item Per semplificare l'utilizzo del sito e renderlo fruibile anche ad utenti diversamente abili si \'e optato per la separazione della struttura dalla presentazione e dal comportamento.
+			\item Il contenuto del sito \'e  infatti racchiuso nei file .html e .cgi i quali richiamano fogli di stile .css, utilizzano script .js e interagiscono con file .xml per la lettura e la scrittura di dati.
+			\item La compilazione dei form rimane sempre accessibile, opportuni controlli in Perl verificano comunque la validit\`a degli input emessi dall'utente anche se JavaScript \'e disabilitato.
 
 			\item Tutto il codice \'e stato scritto seguendo le disposizioni W3C con opportuna validazione sui loro validatori.
-		\end{itemize}
-			\subsection{Colori}
-			\begin{itemize}
-				\item Si \'e scelto uno schema di colori non particolarmente vivace (un mix di azzuri chiaro); anche se non sono colori di base comunque la lettura dei testi risulta accessibile. Per un sito di cucina inoltre è opportuno non utilizzare colori troppi aggressivi e decisi ma attenersi ad uno stile più sobrio e rilassato. 
+		
+				\item Si \'e scelto uno schema di colori non particolarmente vivace: essendo un sito che descrive un parco naturale, i colori scelti (verde chiaro e bianco) si avvicinano il pi\'u possibile al contenuto.
 
-				\item I link sono sempre sottolineati, e diventano di colore viola quando vengono cliccati.
+				\item I link sono sempre sottolineati e di colore blu (tranne nell'header), diventano di colore viola quando vengono visitati.
+				\item In particolare nell'header, il link della pagina in cui si trova l'utente \'e di colore rosso per distinguerlo dagli altri link che possono essere di colore viola se sono gi\'a stati visitati oppure di colore nero se non visitati.
 
-			Di seguito sono riportate le visualizzazioni del sito attraverso alcuni disturbi visivi:
+			\item Di seguito sono riportati degli screenshot raffiguranti il sito tramite gli occhi di un utente affetto da deuteranopia, protanopia e tritanopia, come si può notare l'impatto sulla percezione dei contenuti \'e minimo:
 
 			\begin{figure}
 			\centering
 			\includegraphics[width=90mm]{deuteranopia1}
-			\caption{vedi file deuteranopia.png}
+			\caption{vedi file deuteranopia1.png}
 			\end{figure} 
 
 			\begin{figure}
 			\centering
-			\includegraphics[width=90mm]{protanopia1}
-			\caption{vedi file protanopia.png}
+			\includegraphics[width=90mm]{deuteranopia2}
+			\caption{vedi file deuteranopia2.png}
 			\end{figure}
 
 			\begin{figure}
 			\centering
+			\includegraphics[width=90mm]{protanopia1}
+			\caption{vedi file protanopia1.png}
+			\end{figure}
+
+
+			\begin{figure}
+			\centering
+			\includegraphics[width=90mm]{protanopia2}
+			\caption{vedi file protanopia2.png}
+			\end{figure}
+
+
+			\begin{figure}
+			\centering
 			\includegraphics[width=90mm]{tritanopia1}
-			\caption{vedi file tritanopia.png}
+			\caption{vedi file tritanopia1.png}
 			\end{figure}
 			
-			\end{itemize}	
-
-			
-			\newpage
-			\subsection{Tag meta}
-			
-	 Sono stati inseriti per ogni pagina i tag meta:
+			\begin{figure}
+			\centering
+			\includegraphics[width=90mm]{tritanopia2}
+			\caption{vedi file tritanopia2.png}
+			\end{figure}
+						
+			\item Sono stati inseriti per ogni pagina i tag meta:
 	 		\begin{itemize}
 				\item title: descrive la pagina corrente dal particolare al generale.
 				\item description: da una descrizione del contenuto del sito
 				\item keywords: contiene parole chiave per i motori di ricerca
 				\item language: indica che il sito \'e stato interamente scritto in italiano.
 				\item author: indica l'autore/i del sito
-				\item content-type: contiene direttive per il browser
+				\item content-type: contiene direttive per il browser (in particolare per l'utilizzo degli script Javascript)
 				\item viewport: esprime indicazioni per la visualizzazione
 			\end{itemize}
-			\subsection{Screen reader}
-			\begin{itemize}
+		
 				\item Ogni foto ha il suo attributo alt che descrive ci\'o che l'immagine ritrae.
 				Si \`e evitato di utilizzare immagini per visualizzare il testo, quindi il contenuto informativo rimane accessibile anche quando fallisce il caricamento delle immagini o del CSS.
-				\item Si \'e fornita particolare attenzione alle parole straniere che sono state segnalate agli screenreader attraverso il tag "span xml:lang=en" segnalando la lingua con cui leggere correttamente i vocaboli. 
-				\item Inoltre, nelle pagine contenenti form, \`e stato inserito un link skip nav per saltare direttamente al contenuto qualora l'utente dello screen reader non voglia riascoltare nuovamente il men\`u
-			\end{itemize}
-\newpage			\section{Usabilit\`a DA FARE MEGLIO STAVOLTA}
-			L'utente riesce ad orientarsi nel sito? Analizziamo alcuni degli assi principali del giornalismo. Ometteremo gli assi Who e When dato che nel nostro contesto non \`e necessario dare all'utente informazioni su chi c'\`e dietro al sito (\`e un progetto didattico) n\`e sono presenti novità continue.
-			\begin{itemize}
-				
-				\item What?: 
-				Un utente appena entra nella home capisce subito che si tratta di un sito di ricette, dalla barra dei men\'u (Proponi ricetta, Cerca ricetta), e dal contenuto in primo piano che mette in evidenza alcune ricette proposte.
-				
-				\item Where?: 
-				L'utente riesce sempre a capire dove si trova grazie al breadcrumb, inoltre l'header costituisce un importante punto di riferimento per la navigazione dell'utente.
-				
-				\item Why?: 
-				Perch\'e un utente dovrebbe rimanere nel sito o dovrebbe ritornarci? Il sito \'e principalmente espositivo,(gli utenti possono liberamente visualizzare le ricette), si \'e cercato di renderlo pi\'u interessante, aggiungendo una sezione proponi ricetta (l'utente ha la possibilit\'a di inserire la propria ricetta), e anche una sezione commenti.
-				
-				\item How?:
-				 La barra di navigazione mostra tutte le sezioni principali del sito alle quali un utente pu\'o accedere.
-				Nella barra men\'u \'e sempre evidenziata la voce della pagina in cui ci troviamo,e si vede attraverso una diversa colorazione dei link in quali altre pagine si \'e stati. 
-
-				
-			\end{itemize}
+				\item Si \'e prestata particolare attenzione alle parole straniere che sono state segnalate agli screenreader attraverso il tag "span xml:lang=en" segnalando la lingua con cui leggere correttamente i vocaboli. 
+				\item In tutte le pagine, \`e stato inserito un link \textit{skip-nav} per saltare direttamente al contenuto qualora l'utente dello screen reader non voglia riascoltare nuovamente il men\`u
+				\item Non sono state utilizzate tabelle per la gestione del layout grafico
+				\item Non sono presenti oggetti java o flash non accessibili
+				\item Nei form si \`e cercato di associare in maniera esplicita le etichette ai rispettivi controlli, posizionandole in modo che sia agevolata la compilazione dei campi da parte di chi utilizza tecnologie assistive
+				\item Tutti gli elementi informativi e le funzionalit\`a sono disponibili anche in assenza del colore utilizzato per presentarli nelle pagine
+				\item Il contrasto tra lo sfondo e il contenuto informativo è garantito da un sufficiente contrasto
+				\item Non sono presenti oggetti e scritte lampeggianti o in movimento le cui frequenze di intermittenza possano provocare disturbi di epilessia fotosensibile o disturbi della concentrazione ovvero possano causare il malfunzionamento di tecnologie assistive utilizzate dall’utente
+				\end{itemize}
 	
 	
 \end{document}
