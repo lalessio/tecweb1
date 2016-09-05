@@ -79,6 +79,7 @@ for (my $i=0; $i<3; $i=$i+1)
 	$text = substr($text,0,100);
 	my $image = $notizia->findvalue('img');
     my $id = $notizia->getAttribute('ID');
+	encode_entities($image);
 	print "
 			<div class=\"bloccosingolonew\">
 				<p><strong>$title</strong></p>
