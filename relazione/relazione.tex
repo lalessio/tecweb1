@@ -198,7 +198,7 @@ body on load
 \end{itemize}	
 			
 		\newpage	
-	\section{CSS DA FARE}
+	\section{CSS}
 			\begin{itemize}
 				\item Nella realizzazione dell'interfaccia grafica del sito è stato usato lo standard CSS3.
 				\item Allo stesso tempo si \'e fatta molta attenzione alla compatibilit\'a con browser pi\'u datati, e si \'e cercato di utilizzare un numero ristretto delle nuove funzionalit\'a offerte dallo standard.
@@ -209,10 +209,11 @@ body on load
 			
 				\item Nella cartella public-html/css sono presenti i seguenti fogli di stile:
 
-				\subitem style.css: modella lo stile di visualizzazione del sito sia per gli utenti desktop (che hanno uno schermo largo al massimo 1200px) che per gli utenti mobile con dispositivi con schermo piccolo (che hanno uno schermo largo massimo 390px) e dispositivi con dimensioni schermo intermedie ( max-width=730px).
+				\subitem style.css: modella lo stile di visualizzazione del sito sia per gli utenti desktop (che hanno uno schermo largo al massimo 1350px) che per gli utenti che utilizzano tablet e dispositivi mobile (che hanno uno schermo con una larghezza minima di 769px e larghezza massima di 922px) 
 
+				\item Le regole definite nella mediaquery (max-width 922px) valgono anche per dispositivi mobile molto piccoli
 
-				\subitem styleprint.css: modella lo stile di stampa delle pagine del sito.(particolare attenzione si \'e data alla stampa delle pagine delle ricette).
+				\subitem styleprint.css: modella lo stile di stampa delle pagine del sito. Particolare attenzione \'e fatta nel visualizzare le pagine che descrivono il parco, le pagine che visualizzano le news e le attività e la pagina che visualizza orari e prezzi del parco.
 
 \end{itemize}
 					\newpage
