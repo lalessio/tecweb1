@@ -430,7 +430,7 @@ vertical-align: middle;}
 
 	.immagine_cat{ 
 	display:block; margin:0 auto;
-	max-width:100%;
+	max-width:200px;
 	max-height: 15em;
 	}
 
