@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.14)  5 SEP 2016 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/W32TeX) (preloaded format=pdflatex 2016.3.14)  6 SEP 2016 09:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -344,54 +344,42 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
-
-Overfull \hbox (90.95204pt too wide) in paragraph at lines 178--180
-\OT1/cmr/m/n/12 Il codice .html rispetta in-ter-a-mente le im-po-sizioni del va
-l-ida-tore W3C https://validator.w3.org/
- []
-
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--185
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
  []
 
 
-Overfull \hbox (3.7592pt too wide) in paragraph at lines 188--189
+Overfull \hbox (3.7592pt too wide) in paragraph at lines 189--190
 []\OT1/cmr/m/it/12 adminarea.cgi\OT1/cmr/m/n/12 : cuore dell'area am-min-is-tra
 -tiva, da questa pag-ina l'admin
  []
 
 [7]
-Overfull \hbox (13.73291pt too wide) in paragraph at lines 194--195
+Overfull \hbox (13.73291pt too wide) in paragraph at lines 195--196
 []\OT1/cmr/m/it/12 newsattivita.cgi\OT1/cmr/m/n/12 : pag-ina di-visa in due sez
 ioni, un primo set-tore riguardante
  []
 
 [8]
-Overfull \hbox (10.2857pt too wide) in paragraph at lines 201--203
+Overfull \hbox (10.2857pt too wide) in paragraph at lines 202--204
 []\OT1/cmr/bx/n/12 Disclaimer: \OT1/cmr/m/n/12 per quanto riguarda i file chang
 e[]orario.cgi, change[]prezzo.cgi,
  []
 
 [9] [10]
-Overfull \hbox (1.85843pt too wide) in paragraph at lines 234--235
+Overfull \hbox (1.85843pt too wide) in paragraph at lines 235--236
 \OT1/cmr/m/n/12 modalit^^Ra desk-top) le cat-e-go-ria prin-ci-pali sono pre-sen
 ti nell'inquadratura
  []
 
-
-Overfull \hbox (52.8942pt too wide) in paragraph at lines 236--237
-[]\OT1/cmr/m/n/12 Il codice CSS rispetta le in-di-cazioni del val-ida-tore W3C 
-https://jigsaw.w3.org/css-
- []
-
 [11]
-Overfull \hbox (0.2164pt too wide) in paragraph at lines 244--245
+Overfull \hbox (0.2164pt too wide) in paragraph at lines 245--246
 []\OT1/cmr/m/it/12 newsparco\OT1/cmr/m/n/12 : funge da "database" del sito, ogn
 i no-tizia pre-senta i seguenti
  []
@@ -399,42 +387,42 @@ i no-tizia pre-senta i seguenti
 [12] [13]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
- <deuteranopia1.png, id=128, 829.0975pt x 533.995pt>
+ <deuteranopia1.png, id=128, 826.08624pt x 754.82pt>
 File: deuteranopia1.png Graphic file (type png)
 
 <use deuteranopia1.png>
-Package pdftex.def Info: deuteranopia1.png used on input line 295.
-(pdftex.def)             Requested size: 256.0748pt x 164.92563pt.
- <deuteranopia2.png, id=129, 819.06pt x 612.2875pt>
+Package pdftex.def Info: deuteranopia1.png used on input line 296.
+(pdftex.def)             Requested size: 256.0748pt x 233.98027pt.
+ <deuteranopia2.png, id=129, 846.16125pt x 741.77126pt>
 File: deuteranopia2.png Graphic file (type png)
 
 <use deuteranopia2.png>
-Package pdftex.def Info: deuteranopia2.png used on input line 301.
-(pdftex.def)             Requested size: 256.0748pt x 191.4328pt.
- <protanopia1.png, id=130, 830.10126pt x 599.23875pt>
+Package pdftex.def Info: deuteranopia2.png used on input line 302.
+(pdftex.def)             Requested size: 256.0748pt x 224.47987pt.
+ <protanopia1.png, id=130, 825.0825pt x 758.835pt>
 File: protanopia1.png Graphic file (type png)
 
 <use protanopia1.png>
-Package pdftex.def Info: protanopia1.png used on input line 307.
-(pdftex.def)             Requested size: 256.0748pt x 184.85687pt.
- <protanopia2.png, id=131, 830.10126pt x 517.935pt>
+Package pdftex.def Info: protanopia1.png used on input line 308.
+(pdftex.def)             Requested size: 256.0748pt x 235.51431pt.
+ <protanopia2.png, id=131, 861.2175pt x 754.82pt>
 File: protanopia2.png Graphic file (type png)
 
 <use protanopia2.png>
-Package pdftex.def Info: protanopia2.png used on input line 314.
-(pdftex.def)             Requested size: 256.0748pt x 159.77577pt.
- <tritanopia1.png, id=132, 829.0975pt x 616.3025pt>
+Package pdftex.def Info: protanopia2.png used on input line 315.
+(pdftex.def)             Requested size: 256.0748pt x 224.44368pt.
+ <tritanopia1.png, id=132, 830.10126pt x 752.8125pt>
 File: tritanopia1.png Graphic file (type png)
 
 <use tritanopia1.png>
-Package pdftex.def Info: tritanopia1.png used on input line 321.
-(pdftex.def)             Requested size: 256.0748pt x 190.3465pt.
- <tritanopia2.png, id=133, 829.0975pt x 542.025pt>
+Package pdftex.def Info: tritanopia1.png used on input line 322.
+(pdftex.def)             Requested size: 256.0748pt x 232.23224pt.
+ <tritanopia2.png, id=133, 836.12375pt x 738.76pt>
 File: tritanopia2.png Graphic file (type png)
 
 <use tritanopia2.png>
-Package pdftex.def Info: tritanopia2.png used on input line 327.
-(pdftex.def)             Requested size: 256.0748pt x 167.40572pt.
+Package pdftex.def Info: tritanopia2.png used on input line 328.
+(pdftex.def)             Requested size: 256.0748pt x 226.26273pt.
  [14] [15 <./deuteranopia1.png> <./deuteranopia2.png>]
 [16 <./protanopia1.png> <./protanopia2.png>] [17 <./tritanopia1.png> <./tritano
 pia2.png>]
@@ -443,15 +431,15 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 355.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 356.
  [18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 355.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 356.
  (./relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 355.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 355.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 356.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 356.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: 65DC02430CE5B01CB7B97E8E142C0495;521.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 355.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 356.
  ) 
 Here is how much of TeX's memory you used:
  6199 strings out of 493033
@@ -469,7 +457,7 @@ type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2015/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr17.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb><c:/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb>
-Output written on relazione.pdf (20 pages, 1179394 bytes).
+Output written on relazione.pdf (20 pages, 1463360 bytes).
 PDF statistics:
  203 PDF objects out of 1000 (max. 8388607)
  165 compressed objects within 2 object streams
